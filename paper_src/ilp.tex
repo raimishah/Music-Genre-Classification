@@ -1,0 +1,89 @@
+%\subsection{ILP Formulation}\label{sec:ilp}
+\begin{table}
+%\scriptsize
+\caption{The constant terms used in our ILP formulation. These are either architecture specific or workload specific.}
+\label{table:constants}
+\begin{center}
+\begin{small}
+\begin{tabular}{|c|l|}
+\hline
+{\sf Constant} &  {\sf Definition}    \\
+\hline\hline
+$M$				& Number of cores\\
+$T$				& Number of affinity domain\\
+$I$				& Number of queries for affinity domain\\
+$L_{t,q}$	& Load for a given affinity domain $t$ and query $q$\\
+$Q$				& Load imbalance coefficient\\
+\hline
+\end{tabular}
+\end{small}
+\end{center}
+\end{table}
+Table~\ref{table:constants} gives the constant terms used in our ILP formulation.
+Note that, the loads given in this table are normalized using the minimum amount of processing load that can be
+allocated to an affinity domain. Load imbalance coefficient is used as an upper limit for the difference 
+between the amount of work assigned to two affinity domains. This value can be obtained through experimentation, 
+query types, data being accessed, and history of the executions. Moreover, it is also possible to devise an adaptive 
+technique where this coefficient gets adjusted according to a function of current state and history.
+
+For each query, we define 0-1 variables to specify
+the assignment of a query to an affinity domain. Specifically, we define:
+\begin {itemize}
+\item $X_{t,q,m}$ : to indicate whether affinity domain $t$ and instance $q$ of that domain is assigned to core $m$.
+\end {itemize}
+
+We use a variable for each one of the possible assignments. If this 0-1 variable is 1, this
+indicates that the corresponding query can be assigned to core $m$. If this size is 0, then
+we conclude that this assignment does not exist.
+
+We use another 0-1 variable to indicate (after final assignment) whether two different queries of the same affinity domain are
+assigned to the same core or not:
+\begin {itemize}
+\item $S_{t,q_1,q_2}$ : indicates whether query $q_1$ and $q_2$ of affinity domain $t$ can be assigned to the same core.
+\end {itemize}
+
+We use $AL$, a non 0-1 variable, to express the total assigned query load assigned to each core:
+\begin {itemize}
+\item $AL_m$ : indicates the amount of load assigned to core $m$.
+\end {itemize}
+
+After defining the variables in our ILP formulation, now we explain the necessary constraints to be satisfied.
+
+Each query must be assigned to a particular core, captured by the constraint:
+\begin{equation}
+\sum_{k=1}^{M} X_{t,q,k} = 1, \;\; \forall{t,q}.
+\label{eq:1}
+\end{equation}
+
+Also, two queries are said to be assigned to the same core if the following constraint holds:
+\begin{equation}
+S_{t,i_1,i_2} >= X_{t,i_1,m} + X_{t,i_2,m} - 1, \;\; \forall{t,i_1,i_2,m}, \mbox{where $i_1 \ne i_2$}.
+\label{eq:2}
+\end{equation}
+If both $i_1$ and $i_2$ queries(affinity domain $t$) are assigned to the same core ($m$), then
+0-1 variable $S_{t,i_1,i_2}$ will be forced to have a 1 value.
+
+A necessary constraint is related to the load balancing in the query mapping between affinity domains which will prevent overloading of a core-pair with running related queries. To capture this, we use variable $AL_m$ to indicate the total assigned query load onto the core $m$. The estimated load of a particular query can be extracted from the associated query plan derived by the query optimizer. As explained earlier, we use the estimated cost (execution time) for each operator and  generate the total estimated cost (execution time) for a certain query execution plan.
+
+
+\begin{equation}
+AL_{m} = \sum_{i=1}^{T}\sum_{j=1}^{I} X_{i,j,m} \times L_{i,j}, \;\; \forall{m}.
+\label{eq:3}
+\end{equation}
+This expression essentially sums up all the assigned query loads to generate the total
+load of the core. This variable is then used for limiting the disparities across the loads of
+different cores. More specifically;
+
+\begin{equation}
+AL_{m1} - AL_{m2} < AL_{m2} \times Q,\forall{m1,m2},\mbox{where $AL_{m1} > AL_{m2}$}.
+\label{eq:4}
+\end{equation}
+Note that, the load imbalance coefficient ($Q$) is given as a percentage in Table~\ref{table:constants}. Having specified the necessary constraints in our ILP formulation, we next give our objective function.
+
+\begin{equation}
+max \sum_{i=1}^{T}\sum_{j=1}^{I}\sum_{k=1}^{I} S_{i,j,k}, \mbox{ where $j\ne k$}.
+\label{eq:5}
+\end{equation}
+
+Based on the above expression, our 0-1 ILP problem can formally be defined as one of ``maximizing
+the objective function under constraints (\ref{eq:1}) through (\ref{eq:5}).'' 

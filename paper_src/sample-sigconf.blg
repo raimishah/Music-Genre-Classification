@@ -1,0 +1,101 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: sample-sigconf.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: IEEEabrv.bib
+Database file #2: IEEEexample.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--numpages field, but no articleno or eid field, in Avizienis:1985
+Warning--empty publisher in Barraza:2017
+Warning--empty address in Barraza:2017
+Warning--empty publisher in Chakravorty:2007
+Warning--empty address in Chakravorty:2007
+Warning--empty publisher in FTM:2017
+Warning--empty address in FTM:2017
+Warning--empty publisher in Fiala:2012
+Warning--empty address in Fiala:2012
+Warning--empty publisher in Fields:2001
+Warning--empty address in Fields:2001
+Warning--page numbers missing in both pages and numpages fields in Fields:2001
+Warning--empty publisher in Gupta:2016
+Warning--empty address in Gupta:2016
+Warning--page numbers missing in both pages and numpages fields in Gupta:2016
+Warning--empty publisher in MiBench:2001
+Warning--empty address in MiBench:2001
+Warning--empty publisher in MediaBench:1997
+Warning--empty address in MediaBench:1997
+Warning--empty publisher in Lebeck:2003
+Warning--empty address in Lebeck:2003
+Warning--page numbers missing in both pages and numpages fields in Lebeck:2003
+Warning--empty publisher in LLFI:2015
+Warning--empty address in LLFI:2015
+Warning--empty publisher in ACE:2003
+Warning--empty address in ACE:2003
+Warning--empty publisher in Ni:2016
+Warning--empty address in Ni:2016
+Warning--empty publisher in Rebaudengo:1999
+Warning--empty address in Rebaudengo:1999
+Warning--page numbers missing in both pages and numpages fields in Rebaudengo:1999
+Warning--empty address in Rehman:2016
+Warning--empty publisher in RTPenalty:2013
+Warning--empty address in RTPenalty:2013
+Warning--empty publisher in SRT:2000
+Warning--empty address in SRT:2000
+Warning--empty publisher in SWIFT:2005
+Warning--empty address in SWIFT:2005
+Warning--empty publisher in Schwarz:2009
+Warning--empty address in Schwarz:2009
+Warning--empty publisher in Singh:2013
+Warning--empty address in Singh:2013
+Warning--empty publisher in Subramaniam:2009
+Warning--empty address in Subramaniam:2009
+Warning--empty publisher in Fault_Injection_Simulation:2010
+Warning--empty address in Fault_Injection_Simulation:2010
+You've used 32 entries,
+            5733 wiz_defined-function locations,
+            1898 strings with 28942 characters,
+and the built_in function-call counts, 40761 in all, are:
+= -- 4638
+> -- 1573
+< -- 0
++ -- 532
+- -- 532
+* -- 3011
+:= -- 4100
+add.period$ -- 157
+call.type$ -- 32
+change.case$ -- 242
+chr.to.int$ -- 32
+cite$ -- 78
+duplicate$ -- 3713
+empty$ -- 2576
+format.name$ -- 652
+if$ -- 9650
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 149
+newline$ -- 372
+num.names$ -- 256
+pop$ -- 1456
+preamble$ -- 1
+purify$ -- 529
+quote$ -- 0
+skip$ -- 1333
+stack$ -- 0
+substring$ -- 2987
+swap$ -- 385
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 833
+warning$ -- 46
+while$ -- 230
+width$ -- 0
+write$ -- 663
+(There were 46 warnings)
