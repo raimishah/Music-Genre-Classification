@@ -53,8 +53,10 @@ for file in os.listdir(classical_path):
     path = os.path.join(classical_path,file)
     fs,classical = wavread(path)
     classical = classical.astype(float)
-    if classical.shape[0] < 700000:
-        classical = np.pad(classical, (0, 700000 - classical.shape[0]), 'constant', constant_values=(1, 1))
+    #classical = np.pad(classical, (0, 700000 - classical.shape[0]), 'constant', constant_values=(1, 1))
+    shape = classical.shape[0] - 500000
+    #print(shape)
+    classical = classical[:-shape]
     #print(classical.shape)
     data_classical.append(classical)
 
@@ -63,8 +65,9 @@ for file in os.listdir(metal_path):
     path = os.path.join(metal_path,file)
     fs,metal = wavread(path)
     metal = metal.astype(float)
-    if metal.shape[0] < 700000:
-        metal = np.pad(metal, (0, 700000 - metal.shape[0]), 'constant', constant_values=(1, 1))
+    #metal = np.pad(metal, (0, 700000 - metal.shape[0]), 'constant', constant_values=(1, 1))
+    shape = metal.shape[0] - 500000
+    metal = metal[:-shape]
     #print(metal.shape)
     data_metal.append(metal)
 
@@ -130,6 +133,41 @@ result = (classical_probs > metal_probs).astype(int)
 
 
 print('The accuracy of the classical classifier is: %f' %(classical_accuracy(result,Y_test)))
+
+print('Testing with some random metal music...')
+rate,data = wavread('metal.00023.wav') 
+data = data.astype(float)
+f,t,music = signal.stft(data, fs = rate, window = 'hann', nperseg = 1024, noverlap=768)
+music = np.log(np.abs(music))
+Z_music = W.dot(music - np.mean(music,axis=1,keepdims=True))
+classical_probs = log_prob(Z_music,gauss_classical)
+metal_probs = log_prob(Z_music,gauss_metal)
+
+result = (classical_probs > metal_probs).astype(int)
+
+
+if (classical_accuracy(result,np.ones(result.shape[0]))) < 50:
+    print('I am pretty sure that this is METAL MUSIC!')
+else: 
+    print('I am pretty sure that this is CLASSICAL MUSIC!')
+
+print('Testing with some random classical music...')
+rate,data = wavread('classical.00009.wav') 
+data = data.astype(float)
+f,t,music = signal.stft(data, fs = rate, window = 'hann', nperseg = 1024, noverlap=768)
+music = np.log(np.abs(music))
+Z_music = W.dot(music - np.mean(music,axis=1,keepdims=True))
+classical_probs = log_prob(Z_music,gauss_classical)
+metal_probs = log_prob(Z_music,gauss_metal)
+
+result = (classical_probs > metal_probs).astype(int)
+
+
+if (classical_accuracy(result,np.ones(result.shape[0]))) < 50:
+    print('I am pretty sure that this is METAL MUSIC!')
+else: 
+    print('I am pretty sure that this is CLASSICAL MUSIC!')
+
 
 
 

@@ -1,7 +1,6 @@
 # import the necessary package dependencies
 import numpy as np
 import scipy
-from sklearn.model_selection import train_test_split
 from scipy.io.wavfile import read as wavread
 from scipy import signal
 from scipy.fftpack import fft, fftfreq, ifft
@@ -70,6 +69,7 @@ for file in os.listdir(music_path):
 data_music = np.array(data_music)
 data_speech = np.array(data_speech)
 
+print(data_speech.shape)
 f,t,Zxx_speech = signal.stft(data_speech, fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
 Zxx_speech = np.abs(Zxx_speech)
 Zxx_speech = np.log(Zxx_speech)
