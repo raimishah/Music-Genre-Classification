@@ -151,7 +151,7 @@ if (classical_accuracy(result,np.ones(result.shape[0]))) < 50:
 else: 
     print('I am pretty sure that this is CLASSICAL MUSIC!')
 
-print('Testing with some random classical music...')
+print('Testing with some random classical music')
 rate,data = wavread('classical.00009.wav') 
 data = data.astype(float)
 f,t,music = signal.stft(data, fs = rate, window = 'hann', nperseg = 1024, noverlap=768)
