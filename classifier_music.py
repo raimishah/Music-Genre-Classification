@@ -44,6 +44,8 @@ metal_path = 'genres/metal'
 blues_path = 'genres/blues'
 pop_path = 'genres/pop'
 country_path = 'genres/country'
+disco_path = 'genres/disco'
+hiphop_path = 'genres/hiphop'
 
 
 data_classical = []
@@ -51,6 +53,8 @@ data_metal = []
 data_blues = []
 data_pop = []
 data_country = []
+data_disco = []
+data_hiphop = []
 sampling_rate = 22050
 num_tracks = 100
 
@@ -60,7 +64,7 @@ for file in os.listdir(classical_path):
     fs,classical = wavread(path)
     classical = classical.astype(float)
     #classical = np.pad(classical, (0, 700000 - classical.shape[0]), 'constant', constant_values=(1, 1))
-    shape = classical.shape[0] - 500000
+    shape = classical.shape[0] - 400000
     #print(shape)
     classical = classical[:-shape]
     #print(classical.shape)
@@ -72,7 +76,7 @@ for file in os.listdir(metal_path):
     fs,metal = wavread(path)
     metal = metal.astype(float)
     #metal = np.pad(metal, (0, 700000 - metal.shape[0]), 'constant', constant_values=(1, 1))
-    shape = metal.shape[0] - 500000
+    shape = metal.shape[0] - 400000
     metal = metal[:-shape]
     #print(metal.shape)
     data_metal.append(metal)
@@ -82,7 +86,7 @@ for file in os.listdir(blues_path):
     fs,blues = wavread(path)
     blues = blues.astype(float)
     #blues = np.pad(blues, (0, 700000 - blues.shape[0]), 'constant', constant_values=(1, 1))
-    shape = blues.shape[0] - 500000
+    shape = blues.shape[0] - 400000
     blues = blues[:-shape]
     #print(blues.shape)
     data_blues.append(blues)
@@ -92,7 +96,7 @@ for file in os.listdir(pop_path):
     fs,pop = wavread(path)
     pop = pop.astype(float)
     #pop = np.pad(pop, (0, 700000 - pop.shape[0]), 'constant', constant_values=(1, 1))
-    shape = pop.shape[0] - 500000
+    shape = pop.shape[0] - 400000
     pop = pop[:-shape]
     #print(pop.shape)
     data_pop.append(pop)
@@ -102,18 +106,40 @@ for file in os.listdir(country_path):
     fs,country = wavread(path)
     country = country.astype(float)
     #country = np.pad(country, (0, 700000 - country.shape[0]), 'constant', constant_values=(1, 1))
-    shape = country.shape[0] - 500000
+    shape = country.shape[0] - 400000
     country = country[:-shape]
     #print(country.shape)
     data_country.append(country)
+
+for file in os.listdir(disco_path):
+    path = os.path.join(disco_path,file)
+    fs,disco = wavread(path)
+    disco = disco.astype(float)
+    #disco = np.pad(disco, (0, 700000 - disco.shape[0]), 'constant', constant_values=(1, 1))
+    shape = disco.shape[0] - 400000
+    disco = disco[:-shape]
+    #print(disco.shape)
+    data_disco.append(disco)
+
+for file in os.listdir(hiphop_path):
+    path = os.path.join(hiphop_path,file)
+    fs,hiphop = wavread(path)
+    hiphop = hiphop.astype(float)
+    #hiphop = np.pad(hiphop, (0, 700000 - hiphop.shape[0]), 'constant', constant_values=(1, 1))
+    shape = hiphop.shape[0] - 400000
+    hiphop = hiphop[:-shape]
+    #print(hiphop.shape)
+    data_hiphop.append(hiphop)
 
 data_classical = np.array(data_classical)
 data_metal = np.array(data_metal)
 data_blues = np.array(data_blues)
 data_pop = np.array(data_pop)
 data_country = np.array(data_country)
+data_disco = np.array(data_disco)
+data_hiphop = np.array(data_hiphop)
 
-print(data_metal.shape,data_classical.shape,data_blues.shape,data_pop.shape,data_country.shape)
+print('Musical data read... Starting spectogram computations...')
 
 # Get spectogram features with log and magnitude
 f,t,Zxx_classical = signal.stft(data_classical, fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
@@ -136,6 +162,16 @@ f,t,Zxx_country = signal.stft(data_country, fs = sampling_rate, window = 'hann',
 Zxx_country = np.abs(Zxx_country)
 Zxx_country = np.log(Zxx_country)
 
+f,t,Zxx_disco = signal.stft(data_disco, fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+Zxx_disco = np.abs(Zxx_disco)
+Zxx_disco = np.log(Zxx_disco)
+
+f,t,Zxx_hiphop = signal.stft(data_hiphop, fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+Zxx_hiphop = np.abs(Zxx_hiphop)
+Zxx_hiphop = np.log(Zxx_hiphop)
+
+print('Done with spectogram computations...')
+
 mix = np.arange(0, num_tracks, 1) # for random sampling of data
 np.random.shuffle(mix)
 
@@ -144,6 +180,9 @@ Train_metal = np.hstack(Zxx_metal[mix[10:]]) # random 90% of metal data sampled
 Train_blues = np.hstack(Zxx_blues[mix[10:]]) # random 90% of metal data sampled
 Train_pop = np.hstack(Zxx_pop[mix[10:]]) # random 90% of metal data sampled
 Train_country = np.hstack(Zxx_country[mix[10:]]) # random 90% of metal data sampled
+Train_disco = np.hstack(Zxx_disco[mix[10:]]) # random 90% of metal data sampled
+Train_hiphop = np.hstack(Zxx_hiphop[mix[10:]]) # random 90% of metal data sampled
+
 
 
 Test_classical = np.hstack(Zxx_classical[mix[:10]]) # random remaining 10% is for testing
@@ -151,12 +190,13 @@ Test_metal = np.hstack(Zxx_metal[mix[:10]])
 Test_blues = np.hstack(Zxx_blues[mix[:10]])
 Test_pop = np.hstack(Zxx_pop[mix[:10]])
 Test_country = np.hstack(Zxx_country[mix[:10]])
+Test_disco = np.hstack(Zxx_disco[mix[:10]])
+Test_hiphop = np.hstack(Zxx_hiphop[mix[:10]])
 
 
 
-
-X_train = np.hstack((Train_classical,Train_metal,Train_blues,Train_pop,Train_country)) # stack'em
-X_test = np.hstack((Test_classical,Test_metal,Test_blues,Test_pop,Test_country)) #stack'em
+X_train = np.hstack((Train_classical,Train_metal,Train_blues,Train_pop,Train_country,Train_disco)) # stack'em
+X_test = np.hstack((Test_classical,Test_metal,Test_blues,Test_pop,Test_country,Test_disco)) #stack'em
 
 print(X_train.shape,X_test.shape)
 
@@ -167,20 +207,24 @@ metal_labels = np.zeros(Train_metal.shape[1])
 blues_labels = np.ones(Train_blues.shape[1]) + np.ones(Train_blues.shape[1])
 pop_labels = np.ones(Train_pop.shape[1]) + np.ones(Train_pop.shape[1]) + np.ones(Train_pop.shape[1])
 country_labels = np.ones(Train_country.shape[1]) + np.ones(Train_country.shape[1]) + np.ones(Train_country.shape[1]) + np.ones(Train_country.shape[1])
+disco_labels = np.ones(Train_disco.shape[1]) + np.ones(Train_disco.shape[1]) + np.ones(Train_disco.shape[1]) + np.ones(Train_disco.shape[1]) + np.ones(Train_disco.shape[1])
+hiphop_labels = np.ones(Train_hiphop.shape[1]) + np.ones(Train_hiphop.shape[1]) + np.ones(Train_hiphop.shape[1]) + np.ones(Train_hiphop.shape[1]) + np.ones(Train_hiphop.shape[1]) + np.ones(Train_hiphop.shape[1])
 
 
-Y_train = np.hstack((classical_labels,metal_labels,blues_labels,pop_labels,country_labels))
+Y_train = np.hstack((classical_labels,metal_labels,blues_labels,pop_labels,country_labels,disco_labels))
 
 classical_labels = np.ones(Test_classical.shape[1])
 metal_labels = np.zeros(Test_metal.shape[1])
 blues_labels = np.ones(Test_blues.shape[1]) + np.ones(Test_blues.shape[1])
 pop_labels = np.ones(Test_pop.shape[1]) + np.ones(Test_pop.shape[1]) + np.ones(Test_pop.shape[1])
 country_labels = np.ones(Test_country.shape[1]) + np.ones(Test_country.shape[1]) + np.ones(Test_country.shape[1]) + np.ones(Test_country.shape[1])
+disco_labels = np.ones(Test_disco.shape[1]) + np.ones(Test_disco.shape[1]) + np.ones(Test_disco.shape[1]) + np.ones(Test_disco.shape[1]) + np.ones(Test_disco.shape[1])
+hiphop_labels = np.ones(Test_hiphop.shape[1]) + np.ones(Test_hiphop.shape[1]) + np.ones(Test_hiphop.shape[1]) + np.ones(Test_hiphop.shape[1]) + np.ones(Test_hiphop.shape[1]) + np.ones(Test_hiphop.shape[1])
 
 
-Y_test = np.hstack((classical_labels,metal_labels,blues_labels,pop_labels,country_labels))
+Y_test = np.hstack((classical_labels,metal_labels,blues_labels,pop_labels,country_labels,disco_labels))
 
-print('Starting PCA')
+print('Starting PCA...')
 W = PCA(X_train,64)
 
 '''
@@ -207,6 +251,7 @@ def one_second_result(probs,fps):
 def get_acc(pred, y_test):
     return np.sum(y_test==pred)/len(y_test)*100
 
+print('Computing likelihoods for each data point...')
 Z_train = W.dot(X_train - np.mean(X_train,axis=1,keepdims=True))
 Z_test = W.dot(X_test - np.mean(X_test,axis=1,keepdims=True))
 # Compute likelihoods for classical and music
@@ -215,10 +260,10 @@ classical_probs = log_prob(Z_test,gauss_classical)
 metal_probs = log_prob(Z_test,gauss_metal)
 blues_probs = log_prob(Z_test,gauss_blues)
 '''
-G = [gauss_classifier(Z_train[:,Y_train == j]) for j in [0,1,2,3,4]]
+G = [gauss_classifier(Z_train[:,Y_train == j]) for j in [0,1,2,3,4,5]]
 probs = [log_prob(Z_test, i) for i in G]
 pred = np.argmax(probs, axis=0)
-print(get_acc(pred,Y_test))
+print('The accuracy of the classifier is: %f' %(get_acc(pred,Y_test)))
 
 # According to Piazza, we get the 1-sec probs
 '''
