@@ -43,12 +43,14 @@ classical_path = 'genres/classical'
 metal_path = 'genres/metal'
 blues_path = 'genres/blues'
 pop_path = 'genres/pop'
+country_path = 'genres/country'
 
 
 data_classical = []
 data_metal = []
 data_blues = []
 data_pop = []
+data_country = []
 sampling_rate = 22050
 num_tracks = 100
 
@@ -95,11 +97,23 @@ for file in os.listdir(pop_path):
     #print(pop.shape)
     data_pop.append(pop)
 
+for file in os.listdir(country_path):
+    path = os.path.join(country_path,file)
+    fs,country = wavread(path)
+    country = country.astype(float)
+    #country = np.pad(country, (0, 700000 - country.shape[0]), 'constant', constant_values=(1, 1))
+    shape = country.shape[0] - 500000
+    country = country[:-shape]
+    #print(country.shape)
+    data_country.append(country)
+
 data_classical = np.array(data_classical)
 data_metal = np.array(data_metal)
 data_blues = np.array(data_blues)
 data_pop = np.array(data_pop)
-print(data_metal.shape,data_classical.shape,data_blues.shape,data_pop.shape)
+data_country = np.array(data_country)
+
+print(data_metal.shape,data_classical.shape,data_blues.shape,data_pop.shape,data_country.shape)
 
 # Get spectogram features with log and magnitude
 f,t,Zxx_classical = signal.stft(data_classical, fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
@@ -118,6 +132,10 @@ f,t,Zxx_pop = signal.stft(data_pop, fs = sampling_rate, window = 'hann', nperseg
 Zxx_pop = np.abs(Zxx_pop)
 Zxx_pop = np.log(Zxx_pop)
 
+f,t,Zxx_country = signal.stft(data_country, fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+Zxx_country = np.abs(Zxx_country)
+Zxx_country = np.log(Zxx_country)
+
 mix = np.arange(0, num_tracks, 1) # for random sampling of data
 np.random.shuffle(mix)
 
@@ -125,16 +143,20 @@ Train_classical = np.hstack(Zxx_classical[mix[10:]]) # random 90% of classical d
 Train_metal = np.hstack(Zxx_metal[mix[10:]]) # random 90% of metal data sampled
 Train_blues = np.hstack(Zxx_blues[mix[10:]]) # random 90% of metal data sampled
 Train_pop = np.hstack(Zxx_pop[mix[10:]]) # random 90% of metal data sampled
+Train_country = np.hstack(Zxx_country[mix[10:]]) # random 90% of metal data sampled
+
 
 Test_classical = np.hstack(Zxx_classical[mix[:10]]) # random remaining 10% is for testing
 Test_metal = np.hstack(Zxx_metal[mix[:10]])
 Test_blues = np.hstack(Zxx_blues[mix[:10]])
 Test_pop = np.hstack(Zxx_pop[mix[:10]])
+Test_country = np.hstack(Zxx_country[mix[:10]])
 
 
 
-X_train = np.hstack((Train_classical,Train_metal,Train_blues,Train_pop)) # stack'em
-X_test = np.hstack((Test_classical,Test_metal,Test_blues,Test_pop)) #stack'em
+
+X_train = np.hstack((Train_classical,Train_metal,Train_blues,Train_pop,Train_country)) # stack'em
+X_test = np.hstack((Test_classical,Test_metal,Test_blues,Test_pop,Test_country)) #stack'em
 
 print(X_train.shape,X_test.shape)
 
@@ -144,15 +166,19 @@ classical_labels = np.ones(Train_classical.shape[1])
 metal_labels = np.zeros(Train_metal.shape[1])
 blues_labels = np.ones(Train_blues.shape[1]) + np.ones(Train_blues.shape[1])
 pop_labels = np.ones(Train_pop.shape[1]) + np.ones(Train_pop.shape[1]) + np.ones(Train_pop.shape[1])
+country_labels = np.ones(Train_country.shape[1]) + np.ones(Train_country.shape[1]) + np.ones(Train_country.shape[1]) + np.ones(Train_country.shape[1])
 
-Y_train = np.hstack((classical_labels,metal_labels,blues_labels,pop_labels))
+
+Y_train = np.hstack((classical_labels,metal_labels,blues_labels,pop_labels,country_labels))
 
 classical_labels = np.ones(Test_classical.shape[1])
 metal_labels = np.zeros(Test_metal.shape[1])
 blues_labels = np.ones(Test_blues.shape[1]) + np.ones(Test_blues.shape[1])
 pop_labels = np.ones(Test_pop.shape[1]) + np.ones(Test_pop.shape[1]) + np.ones(Test_pop.shape[1])
+country_labels = np.ones(Test_country.shape[1]) + np.ones(Test_country.shape[1]) + np.ones(Test_country.shape[1]) + np.ones(Test_country.shape[1])
 
-Y_test = np.hstack((classical_labels,metal_labels,blues_labels,pop_labels))
+
+Y_test = np.hstack((classical_labels,metal_labels,blues_labels,pop_labels,country_labels))
 
 print('Starting PCA')
 W = PCA(X_train,64)
@@ -189,7 +215,7 @@ classical_probs = log_prob(Z_test,gauss_classical)
 metal_probs = log_prob(Z_test,gauss_metal)
 blues_probs = log_prob(Z_test,gauss_blues)
 '''
-G = [gauss_classifier(Z_train[:,Y_train == j]) for j in [0,1,2,3]]
+G = [gauss_classifier(Z_train[:,Y_train == j]) for j in [0,1,2,3,4]]
 probs = [log_prob(Z_test, i) for i in G]
 pred = np.argmax(probs, axis=0)
 print(get_acc(pred,Y_test))
@@ -203,10 +229,6 @@ probs = np.hstack((classical_probs,metal_probs,blues_probs))
 # get predictions
 metal_pred = np.argmax(metal_probs)
 '''
-
-
-
-
 
 '''
 print('The accuracy of the classical classifier is: %f' %(classical_accuracy(result,Y_test)))
