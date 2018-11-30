@@ -32,19 +32,63 @@ for g_path in genres_paths:
 
 data = np.array(data)
 labels = np.zeros(data.shape[0])
-for i in range(10):
+for i in range(0, 10):
     labels[i*100 : (i + 1) * 100] = i
-print(labels)
 print(data.shape)
 
 
 sampling_rate = 22050
 Zxx_data = []
-for i in range(len(genres_paths)):
-    f,t,Zxx = signal.stft(data[i*100 : (i + 1) * 100], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
-    Zxx = np.abs(Zxx)
-    Zxx = np.log(Zxx)
-    Zxx_data.append(Zxx)
+#for i in range(len(genres_paths)):
+#for i in range(0, 1):
+#    f,t,Zxx = signal.stft(data[i*100 : (i + 1) * 100], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+#    Zxx = np.abs(Zxx)
+#    Zxx = np.log(Zxx)
+#    Zxx_data.append(Zxx)
+#f,t,Zxx = signal.stft(data[0 : 100], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+#Zxx = np.abs(Zxx)
+#Zxx = np.log(Zxx)
+#Zxx_data.append(Zxx)
+
+#f,t,Zxx = signal.stft(data[100 : 200], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+#Zxx = np.abs(Zxx)
+#Zxx = np.log(Zxx)
+#Zxx_data.append(Zxx)
+
+f,t,Zxx = signal.stft(data[200 : 300], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+Zxx = np.abs(Zxx)
+Zxx = np.log(Zxx)
+Zxx_data.append(Zxx)
+
+f,t,Zxx = signal.stft(data[300 : 400], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+Zxx = np.abs(Zxx)
+Zxx = np.log(Zxx)
+Zxx_data.append(Zxx)
+
+f,t,Zxx = signal.stft(data[400 : 500], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+Zxx = np.abs(Zxx)
+Zxx = np.log(Zxx)
+Zxx_data.append(Zxx)
+
+f,t,Zxx = signal.stft(data[500 : 600], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+Zxx = np.abs(Zxx)
+Zxx = np.log(Zxx)
+Zxx_data.append(Zxx)
+
+f,t,Zxx = signal.stft(data[700 : 800], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+Zxx = np.abs(Zxx)
+Zxx = np.log(Zxx)
+Zxx_data.append(Zxx)
+
+f,t,Zxx = signal.stft(data[800 : 900], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+Zxx = np.abs(Zxx)
+Zxx = np.log(Zxx)
+Zxx_data.append(Zxx)
+
+f,t,Zxx = signal.stft(data[900 : 1000], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+Zxx = np.abs(Zxx)
+Zxx = np.log(Zxx)
+Zxx_data.append(Zxx)
 
 print(Zxx.shape)
 
@@ -107,7 +151,7 @@ def KMeans(X, k,seed):
 
 
 #PCA
-W_p, Z_p = PCA(X_train, 64, False)
+W_p, Z_p = PCA(X, 64, False)
 
 #KMeans
 ccs, assignments = KMeans(Z_p, 10, 0)
