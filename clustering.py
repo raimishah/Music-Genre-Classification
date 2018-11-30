@@ -39,21 +39,23 @@ print(data.shape)
 
 sampling_rate = 22050
 Zxx_data = []
-#for i in range(len(genres_paths)):
+for i in range(len(genres_paths)):
 #for i in range(0, 1):
-#    f,t,Zxx = signal.stft(data[i*100 : (i + 1) * 100], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
-#    Zxx = np.abs(Zxx)
-#    Zxx = np.log(Zxx)
-#    Zxx_data.append(Zxx)
-#f,t,Zxx = signal.stft(data[0 : 100], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
-#Zxx = np.abs(Zxx)
-#Zxx = np.log(Zxx)
-#Zxx_data.append(Zxx)
+    f,t,Zxx = signal.stft(data[i*100 : (i + 1) * 100], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+    Zxx = np.abs(Zxx)
+    Zxx = np.log(Zxx)
+    Zxx_data.append(Zxx)
 
-#f,t,Zxx = signal.stft(data[100 : 200], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
-#Zxx = np.abs(Zxx)
-#Zxx = np.log(Zxx)
-#Zxx_data.append(Zxx)
+'''
+f,t,Zxx = signal.stft(data[0 : 100], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+Zxx = np.abs(Zxx)
+Zxx = np.log(Zxx)
+Zxx_data.append(Zxx)
+
+f,t,Zxx = signal.stft(data[100 : 200], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
+Zxx = np.abs(Zxx)
+Zxx = np.log(Zxx)
+Zxx_data.append(Zxx)
 
 f,t,Zxx = signal.stft(data[200 : 300], fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
 Zxx = np.abs(Zxx)
@@ -89,7 +91,7 @@ f,t,Zxx = signal.stft(data[900 : 1000], fs = sampling_rate, window = 'hann', npe
 Zxx = np.abs(Zxx)
 Zxx = np.log(Zxx)
 Zxx_data.append(Zxx)
-
+'''
 print(Zxx.shape)
 
 #pca
