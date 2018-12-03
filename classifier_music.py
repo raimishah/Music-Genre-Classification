@@ -11,16 +11,40 @@ import matplotlib
 import matplotlib.pyplot as plt
 import os
 from PIL import Image
+import pickle
+import sys
 
 
 # define a PCA function to use (Lecture 5 - Slide 17)
 # COV = (1/K)(X - X_mean).(X - X_mean)^T
 def PCA(X,n): 
-	X_2 = X - np.mean(X,axis=1,keepdims=True)    							# removed the mean
-	COV = (X_2.dot(X_2.T))/(X_2.shape[1]-1)        							# computed the covariance matrix  
-	eigenvalues, eigenvecs = scipy.sparse.linalg.eigsh(COV,k=n)  		    # Got the eigenvectors and eigenvalues
-	W = np.diag(1./(np.sqrt(eigenvalues))).dot(eigenvecs.T)                 # Lecture 5 - Slide 18 --> W = diag(eigenvalues^-1)*U^T
-	return W
+    X_2 = X - np.mean(X,axis=1,keepdims=True)                               # removed the mean
+    COV = (X_2.dot(X_2.T))/(X_2.shape[1]-1)                                 # computed the covariance matrix  
+    eigenvalues, eigenvecs = scipy.sparse.linalg.eigsh(COV,k=n)             # Got the eigenvectors and eigenvalues
+    W = np.diag(1./(np.sqrt(eigenvalues))).dot(eigenvecs.T)                 # Lecture 5 - Slide 18 --> W = diag(eigenvalues^-1)*U^T
+    return W
+
+def ICA(X):  
+    I_2 = np.identity(X.shape[0])
+    W = np.identity(X.shape[0])
+    const = 0.0001
+    N = X.shape[1]
+    for i in range(500):
+        Y = W.dot(X)
+        delta_w = (N*I_2-2*np.tanh(Y).dot(Y.T)).dot(W)
+        W += const*delta_w
+
+    return W
+
+def NMF(X,n): 
+    Dim1 = X.shape[0]
+    Dim2 = X.shape[1]
+    H = np.random.rand(n,Dim2)
+    W = np.random.rand(Dim1,n) # so that X = W.H
+    for i in range(100): 
+        H = H * ((W.T.dot(X)) / (0.000001 + W.T.dot(W).dot(H))) # prevent division by 0
+        W = W * ((X.dot(H.T)) / (0.000001 + W.dot(H).dot(H.T)))
+    return W
 
 def gauss_classifier(X):
         N = X.shape[1]
@@ -39,13 +63,26 @@ def log_prob(X,g):
     probs = (-1*np.log(np.linalg.det(IC)) + M*np.log(2*np.pi) + np.sum((IC).dot(X_2)*X_2,axis=0))*(-1/2)
     return probs
 
+# function to compute classification accuracy
+def classical_accuracy(pred,Y_test):
+    test_ind = np.where(Y_test == 1)[0] # get the indices of data that has classical label
+    pred_num = np.sum(pred[test_ind] == Y_test[test_ind]) #number of correct predictions
+    acc = (pred_num / test_ind.shape[0])*100
+    return acc
+def one_second_result(probs,fps):
+    probs = np.convolve(probs,np.ones(fps))
+    return probs
+# Accuracy function to compute classifier accuracy 
+def get_acc(pred, y_test):
+    return np.sum(y_test==pred)/len(y_test)*100
+'''
+
 classical_path = 'genres/classical'
 metal_path = 'genres/metal'
 blues_path = 'genres/blues'
 pop_path = 'genres/pop'
 country_path = 'genres/country'
 disco_path = 'genres/disco'
-hiphop_path = 'genres/hiphop'
 
 
 data_classical = []
@@ -54,7 +91,6 @@ data_blues = []
 data_pop = []
 data_country = []
 data_disco = []
-data_hiphop = []
 sampling_rate = 22050
 num_tracks = 100
 
@@ -121,15 +157,6 @@ for file in os.listdir(disco_path):
     #print(disco.shape)
     data_disco.append(disco)
 
-for file in os.listdir(hiphop_path):
-    path = os.path.join(hiphop_path,file)
-    fs,hiphop = wavread(path)
-    hiphop = hiphop.astype(float)
-    #hiphop = np.pad(hiphop, (0, 700000 - hiphop.shape[0]), 'constant', constant_values=(1, 1))
-    shape = hiphop.shape[0] - 400000
-    hiphop = hiphop[:-shape]
-    #print(hiphop.shape)
-    data_hiphop.append(hiphop)
 
 data_classical = np.array(data_classical)
 data_metal = np.array(data_metal)
@@ -137,7 +164,6 @@ data_blues = np.array(data_blues)
 data_pop = np.array(data_pop)
 data_country = np.array(data_country)
 data_disco = np.array(data_disco)
-data_hiphop = np.array(data_hiphop)
 
 print('Musical data read... Starting spectogram computations...')
 
@@ -166,10 +192,6 @@ f,t,Zxx_disco = signal.stft(data_disco, fs = sampling_rate, window = 'hann', npe
 Zxx_disco = np.abs(Zxx_disco)
 Zxx_disco = np.log(Zxx_disco)
 
-f,t,Zxx_hiphop = signal.stft(data_hiphop, fs = sampling_rate, window = 'hann', nperseg = 1024, noverlap=768)
-Zxx_hiphop = np.abs(Zxx_hiphop)
-Zxx_hiphop = np.log(Zxx_hiphop)
-
 print('Done with spectogram computations...')
 
 mix = np.arange(0, num_tracks, 1) # for random sampling of data
@@ -181,7 +203,6 @@ Train_blues = np.hstack(Zxx_blues[mix[10:]]) # random 90% of metal data sampled
 Train_pop = np.hstack(Zxx_pop[mix[10:]]) # random 90% of metal data sampled
 Train_country = np.hstack(Zxx_country[mix[10:]]) # random 90% of metal data sampled
 Train_disco = np.hstack(Zxx_disco[mix[10:]]) # random 90% of metal data sampled
-Train_hiphop = np.hstack(Zxx_hiphop[mix[10:]]) # random 90% of metal data sampled
 
 
 
@@ -191,14 +212,11 @@ Test_blues = np.hstack(Zxx_blues[mix[:10]])
 Test_pop = np.hstack(Zxx_pop[mix[:10]])
 Test_country = np.hstack(Zxx_country[mix[:10]])
 Test_disco = np.hstack(Zxx_disco[mix[:10]])
-Test_hiphop = np.hstack(Zxx_hiphop[mix[:10]])
 
 
 
-X_train = np.hstack((Train_classical,Train_metal,Train_blues,Train_pop,Train_country,Train_disco)) # stack'em
-X_test = np.hstack((Test_classical,Test_metal,Test_blues,Test_pop,Test_country,Test_disco)) #stack'em
-
-print(X_train.shape,X_test.shape)
+X_train = np.hstack((Train_classical,Train_metal,Train_blues,Train_pop,Train_country)) # stack'em
+X_test = np.hstack((Test_classical,Test_metal,Test_blues,Test_pop,Test_country)) #stack'em
 
 # Create labels for testing
 # 1 is classical and 0 if metal
@@ -208,10 +226,9 @@ blues_labels = np.ones(Train_blues.shape[1]) + np.ones(Train_blues.shape[1])
 pop_labels = np.ones(Train_pop.shape[1]) + np.ones(Train_pop.shape[1]) + np.ones(Train_pop.shape[1])
 country_labels = np.ones(Train_country.shape[1]) + np.ones(Train_country.shape[1]) + np.ones(Train_country.shape[1]) + np.ones(Train_country.shape[1])
 disco_labels = np.ones(Train_disco.shape[1]) + np.ones(Train_disco.shape[1]) + np.ones(Train_disco.shape[1]) + np.ones(Train_disco.shape[1]) + np.ones(Train_disco.shape[1])
-hiphop_labels = np.ones(Train_hiphop.shape[1]) + np.ones(Train_hiphop.shape[1]) + np.ones(Train_hiphop.shape[1]) + np.ones(Train_hiphop.shape[1]) + np.ones(Train_hiphop.shape[1]) + np.ones(Train_hiphop.shape[1])
 
 
-Y_train = np.hstack((classical_labels,metal_labels,blues_labels,pop_labels,country_labels,disco_labels))
+Y_train = np.hstack((classical_labels,metal_labels,blues_labels,pop_labels,country_labels))
 
 classical_labels = np.ones(Test_classical.shape[1])
 metal_labels = np.zeros(Test_metal.shape[1])
@@ -219,13 +236,57 @@ blues_labels = np.ones(Test_blues.shape[1]) + np.ones(Test_blues.shape[1])
 pop_labels = np.ones(Test_pop.shape[1]) + np.ones(Test_pop.shape[1]) + np.ones(Test_pop.shape[1])
 country_labels = np.ones(Test_country.shape[1]) + np.ones(Test_country.shape[1]) + np.ones(Test_country.shape[1]) + np.ones(Test_country.shape[1])
 disco_labels = np.ones(Test_disco.shape[1]) + np.ones(Test_disco.shape[1]) + np.ones(Test_disco.shape[1]) + np.ones(Test_disco.shape[1]) + np.ones(Test_disco.shape[1])
-hiphop_labels = np.ones(Test_hiphop.shape[1]) + np.ones(Test_hiphop.shape[1]) + np.ones(Test_hiphop.shape[1]) + np.ones(Test_hiphop.shape[1]) + np.ones(Test_hiphop.shape[1]) + np.ones(Test_hiphop.shape[1])
 
 
-Y_test = np.hstack((classical_labels,metal_labels,blues_labels,pop_labels,country_labels,disco_labels))
+Y_test = np.hstack((classical_labels,metal_labels,blues_labels,pop_labels,country_labels))
+
+def save_as_pickled_object(obj, filepath):
+    """
+    This is a defensive way to write pickle.write, allowing for very large files on all platforms
+    """
+    print('Saving data...')
+    max_bytes = 2**31 - 1
+    bytes_out = pickle.dumps(obj)
+    n_bytes = sys.getsizeof(bytes_out)
+    with open(filepath, 'wb') as f_out:
+        for idx in range(0, n_bytes, max_bytes):
+            f_out.write(bytes_out[idx:idx+max_bytes])
+
+save_as_pickled_object(X_train,'X_train.pkl')
+save_as_pickled_object(Y_train,'Y_train.pkl')
+save_as_pickled_object(X_test,'X_test.pkl')
+save_as_pickled_object(Y_test,'Y_test.pkl')
+'''
+
+print('Loading train and test data...')
+def try_to_load_as_pickled_object_or_None(filepath):
+    """
+    This is a defensive way to write pickle.load, allowing for very large files on all platforms
+    """
+    max_bytes = 2**31 - 1
+    try:
+        input_size = os.path.getsize(filepath)
+        bytes_in = bytearray(0)
+        with open(filepath, 'rb') as f_in:
+            for _ in range(0, input_size, max_bytes):
+                bytes_in += f_in.read(max_bytes)
+        obj = pickle.loads(bytes_in)
+    except:
+        return None
+    return obj
+
+X_train = try_to_load_as_pickled_object_or_None('X_train.pkl')
+Y_train = try_to_load_as_pickled_object_or_None('Y_train.pkl')
+X_test = try_to_load_as_pickled_object_or_None('X_test.pkl')
+Y_test = try_to_load_as_pickled_object_or_None('Y_test.pkl')
+
+
 
 print('Starting PCA...')
-W = PCA(X_train,64)
+W = PCA(X_train,128)
+# Uncomment below to test NMF
+#W = NMF(X_train,128)
+
 
 '''
 Z_classical = W.dot(Train_classical - np.mean(Train_classical,axis=1,keepdims=True))
@@ -238,30 +299,27 @@ Z_blues = W.dot(Train_blues - np.mean(Train_blues,axis=1,keepdims=True))
 gauss_blues = gauss_classifier(Z_blues)
 '''
 
-# function to compute classification accuracy
-def classical_accuracy(pred,Y_test):
-    test_ind = np.where(Y_test == 1)[0] # get the indices of data that has classical label
-    pred_num = np.sum(pred[test_ind] == Y_test[test_ind]) #number of correct predictions
-    acc = (pred_num / test_ind.shape[0])*100
-    return acc
-def one_second_result(probs,fps):
-    probs = np.convolve(probs,np.ones(fps))
-    return probs
-# Accuracy function to compute classifier accuracy 
-def get_acc(pred, y_test):
-    return np.sum(y_test==pred)/len(y_test)*100
-
-print('Computing likelihoods for each data point...')
+print('Multiplication after PCA...')
 Z_train = W.dot(X_train - np.mean(X_train,axis=1,keepdims=True))
 Z_test = W.dot(X_test - np.mean(X_test,axis=1,keepdims=True))
+
+## Uncomment below to test ICA ##
+print('Using ICA on the spectogram PCA...')
+#W_ica = ICA(Z_train)
+#Z_train = W_ica.dot(Z_train)
+#Z_test = W_ica.dot(Z_test)
+##
+
+print('Computing likelihoods for each data point...')
 # Compute likelihoods for classical and music
 '''
 classical_probs = log_prob(Z_test,gauss_classical)
 metal_probs = log_prob(Z_test,gauss_metal)
 blues_probs = log_prob(Z_test,gauss_blues)
 '''
-G = [gauss_classifier(Z_train[:,Y_train == j]) for j in [0,1,2,3,4,5]]
+G = [gauss_classifier(Z_train[:,Y_train == j]) for j in [0,1,2,3,4]]
 probs = [log_prob(Z_test, i) for i in G]
+#probs = one_second_result(probs,fps=26)
 pred = np.argmax(probs, axis=0)
 print('The accuracy of the classifier is: %f' %(get_acc(pred,Y_test)))
 
@@ -312,8 +370,8 @@ if (classical_accuracy(result,np.ones(result.shape[0]))) < 50:
 else: 
     print('I am pretty sure that this is CLASSICAL MUSIC!')
 
-'''
 
+'''
 
 
 
