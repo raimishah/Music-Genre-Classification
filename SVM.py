@@ -20,5 +20,5 @@ from sklearn.svm import SVC
 def support_vector_machine(X_train,Y_train,X_test,Y_test):
 	svm = SVC(C = 100,gamma=0.08)
 	svm.fit(X_train.transpose(),Y_train)
-	print("SVM Training Score: {:.3f}".format(svm.score(X_train.transpose(),Y_train)))
-	print("SVM Test score: {:.3f}".format(svm.score(X_test.transpose(),Y_test)))
+	print("SVM Training Score: {:.3f}".format(svm.score(X_train,Y_train)))
+	print("SVM Test score: {:.3f}".format(svm.score(X_test,Y_test)))

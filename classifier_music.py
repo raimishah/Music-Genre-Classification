@@ -16,22 +16,29 @@ import sys
 import librosa
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
 from gaussian import get_gaussian
 from knn import nearest_neighbor
 from SVM import support_vector_machine
 from confusion_matrix import confusion
 import sklearn
+import pandas as pd
 
 
 
 # define a PCA function to use (Lecture 5 - Slide 17)
 # COV = (1/K)(X - X_mean).(X - X_mean)^T
-def PCA(X,n): 
-    X_2 = X - np.mean(X,axis=1,keepdims=True)                               # removed the mean
-    COV = (X_2.dot(X_2.T))/(X_2.shape[1]-1)                                 # computed the covariance matrix  
-    eigenvalues, eigenvecs = scipy.sparse.linalg.eigsh(COV,k=n)             # Got the eigenvectors and eigenvalues
-    W = np.diag(1./(np.sqrt(eigenvalues))).dot(eigenvecs.T)                 # Lecture 5 - Slide 18 --> W = diag(eigenvalues^-1)*U^T
-    return W
+def PCA(X, n):
+    # getting 0 mean
+    X_ = X - np.mean(X, axis = 1, keepdims = True)
+    cov_X = (X_ @ X_.T) / (X.shape[1] - 1)
+    evals, evecs = scipy.sparse.linalg.eigsh(cov_X, n)
+    evals = np.sqrt(evals)
+    evals = 1 / evals
+    evals = np.diag(evals)
+    W = evals.dot(evecs.T)
+    Z = W.dot(X_)    
+    return W, Z
 
 def NMF(X,n): 
     Dim1 = X.shape[0]
@@ -68,24 +75,53 @@ def try_to_load_as_pickled_object_or_None(filepath):
     return obj
 
 ############################################################################################################################################################################
-GENRES=['METAL', 'CLASSICAL', 'BLUES', 'POP', 'COUNTRY']
 
 print('Loading train and test data...')
-X_train = try_to_load_as_pickled_object_or_None('X_train.pkl')
-Y_train = try_to_load_as_pickled_object_or_None('Y_train.pkl')
-X_test = try_to_load_as_pickled_object_or_None('X_test.pkl')
-Y_test = try_to_load_as_pickled_object_or_None('Y_test.pkl')
+X_all = try_to_load_as_pickled_object_or_None('data.pkl')
+Y_all = try_to_load_as_pickled_object_or_None('labels.pkl')
+
 
 print('Dimensionality reduction..')
-W = PCA(X_train,64)
+
+X_all = X_all.T
+print(X_all.shape)
+W,Z_p = PCA(X_all,3)
+Z_p = Z_p.T
+print(Z_p.shape)
+
+X_train, X_test, Y_train, Y_test = train_test_split(Z_p, Y_all, test_size = 0.5)
+
 # Uncomment below to test NMF
 #W = NMF(X_train,128)
-Z_train = W.dot(X_train - np.mean(X_train,axis=1,keepdims=True))
-Z_test = W.dot(X_test - np.mean(X_test,axis=1,keepdims=True))
+#Z_p = W.dot(X_all - np.mean(X_all,axis=1,keepdims=True))
 
+#first we need to map colors on labels
+#plot for 2d
+#plt.scatter(Z_train[1, :], Z_train[0, :], color = 'r')
+#plt.show()
+
+#plot for 2d
+
+for i in range(len(Y_all)):
+    print(i)
+    if Y_all[i] == 0:
+        plt.scatter(Z_p[i, :][1], Z_p[i, :][0], color = 'r')
+    elif Y_all[i] == 1:
+        plt.scatter(Z_p[i, :][1], Z_p[i, :][0], color = 'b')
+    elif Y_all[i] == 2:
+        plt.scatter(Z_p[i, :][1], Z_p[i, :][0], color = 'g')
+    elif Y_all[i] == 3:
+        plt.scatter(Z_p[i, :][1], Z_p[i, :][0], color = 'k')
+    elif Y_all[i] == 4:
+        plt.scatter(Z_p[i, :][1], Z_p[i, :][0], color = 'c')
+
+plt.show()
 
 # Gaussian Classifier
-pred = get_gaussian(Z_train,Y_train,Z_test)
+print(X_train.shape)
+print(Y_train.shape)
+print(Y_test)
+pred = get_gaussian(X_train.T,Y_train,X_test.T)
 print('The accuracy of the gaussian classifier is: %f' %(get_acc(pred,Y_test)))
 confusion(Y_test,pred)
 

@@ -17,10 +17,8 @@ import librosa
 from sklearn.neighbors import KNeighborsClassifier
 
 
-
-
 def nearest_neighbor(X_train,Y_train,X_test,Y_test):
 	knn = KNeighborsClassifier(n_neighbors = 8)
 	knn.fit(X_train.transpose(),Y_train)
-	print("KNN Training Score: {:.3f}".format(knn.score(X_train.transpose(),Y_train)))
-	print("KNN Test score: {:.3f}".format(knn.score(X_test.transpose(),Y_test)))
+	print("KNN Training Score: {:.3f}".format(knn.score(X_train,Y_train)))
+	print("KNN Test score: {:.3f}".format(knn.score(X_test,Y_test)))
