@@ -23,6 +23,9 @@ from SVM import support_vector_machine
 from confusion_matrix import confusion
 import sklearn
 import pandas as pd
+from train import train_net
+from mpl_toolkits.mplot3d import Axes3D
+
 
 
 
@@ -85,11 +88,11 @@ print('Dimensionality reduction..')
 
 X_all = X_all.T
 print(X_all.shape)
-W,Z_p = PCA(X_all,3)
+W,Z_p = PCA(X_all,12)
 Z_p = Z_p.T
 print(Z_p.shape)
 
-X_train, X_test, Y_train, Y_test = train_test_split(Z_p, Y_all, test_size = 0.5)
+X_train, X_test, Y_train, Y_test = train_test_split(Z_p, Y_all, test_size = 0.1)
 
 # Uncomment below to test NMF
 #W = NMF(X_train,128)
@@ -101,21 +104,20 @@ X_train, X_test, Y_train, Y_test = train_test_split(Z_p, Y_all, test_size = 0.5)
 #plt.show()
 
 #plot for 2d
-
+'''
 for i in range(len(Y_all)):
-    print(i)
     if Y_all[i] == 0:
-        plt.scatter(Z_p[i, :][1], Z_p[i, :][0], color = 'r')
+        plt.scatter(Z_p[i, 1], Z_p[i, 0], color = 'r')
     elif Y_all[i] == 1:
-        plt.scatter(Z_p[i, :][1], Z_p[i, :][0], color = 'b')
+        plt.scatter(Z_p[i, 1], Z_p[i, 0], color = 'b')
     elif Y_all[i] == 2:
-        plt.scatter(Z_p[i, :][1], Z_p[i, :][0], color = 'g')
+        plt.scatter(Z_p[i, 1], Z_p[i, 0], color = 'g')
     elif Y_all[i] == 3:
-        plt.scatter(Z_p[i, :][1], Z_p[i, :][0], color = 'k')
+        plt.scatter(Z_p[i, 1], Z_p[i, 0], color = 'k')
     elif Y_all[i] == 4:
-        plt.scatter(Z_p[i, :][1], Z_p[i, :][0], color = 'c')
-
-plt.show()
+        plt.scatter(Z_p[i, 1], Z_p[i, 0], color = 'c')
+'''
+#plt.show()
 
 # Gaussian Classifier
 print(X_train.shape)
@@ -125,11 +127,30 @@ pred = get_gaussian(X_train.T,Y_train,X_test.T)
 print('The accuracy of the gaussian classifier is: %f' %(get_acc(pred,Y_test)))
 confusion(Y_test,pred)
 
+
+#train_net(X_train.T,Y_train,X_test.T,Y_test)
+
+#plot for 3d
+fig = plt.figure()
+ax = Axes3D(fig)
+
+for i in range(len(Y_all)):
+    if Y_all[i] == 0:
+        ax.scatter(Z_p[i, :][0], Z_p[i, :][1], Z_p[i, :][2], c = 'b', marker='o')
+    elif Y_all[i] == 1:
+        ax.scatter(Z_p[i, :][0], Z_p[i, :][1], Z_p[i, :][2], c = 'r', marker='o')
+    elif Y_all[i] == 2:
+        ax.scatter(Z_p[i, :][0], Z_p[i, :][1], Z_p[i, :][2], c = 'g', marker='o')
+    elif Y_all[i] == 3:
+        ax.scatter(Z_p[i, :][0], Z_p[i, :][1], Z_p[i, :][2], c = 'c', marker='o')
+    elif Y_all[i] == 4:
+        ax.scatter(Z_p[i, :][0], Z_p[i, :][1], Z_p[i, :][2], c = 'k', marker='o')
+plt.show()
 # KNN
-#nearest_neighbor(Z_train,Y_train,Z_test,Y_test)
+nearest_neighbor(X_train,Y_train,X_test,Y_test)
 
 # SVM 
-#support_vector_machine(Z_train,Y_train,Z_test,Y_test)
+support_vector_machine(X_train,Y_train,X_test,Y_test)
 
 
 
