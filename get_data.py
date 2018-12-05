@@ -21,7 +21,6 @@ metal_path = 'genres/metal'
 blues_path = 'genres/blues'
 pop_path = 'genres/pop'
 country_path = 'genres/country'
-disco_path = 'genres/disco'
 
 
 data_classical = []
@@ -29,13 +28,14 @@ data_metal = []
 data_blues = []
 data_pop = []
 data_country = []
-data_disco = []
 sampling_rate = 22050
 num_tracks = 100
 
 # First, load the classical music dataset
 for file in os.listdir(classical_path):
     path = os.path.join(classical_path,file)
+    if '.wav' not in path:
+        continue
     y, sr = librosa.load(path, mono=True)
     S = librosa.feature.melspectrogram(y, sr=sr,n_mels=128,n_fft=2048,hop_length=1024)
     S = librosa.power_to_db(S,ref=np.max)
@@ -47,6 +47,8 @@ for file in os.listdir(classical_path):
 # Next, load the music dataset    
 for file in os.listdir(metal_path):
     path = os.path.join(metal_path,file)
+    if '.wav' not in path:
+        continue
     y, sr = librosa.load(path, mono=True)
     S = librosa.feature.melspectrogram(y, sr=sr,n_mels=128,n_fft=2048,hop_length=1024)
     S = librosa.power_to_db(S,ref=np.max)
@@ -57,6 +59,8 @@ for file in os.listdir(metal_path):
 
 for file in os.listdir(blues_path):
     path = os.path.join(blues_path,file)
+    if '.wav' not in path:
+        continue
     y, sr = librosa.load(path, mono=True)
     S = librosa.feature.melspectrogram(y, sr=sr,n_mels=128,n_fft=2048,hop_length=1024)
     S = librosa.power_to_db(S,ref=np.max)
@@ -67,6 +71,8 @@ for file in os.listdir(blues_path):
 
 for file in os.listdir(pop_path):
     path = os.path.join(pop_path,file)
+    if '.wav' not in path:
+        continue
     y, sr = librosa.load(path, mono=True)
     S = librosa.feature.melspectrogram(y, sr=sr,n_mels=128,n_fft=2048,hop_length=1024)
     S = librosa.power_to_db(S,ref=np.max)
@@ -77,6 +83,8 @@ for file in os.listdir(pop_path):
 
 for file in os.listdir(country_path):
     path = os.path.join(country_path,file)
+    if '.wav' not in path:
+        continue
     y, sr = librosa.load(path, mono=True)
     S = librosa.feature.melspectrogram(y, sr=sr,n_mels=128,n_fft=2048,hop_length=1024)
     S = librosa.power_to_db(S,ref=np.max)
@@ -85,22 +93,12 @@ for file in os.listdir(country_path):
     S = S[:,:-shape]
     data_country.append(S)
 
-for file in os.listdir(disco_path):
-    y, sr = librosa.load(path, mono=True)
-    S = librosa.feature.melspectrogram(y, sr=sr,n_mels=128,n_fft=2048,hop_length=1024)
-    S = librosa.power_to_db(S,ref=np.max)
-    #S = librosa.feature.mfcc(S=S,sr=sr)
-    shape = S.shape[1] - 640
-    S = S[:,:-shape]
-    data_disco.append(S)
-
 
 data_classical = np.array(data_classical)
 data_metal = np.array(data_metal)
 data_blues = np.array(data_blues)
 data_pop = np.array(data_pop)
 data_country = np.array(data_country)
-data_disco = np.array(data_disco)
 
 mix = np.arange(0, num_tracks, 1) # for random sampling of data
 np.random.seed()
@@ -111,7 +109,6 @@ Train_metal = np.hstack(data_metal[mix[10:]]) # random 90% of metal data sampled
 Train_blues = np.hstack(data_blues[mix[10:]]) # random 90% of metal data sampled
 Train_pop = np.hstack(data_pop[mix[10:]]) # random 90% of metal data sampled
 Train_country = np.hstack(data_country[mix[10:]]) # random 90% of metal data sampled
-Train_disco = np.hstack(data_disco[mix[10:]]) # random 90% of metal data sampled
 
 
 
@@ -120,7 +117,6 @@ Test_metal = np.hstack(data_metal[mix[:10]])
 Test_blues = np.hstack(data_blues[mix[:10]])
 Test_pop = np.hstack(data_pop[mix[:10]])
 Test_country = np.hstack(data_country[mix[:10]])
-Test_disco = np.hstack(data_disco[mix[:10]])
 
 
 print(Train_classical.shape)
@@ -133,7 +129,6 @@ classical_labels = np.ones(Train_classical.shape[1])
 blues_labels = np.ones(Train_blues.shape[1]) + np.ones(Train_blues.shape[1])
 pop_labels = np.ones(Train_pop.shape[1]) + np.ones(Train_pop.shape[1]) + np.ones(Train_pop.shape[1])
 country_labels = np.ones(Train_country.shape[1]) + np.ones(Train_country.shape[1]) + np.ones(Train_country.shape[1]) + np.ones(Train_country.shape[1])
-disco_labels = np.ones(Train_disco.shape[1]) + np.ones(Train_disco.shape[1]) + np.ones(Train_disco.shape[1]) + np.ones(Train_disco.shape[1]) + np.ones(Train_disco.shape[1])
 
 
 Y_train = np.hstack((metal_labels,classical_labels,blues_labels,pop_labels,country_labels))
@@ -143,7 +138,6 @@ classical_labels = np.ones(Test_classical.shape[1])
 blues_labels = np.ones(Test_blues.shape[1]) + np.ones(Test_blues.shape[1])
 pop_labels = np.ones(Test_pop.shape[1]) + np.ones(Test_pop.shape[1]) + np.ones(Test_pop.shape[1])
 country_labels = np.ones(Test_country.shape[1]) + np.ones(Test_country.shape[1]) + np.ones(Test_country.shape[1]) + np.ones(Test_country.shape[1])
-disco_labels = np.ones(Test_disco.shape[1]) + np.ones(Test_disco.shape[1]) + np.ones(Test_disco.shape[1]) + np.ones(Test_disco.shape[1]) + np.ones(Test_disco.shape[1])
 
 
 Y_test = np.hstack((metal_labels,classical_labels,blues_labels,pop_labels,country_labels))
