@@ -103,6 +103,7 @@ data_country = np.array(data_country)
 data_disco = np.array(data_disco)
 
 mix = np.arange(0, num_tracks, 1) # for random sampling of data
+np.random.seed()
 np.random.shuffle(mix)
 
 Train_classical = np.hstack(data_classical[mix[10:]]) # random 90% of classical data sampled
