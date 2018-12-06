@@ -23,7 +23,7 @@ from SVM import support_vector_machine
 from confusion_matrix import confusion
 import sklearn
 import pandas as pd
-from train import train_net
+from train import train_torch
 from mpl_toolkits.mplot3d import Axes3D
 
 
@@ -88,7 +88,7 @@ print('Dimensionality reduction..')
 
 X_all = X_all.T
 print(X_all.shape)
-W,Z_p = PCA(X_all,12)
+W,Z_p = PCA(X_all,16)
 Z_p = Z_p.T
 print(Z_p.shape)
 
@@ -125,11 +125,11 @@ print(Y_train.shape)
 print(Y_test)
 pred = get_gaussian(X_train.T,Y_train,X_test.T)
 print('The accuracy of the gaussian classifier is: %f' %(get_acc(pred,Y_test)))
-confusion(Y_test,pred)
+#confusion(Y_test,pred)
 
 
 #train_net(X_train.T,Y_train,X_test.T,Y_test)
-
+'''
 #plot for 3d
 fig = plt.figure()
 ax = Axes3D(fig)
@@ -146,12 +146,15 @@ for i in range(len(Y_all)):
     elif Y_all[i] == 4:
         ax.scatter(Z_p[i, :][0], Z_p[i, :][1], Z_p[i, :][2], c = 'k', marker='o')
 plt.show()
+'''
 # KNN
-nearest_neighbor(X_train,Y_train,X_test,Y_test)
+#nearest_neighbor(X_train,Y_train,X_test,Y_test)
 
 # SVM 
-support_vector_machine(X_train,Y_train,X_test,Y_test)
+#support_vector_machine(X_train,Y_train,X_test,Y_test)
 
+# Pytorch Neural Net 
+train_torch(X_train,Y_train,X_test,Y_test)
 
 
 
