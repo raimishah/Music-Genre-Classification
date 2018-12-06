@@ -29,3 +29,4 @@ def support_vector_machine(X_train,Y_train,X_test,Y_test):
 	print(Y_test)
 	print("SVM Training Score: {:.3f}".format(get_acc(pred_train,Y_train)))
 	print("SVM Test score: {:.3f}".format(get_acc(pred_test,Y_test)))
+	return svm

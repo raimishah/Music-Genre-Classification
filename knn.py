@@ -19,8 +19,8 @@ from sklearn.neighbors import KNeighborsClassifier
 
 def nearest_neighbor(X_train,Y_train,X_test,Y_test):
 	
-	knn = KNeighborsClassifier(n_neighbors = 2)
+	knn = KNeighborsClassifier(n_neighbors = 3)
 	knn.fit(X_train,Y_train)
 	print("KNN Training Score: {:.3f}".format(knn.score(X_train,Y_train)))
 	print("KNN Test score: {:.3f}".format(knn.score(X_test,Y_test)))
-	
+	return knn

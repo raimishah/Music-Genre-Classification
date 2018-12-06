@@ -17,13 +17,13 @@ from model import ConvNet
 
 def train_torch(X_train,Y_train,X_test,Y_test): 
     print(X_train.shape)
-    input_size = int(np.sqrt(X_train.shape[1]))
-    #hidden_size = 8
+    input_size = 16
+    hidden_size = 8
     num_classes = 5
-    learning_rate = 0.001
-    num_epochs = 500
-    #model = NeuralNet(input_size, hidden_size, num_classes)
-    model = ConvNet(input_size, num_classes)
+    learning_rate = 0.00025
+    num_epochs = 12000
+    model = NeuralNet(input_size, hidden_size, num_classes)
+    #model = ConvNet(input_size, num_classes)
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate) 
     X_train = torch.from_numpy(X_train).float()
@@ -33,6 +33,8 @@ def train_torch(X_train,Y_train,X_test,Y_test):
     X_test = torch.FloatTensor(X_test)
     Y_test = torch.from_numpy(Y_test).long() 
 
+    train_loss = []
+    epochs = []
     for epoch in range(num_epochs):
         X_train = X_train
         # Forward pass
@@ -42,7 +44,11 @@ def train_torch(X_train,Y_train,X_test,Y_test):
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-        if (epoch+1) % 50 == 0:
+        if loss.item() < 0.001:
+            break
+        if (epoch+1) % 10 == 0:
+            train_loss.append(loss.item())
+            epochs.append(epoch+1)
             print ('Epoch [{}/{}], Loss: {:.4f}'.format(epoch+1, num_epochs, loss.item()))
 
     with torch.no_grad():
@@ -53,8 +59,12 @@ def train_torch(X_train,Y_train,X_test,Y_test):
         _, predicted = torch.max(outputs.data, 1)
         total += Y_test.size(0)
         correct += (predicted == Y_test).sum().item()
+    plt.plot(epochs,train_loss)
+    plt.show()
+    print('Accuracy of the network: {} %'.format(100 * correct / total))
+    return predicted
+    
 
-    print('Accuracy of the network on the 10000 test images: {} %'.format(100 * correct / total))
 
 
 

@@ -92,12 +92,10 @@ Y_all = try_to_load_as_pickled_object_or_None('labels.pkl')
 print('Dimensionality reduction..')
 
 X_all = X_all.T
-print(X_all.shape)
-W,Z_p = PCA(X_all, 256)
+W,Z_p = PCA(X_all, 16)
 Z_p = Z_p.T
-print(Z_p.shape)
 
-X_train, X_test, Y_train, Y_test = train_test_split(Z_p, Y_all, test_size = 0.1)
+X_train, X_test, Y_train, Y_test = train_test_split(Z_p, Y_all, test_size = 0.2)
 
 # Uncomment below to test NMF
 #W, Z_p = NMF(X_all.T,16)
@@ -123,13 +121,10 @@ for i in range(len(Y_all)):
         plt.scatter(Z_p[i, 1], Z_p[i, 0], color = 'k')
     elif Y_all[i] == 4:
         plt.scatter(Z_p[i, 1], Z_p[i, 0], color = 'c')
+plt.show()
 '''
-#plt.show()
 
 # Gaussian Classifier
-print(X_train.shape)
-print(Y_train.shape)
-print(Y_test)
 pred = get_gaussian(X_train.T,Y_train,X_test.T)
 print('The accuracy of the gaussian classifier is: %f' %(get_acc(pred,Y_test)))
 #confusion(Y_test,pred)
@@ -138,6 +133,7 @@ print('The accuracy of the gaussian classifier is: %f' %(get_acc(pred,Y_test)))
 #train_net(X_train.T,Y_train,X_test.T,Y_test)
 
 #plot for 3d
+'''
 fig = plt.figure()
 ax = Axes3D(fig)
 
@@ -153,17 +149,24 @@ for i in range(len(Y_all)):
     elif Y_all[i] == 4:
         ax.scatter(Z_p[i, :][0], Z_p[i, :][1], Z_p[i, :][2], c = 'k', marker='o')
 #plt.show()
+'''
 
 #KNN
-nearest_neighbor(X_train,Y_train,X_test,Y_test)
+#knn = nearest_neighbor(X_train,Y_train,X_test,Y_test)
+#pred = knn.predict(X_test)
+#confusion(Y_test,pred)
 
 # SVM 
-support_vector_machine(X_train,Y_train,X_test,Y_test)
+#svm = support_vector_machine(X_train,Y_train,X_test,Y_test)
+#pred = svm.predict(X_test)
+#confusion(Y_test,pred)
 
 # Neural-Net
-train_torch(X_train,Y_train,X_test,Y_test)
+pred = train_torch(X_train,Y_train,X_test,Y_test)
+confusion(Y_test,pred)
 
 #KMeans
+'''
 for i in range(10):
     kmeans = lib_KMeans(Z_p, 5, 0)
     #print(Y_all)
@@ -182,7 +185,7 @@ for i in range(10):
     gmm_pred = gmm.predict(X_test)
     fowlkes_scores = metrics.fowlkes_mallows_score(Y_test, gmm_pred)
     print('gmm accuracy : ' + str(fowlkes_scores))
-
+'''
 
 
 
