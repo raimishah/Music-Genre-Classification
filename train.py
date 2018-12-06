@@ -12,15 +12,18 @@ import copy
 import pickle
 from torch.autograd import Variable
 from model import NeuralNet
+from model import ConvNet
 
 
 def train_torch(X_train,Y_train,X_test,Y_test): 
-    input_size = 16
-    hidden_size = 8
+    print(X_train.shape)
+    input_size = int(np.sqrt(X_train.shape[1]))
+    #hidden_size = 8
     num_classes = 5
-    learning_rate = 0.00001
-    num_epochs = 45000
-    model = NeuralNet(input_size, hidden_size, num_classes)
+    learning_rate = 0.001
+    num_epochs = 500
+    #model = NeuralNet(input_size, hidden_size, num_classes)
+    model = ConvNet(input_size, num_classes)
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate) 
     X_train = torch.from_numpy(X_train).float()
@@ -31,7 +34,7 @@ def train_torch(X_train,Y_train,X_test,Y_test):
     Y_test = torch.from_numpy(Y_test).long() 
 
     for epoch in range(num_epochs):
-        X_train = X_train.reshape(-1, 4*4)
+        X_train = X_train
         # Forward pass
         outputs = model(X_train)
         loss = criterion(outputs, Y_train)
@@ -45,7 +48,7 @@ def train_torch(X_train,Y_train,X_test,Y_test):
     with torch.no_grad():
         correct = 0
         total = 0
-        X_test = X_test.reshape(-1, 4*4)
+        #X_test = X_test.reshape(-1, 4*4)
         outputs = model(X_test)
         _, predicted = torch.max(outputs.data, 1)
         total += Y_test.size(0)

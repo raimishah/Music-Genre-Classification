@@ -93,7 +93,7 @@ print('Dimensionality reduction..')
 
 X_all = X_all.T
 print(X_all.shape)
-W,Z_p = PCA(X_all, 16)
+W,Z_p = PCA(X_all, 256)
 Z_p = Z_p.T
 print(Z_p.shape)
 
