@@ -29,6 +29,7 @@ import pandas as pd
 #from train import train_net
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn import metrics
+from train import train_torch
 
 
 
@@ -159,11 +160,12 @@ nearest_neighbor(X_train,Y_train,X_test,Y_test)
 # SVM 
 support_vector_machine(X_train,Y_train,X_test,Y_test)
 
-#KMeans
+# Neural-Net
+train_torch(X_train,Y_train,X_test,Y_test)
 
+#KMeans
 for i in range(10):
     kmeans = lib_KMeans(Z_p, 5, 0)
-
     #print(Y_all)
     #print(kmeans.labels_)
     #randomly sample idxs to evaluate on - fowlkes mallows doesnt work on whole list
@@ -180,6 +182,7 @@ for i in range(10):
     gmm_pred = gmm.predict(X_test)
     fowlkes_scores = metrics.fowlkes_mallows_score(Y_test, gmm_pred)
     print('gmm accuracy : ' + str(fowlkes_scores))
+
 
 
 
