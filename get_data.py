@@ -21,12 +21,20 @@ genres_paths = ['genres/metal',  'genres/classical', 'genres/blues', 'genres/pop
 
 data = []
 for g_path in genres_paths:
+    show_spect = True
     for file in os.listdir(g_path):
         path = os.path.join(g_path,file)
         if '.wav' not in path:
             continue
         y, sr = librosa.load(path, mono=True)
         S = librosa.feature.melspectrogram(y, sr=sr,n_mels=128,n_fft=2048,hop_length=1024).T
+        if show_spect:
+            librosa.display.specshow(librosa.power_to_db(S.T, ref = np.max), y_axis='mel', fmax=8000, x_axis='time')
+            plt.colorbar(format='%+2.0f dB')
+            plt.title('Mel spectrogram')
+            plt.tight_layout()
+            plt.show()
+            show_spect = False
         S = librosa.power_to_db(S,ref=np.max)
         S = S[:-1 * (S.shape[0] % 128)]
         #num_chunk   = S.shape[0] / 128
