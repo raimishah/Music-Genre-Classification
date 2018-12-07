@@ -60,7 +60,11 @@ def train_torch(X_train,Y_train,X_test,Y_test):
         total += Y_test.size(0)
         correct += (predicted == Y_test).sum().item()
     plt.plot(epochs,train_loss)
+    plt.title('Training Loss of 3-layer Network')
+    plt.xlabel('Number of Epochs')
+    plt.ylabel('Loss')
     plt.show()
+
     print('Accuracy of the network: {} %'.format(100 * correct / total))
     return predicted
     
