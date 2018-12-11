@@ -1,15 +1,15 @@
 \section{Introduction}
 In the past decade, with the introduction of technology that can store huge amounts of data, a large amount of musical data is increasingly available to public on different application platforms such as Spotify. As the number of musical data in our phones and Internet keeps increasing, there is a need to characterize each music track so that finding a specific song in a large archive of music would not be a problem. Musical genres are commonly used to describe and characterize songs for music information retrieval. Pachet suggests that genre of music can be the best general information for music content description \cite{Pachet:2003}. Hence, a system that can classify musical genres can solve the problem of locating a specific sound track on any device. 
 
-The only problem with musical genre classification is the fact that the definition of genre is very subjective by its nature there exists thousands of genres or sub-genres. It is also important to note that, the definition of music genre tends to change with time, as what we call Rock song today is very different from the rock songs twenty years ago. Even though, musical genres are subjective, there are certain features that can easily distinguish between different genres. By using features such as distribution of frequency or the number of beats, it is possible to classify main genres of music. For classification of musical genres, various approaches have been proposed. Unfortunately, most of these approaches have been proven to show accuracy around 60-70\%. Therefore, new approaches that can maximize classification accuracy must be considered.  
+The only problem with musical genre classification is the fact that the definition of genre is very subjective by its nature and there exists thousands of genres or sub-genres. It is also important to note that, the definition of music genre tends to change with time, as what we call Rock song today is very different from the rock songs twenty years ago. Even though musical genres are subjective, there are certain features that can easily distinguish between different genres. By using features such as distribution of frequency or the number of beats, it is possible to classify main genres of music. For classification of musical genres, various approaches have been proposed. Unfortunately, most of these approaches have been proven to show accuracy around 60-70\%. Therefore, new approaches that can maximize classification accuracy must be considered.  
 
-Hence, we try to improve the classification accuracy of music genre classification of audio signals. in this work. Specifically, we use a wide range of machine learning algorithms, including k-Nearest Neighbor (k-NN) \cite{KNN:2009}, k-Means Clustering \cite{Clustering:2001}, Support Vector Machines \cite{SVM:2006}, Gaussian Mixture Models \cite{Pachet:2003} and different types of Neural Networks to classify the following 5 genres: metal, classical, blues, pop, country. 
+Hence, we try to improve the classification accuracy of music genre classification of audio signals in this work. Specifically, we use a wide range of machine learning algorithms, including k-Nearest Neighbor (k-NN) \cite{KNN:2009}, k-Means Clustering \cite{Clustering:2001}, Support Vector Machines \cite{SVM:2006}, Gaussian Mixture Models \cite{Pachet:2003} and different types of Neural Networks to classify the following 5 genres: metal, classical, blues, pop, country. 
 
 Our main goal in this study is to maximize the classification accuracy of 5 genres and compare different methods of machine learning for classification of audio signals. We use state-of-the-art machine learning platforms such as PyTorch \cite{PyTorch:2017} to introduce deep learning into our project. We experiment with different neural network architectures and types of neural network. Moreover, we use Mel Frequency Cepstral Coefficients (MFCC) \cite{MFCC:2011} to extract useful information from musical data as recommended by past work in this field.
 To summarize, we make three main contributions in this paper:
 \begin{itemize}
-  \item We experiment with a wide range of machine learning algorithms and state their classification accuracy of 5 different genres. 
-  \item We propose a method from feature extraction and audio signal processing that is dependent on both MFCC and PCA methods. We also discuss the significance of such methods. 
+  \item We experiment with a wide range of machine learning algorithms and state their classification accuracy for 5 different genres. 
+  \item We propose a method for feature extraction and audio processing that is dependent on both MFCC and PCA. We also discuss the significance of such methods. 
   \item We report experimental data that describe the overall effectiveness of our classification methods by including confusion matrices. 
 \end{itemize}
 
@@ -36,6 +36,25 @@ As compared to these works,...
 \section{Proposed Approach}\label{sec:approach}
 % Dataset --> Feature Extraction --> Dimensionality Reduction --> Algorithms 
 \subsection{Musical Dataset}
+For musical data, Marsyas is an open source software framework for Music Information Retrieval with the GTZAN Genre Collection Database, which has 10 genres and each genre has 100 30-second audio tracks. All the tracks are 22050 Hz Mono 16-bit audio files in .au format. 
+
+For this project, we chose five distinct genres; classical, metal, blues, pop, country. Hence, our dataset was 500 songs total, from which we used 80\% for training and 20\% for testing. We chose five very distinct genres as previous works \cite{Chun:2010} suggest more than 5 genres can decrease accuracy a lot and introduces many problems. 
+
+\subsection{Feature Extraction: Mel Frequency Cepstral Coefficients (MFCC)}
+
+\subsection{Dimensionality Reduction with Principal Component Analysis (PCA)}
+
+\subsection{Machine Learning Algorithms}
+
+\section{Experimental Results}\label{sec:results}
+
+\subsection{Experiment Setup}
+
+\subsection{Classification Accuracy}
+
+\section{Conclusion}\label{sec:conclusion}
+
+%\section{Future Work}\label{sec:future_work}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 Our goal in this paper is to present and evaluate a formula to quantify instruction criticality and sort low-level instructions by their fault tolerance. This instruction criticality metric would be used to generate reliable source code and reduce the overhead in system reliability approaches applied today. 
