@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{32}
+\begin{thebibliography}{16}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -37,104 +37,45 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
-\bibitem[\protect\citeauthoryear{Avizienis}{Avizienis}{1985}]%
-        {Avizienis:1985}
-\bibfield{author}{\bibinfo{person}{A. Avizienis}.}
-  \bibinfo{year}{1985}\natexlab{}.
-\newblock \showarticletitle{The N-Version Approach to Fault-Tolerant Software}.
-\newblock \bibinfo{journal}{\emph{IEEE Trans. Softw. Eng.}}
-  \bibinfo{volume}{11}, \bibinfo{number}{12} (\bibinfo{date}{Dec.}
-  \bibinfo{year}{1985}), \bibinfo{pages}{1491--1501}.
+\bibitem[\protect\citeauthoryear{Aucouturier}{Aucouturier}{2003}]%
+        {Pachet:2003}
+\bibfield{author}{\bibinfo{person}{Jean-Julien Aucouturier}.}
+  \bibinfo{year}{2003}\natexlab{}.
+\newblock \showarticletitle{Representing Musical Genre: A State of the Art}.
+\newblock \bibinfo{journal}{\emph{Journal of New Music Research}}
+  \bibinfo{volume}{32} (\bibinfo{date}{03} \bibinfo{year}{2003}),
+  \bibinfo{pages}{83--93}.
 \newblock
-\showISSN{0098-5589}
 \urldef\tempurl%
-\url{https://doi.org/10.1109/TSE.1985.231893}
+\url{https://doi.org/10.1076/jnmr.32.1.83.16801}
 \showDOI{\tempurl}
 
 
-\bibitem[\protect\citeauthoryear{Barraza}{Barraza}{2017}]%
-        {Barraza:2017}
-\bibfield{author}{\bibinfo{person}{N.~R. Barraza}.}
-  \bibinfo{year}{2017}\natexlab{}.
-\newblock \showarticletitle{A Mixed Poisson Process and Empirical Bayes
-  Estimation Based Software Reliability Growth Model and Simulation}. In
-  \bibinfo{booktitle}{\emph{2017 IEEE International Conference on Software
-  Quality, Reliability and Security Companion (QRS-C)}}.
-  \bibinfo{pages}{612--613}.
+\bibitem[\protect\citeauthoryear{Feng}{Feng}{2016}]%
+        {Feng:2016}
+\bibfield{author}{\bibinfo{person}{Tao Feng}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Deep learning for music genre classification}.
+\newblock \bibinfo{journal}{\emph{Pattern Recognition Class Paper}}
+  (\bibinfo{year}{2016}).
 \newblock
+
+
+\bibitem[\protect\citeauthoryear{Fu, Lu, Ting, and Zhang}{Fu
+  et~al\mbox{.}}{2011}]%
+        {MFCC:2011}
+\bibfield{author}{\bibinfo{person}{Z. Fu}, \bibinfo{person}{G. Lu},
+  \bibinfo{person}{K.~M. Ting}, {and} \bibinfo{person}{D. Zhang}.}
+  \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{A Survey of Audio-Based Music Classification and
+  Annotation}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Multimedia}}
+  \bibinfo{volume}{13}, \bibinfo{number}{2} (\bibinfo{date}{April}
+  \bibinfo{year}{2011}), \bibinfo{pages}{303--319}.
+\newblock
+\showISSN{1520-9210}
 \urldef\tempurl%
-\url{https://doi.org/10.1109/QRS-C.2017.114}
+\url{https://doi.org/10.1109/TMM.2010.2098858}
 \showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Chakravorty and Kale}{Chakravorty and
-  Kale}{2007}]%
-        {Chakravorty:2007}
-\bibfield{author}{\bibinfo{person}{S. Chakravorty} {and} \bibinfo{person}{L.~V.
-  Kale}.} \bibinfo{year}{2007}\natexlab{}.
-\newblock \showarticletitle{A Fault Tolerance Protocol with Fast Fault
-  Recovery}. In \bibinfo{booktitle}{\emph{2007 IEEE International Parallel and
-  Distributed Processing Symposium}}. \bibinfo{pages}{1--10}.
-\newblock
-\showISSN{1530-2075}
-\urldef\tempurl%
-\url{https://doi.org/10.1109/IPDPS.2007.370310}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Excoffon, Fabre, and Lauer}{Excoffon
-  et~al\mbox{.}}{2017}]%
-        {FTM:2017}
-\bibfield{author}{\bibinfo{person}{W. Excoffon}, \bibinfo{person}{J.~C. Fabre},
-  {and} \bibinfo{person}{M. Lauer}.} \bibinfo{year}{2017}\natexlab{}.
-\newblock \showarticletitle{Analysis of Adaptive Fault Tolerance for Resilient
-  Computing}. In \bibinfo{booktitle}{\emph{2017 13th European Dependable
-  Computing Conference (EDCC)}}. \bibinfo{pages}{50--57}.
-\newblock
-\urldef\tempurl%
-\url{https://doi.org/10.1109/EDCC.2017.22}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Fiala, Mueller, Engelmann, Riesen, Ferreira,
-  and Brightwell}{Fiala et~al\mbox{.}}{2012}]%
-        {Fiala:2012}
-\bibfield{author}{\bibinfo{person}{D. Fiala}, \bibinfo{person}{F. Mueller},
-  \bibinfo{person}{C. Engelmann}, \bibinfo{person}{R. Riesen},
-  \bibinfo{person}{K. Ferreira}, {and} \bibinfo{person}{R. Brightwell}.}
-  \bibinfo{year}{2012}\natexlab{}.
-\newblock \showarticletitle{Detection and correction of silent data corruption
-  for large-scale high-performance computing}. In
-  \bibinfo{booktitle}{\emph{High Performance Computing, Networking, Storage and
-  Analysis (SC), 2012 International Conference for}}. \bibinfo{pages}{1--12}.
-\newblock
-\showISSN{2167-4329}
-\urldef\tempurl%
-\url{https://doi.org/10.1109/SC.2012.49}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Fields, Rubin, and Bod{\'i}k}{Fields
-  et~al\mbox{.}}{2001}]%
-        {Fields:2001}
-\bibfield{author}{\bibinfo{person}{Brian~A. Fields}, \bibinfo{person}{Shai
-  Rubin}, {and} \bibinfo{person}{Rastislav Bod{\'i}k}.}
-  \bibinfo{year}{2001}\natexlab{}.
-\newblock \showarticletitle{Focusing processor policies via critical-path
-  prediction}. In \bibinfo{booktitle}{\emph{ISCA}}.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Gupta, Roberts, Meswani, Sridharan, Tullsen,
-  and Gupta}{Gupta et~al\mbox{.}}{2016}]%
-        {Gupta:2016}
-\bibfield{author}{\bibinfo{person}{Manish Gupta}, \bibinfo{person}{David
-  Roberts}, \bibinfo{person}{Mitesh~R. Meswani}, \bibinfo{person}{Vilas
-  Sridharan}, \bibinfo{person}{Dean~M. Tullsen}, {and}
-  \bibinfo{person}{Rajesh~K. Gupta}.} \bibinfo{year}{2016}\natexlab{}.
-\newblock \showarticletitle{Reliability and Performance Trade-off Study of
-  Heterogeneous Memories}. In \bibinfo{booktitle}{\emph{MEMSYS}}.
-\newblock
 
 
 \bibitem[\protect\citeauthoryear{Guthaus, Ringenberg, Ernst, Austin, Mudge, and
@@ -151,23 +92,6 @@
 \newblock
 \urldef\tempurl%
 \url{https://doi.org/10.1109/WWC.2001.990739}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Hopkins, Smith, and Lala}{Hopkins
-  et~al\mbox{.}}{1978}]%
-        {FTMP:1978}
-\bibfield{author}{\bibinfo{person}{A.~L. Hopkins}, \bibinfo{person}{T.~B.
-  Smith}, {and} \bibinfo{person}{J.~H. Lala}.} \bibinfo{year}{1978}\natexlab{}.
-\newblock \showarticletitle{FTMP 8212;A highly reliable fault-tolerant
-  multiprocess for aircraft}.
-\newblock \bibinfo{journal}{\emph{Proc. IEEE}} \bibinfo{volume}{66},
-  \bibinfo{number}{10} (\bibinfo{date}{Oct} \bibinfo{year}{1978}),
-  \bibinfo{pages}{1221--1239}.
-\newblock
-\showISSN{0018-9219}
-\urldef\tempurl%
-\url{https://doi.org/10.1109/PROC.1978.11113}
 \showDOI{\tempurl}
 
 
@@ -206,13 +130,13 @@
 \showDOI{\tempurl}
 
 
-\bibitem[\protect\citeauthoryear{Li, Lebeck, and Sorin}{Li
-  et~al\mbox{.}}{2003}]%
-        {Lebeck:2003}
-\bibfield{author}{\bibinfo{person}{Tong Li}, \bibinfo{person}{Alvin~R. Lebeck},
-  {and} \bibinfo{person}{Daniel~J. Sorin}.} \bibinfo{year}{2003}\natexlab{}.
-\newblock \showarticletitle{Quantifying instruction criticality for shared
-  memory multiprocessors}. In \bibinfo{booktitle}{\emph{SPAA}}.
+\bibitem[\protect\citeauthoryear{Li, Chan, and Chun}{Li et~al\mbox{.}}{2010}]%
+        {Chun:2010}
+\bibfield{author}{\bibinfo{person}{Tom L.~H. Li}, \bibinfo{person}{Antoni~B.
+  Chan}, {and} \bibinfo{person}{Andy~HW. Chun}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Automatic Musical Pattern Feature Extraction Using
+  Convolutional Neural Network}.
 \newblock
 
 
@@ -232,101 +156,17 @@
 \showDOI{\tempurl}
 
 
-\bibitem[\protect\citeauthoryear{Lyons and Vanderkulk}{Lyons and
-  Vanderkulk}{1962}]%
-        {TMR:1962}
-\bibfield{author}{\bibinfo{person}{R.~E. Lyons} {and} \bibinfo{person}{W.
-  Vanderkulk}.} \bibinfo{year}{1962}\natexlab{}.
-\newblock \showarticletitle{The Use of Triple-Modular Redundancy to Improve
-  Computer Reliability}.
-\newblock \bibinfo{journal}{\emph{IBM Journal of Research and Development}}
-  \bibinfo{volume}{6}, \bibinfo{number}{2} (\bibinfo{date}{April}
-  \bibinfo{year}{1962}), \bibinfo{pages}{200--209}.
+\bibitem[\protect\citeauthoryear{Mandel, Poliner, and Ellis}{Mandel
+  et~al\mbox{.}}{2006}]%
+        {SVM:2006}
+\bibfield{author}{\bibinfo{person}{Michael~I. Mandel},
+  \bibinfo{person}{Graham~E. Poliner}, {and} \bibinfo{person}{Daniel P.~W.
+  Ellis}.} \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{Support vector machine active learning for music
+  retrieval}.
+\newblock \bibinfo{journal}{\emph{Multimedia Systems}}  \bibinfo{volume}{12}
+  (\bibinfo{year}{2006}), \bibinfo{pages}{3--13}.
 \newblock
-\showISSN{0018-8646}
-\urldef\tempurl%
-\url{https://doi.org/10.1147/rd.62.0200}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Mahmood and McCluskey}{Mahmood and
-  McCluskey}{1988}]%
-        {Mahmood:1988}
-\bibfield{author}{\bibinfo{person}{A. Mahmood} {and} \bibinfo{person}{E.~J.
-  McCluskey}.} \bibinfo{year}{1988}\natexlab{}.
-\newblock \showarticletitle{Concurrent error detection using watchdog
-  processors-a survey}.
-\newblock \bibinfo{journal}{\emph{IEEE Trans. Comput.}} \bibinfo{volume}{37},
-  \bibinfo{number}{2} (\bibinfo{date}{Feb} \bibinfo{year}{1988}),
-  \bibinfo{pages}{160--174}.
-\newblock
-\showISSN{0018-9340}
-\urldef\tempurl%
-\url{https://doi.org/10.1109/12.2145}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Miskov-Zivanov and Marculescu}{Miskov-Zivanov
-  and Marculescu}{2008}]%
-        {Reliability_metric:2008}
-\bibfield{author}{\bibinfo{person}{N. Miskov-Zivanov} {and} \bibinfo{person}{D.
-  Marculescu}.} \bibinfo{year}{2008}\natexlab{}.
-\newblock \showarticletitle{Modeling and Optimization for Soft-Error
-  Reliability of Sequential Circuits}.
-\newblock \bibinfo{journal}{\emph{IEEE Transactions on Computer-Aided Design of
-  Integrated Circuits and Systems}} \bibinfo{volume}{27}, \bibinfo{number}{5}
-  (\bibinfo{date}{May} \bibinfo{year}{2008}), \bibinfo{pages}{803--816}.
-\newblock
-\showISSN{0278-0070}
-\urldef\tempurl%
-\url{https://doi.org/10.1109/TCAD.2008.917591}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Mukherjee, Weaver, Emer, Reinhardt, and
-  Austin}{Mukherjee et~al\mbox{.}}{2003}]%
-        {ACE:2003}
-\bibfield{author}{\bibinfo{person}{S.~S. Mukherjee}, \bibinfo{person}{C.
-  Weaver}, \bibinfo{person}{J. Emer}, \bibinfo{person}{S.~K. Reinhardt}, {and}
-  \bibinfo{person}{T. Austin}.} \bibinfo{year}{2003}\natexlab{}.
-\newblock \showarticletitle{A systematic methodology to compute the
-  architectural vulnerability factors for a high-performance microprocessor}.
-  In \bibinfo{booktitle}{\emph{Proceedings. 36th Annual IEEE/ACM International
-  Symposium on Microarchitecture, 2003. MICRO-36.}} \bibinfo{pages}{29--40}.
-\newblock
-\urldef\tempurl%
-\url{https://doi.org/10.1109/MICRO.2003.1253181}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Murley and Srinivasan}{Murley and
-  Srinivasan}{1996}]%
-        {Monte_Carlo:1996}
-\bibfield{author}{\bibinfo{person}{P.~C. Murley} {and} \bibinfo{person}{G.~R.
-  Srinivasan}.} \bibinfo{year}{1996}\natexlab{}.
-\newblock \showarticletitle{Soft-error Monte Carlo modeling program, SEMM}.
-\newblock \bibinfo{journal}{\emph{IBM Journal of Research and Development}}
-  \bibinfo{volume}{40}, \bibinfo{number}{1} (\bibinfo{date}{Jan}
-  \bibinfo{year}{1996}), \bibinfo{pages}{109--118}.
-\newblock
-\showISSN{0018-8646}
-\urldef\tempurl%
-\url{https://doi.org/10.1147/rd.401.0109}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Ni and Kale}{Ni and Kale}{2016}]%
-        {Ni:2016}
-\bibfield{author}{\bibinfo{person}{X. Ni} {and} \bibinfo{person}{L.~V. Kale}.}
-  \bibinfo{year}{2016}\natexlab{}.
-\newblock \showarticletitle{FlipBack: Automatic Targeted Protection against
-  Silent Data Corruption}. In \bibinfo{booktitle}{\emph{SC16: International
-  Conference for High Performance Computing, Networking, Storage and
-  Analysis}}. \bibinfo{pages}{335--346}.
-\newblock
-\urldef\tempurl%
-\url{https://doi.org/10.1109/SC.2016.28}
-\showDOI{\tempurl}
 
 
 \bibitem[\protect\citeauthoryear{Oh, Shirvani, and McCluskey}{Oh
@@ -346,196 +186,89 @@
 \showDOI{\tempurl}
 
 
-\bibitem[\protect\citeauthoryear{Rebaudengo, Reorda, Torchiano, and
-  Violante}{Rebaudengo et~al\mbox{.}}{1999}]%
-        {Rebaudengo:1999}
-\bibfield{author}{\bibinfo{person}{Maurizio Rebaudengo},
-  \bibinfo{person}{Matteo~Sonza Reorda}, \bibinfo{person}{Marco Torchiano},
-  {and} \bibinfo{person}{Massimo Violante}.} \bibinfo{year}{1999}\natexlab{}.
-\newblock \showarticletitle{Soft-Error Detection through Software
-  Fault-Tolerance Techniques}. In \bibinfo{booktitle}{\emph{DFT}}.
+\bibitem[\protect\citeauthoryear{Paszke, Gross, Chintala, Chanan, Yang, DeVito,
+  Lin, Desmaison, Antiga, and Lerer}{Paszke et~al\mbox{.}}{2017}]%
+        {PyTorch:2017}
+\bibfield{author}{\bibinfo{person}{Adam Paszke}, \bibinfo{person}{Sam Gross},
+  \bibinfo{person}{Soumith Chintala}, \bibinfo{person}{Gregory Chanan},
+  \bibinfo{person}{Edward Yang}, \bibinfo{person}{Zachary DeVito},
+  \bibinfo{person}{Zeming Lin}, \bibinfo{person}{Alban Desmaison},
+  \bibinfo{person}{Luca Antiga}, {and} \bibinfo{person}{Adam Lerer}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Automatic differentiation in PyTorch}. In
+  \bibinfo{booktitle}{\emph{NIPS-W}}.
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Rehman, Kriebel, Shafique, and Henkel}{Rehman
-  et~al\mbox{.}}{2014}]%
-        {Compilation_Rehman:2014}
-\bibfield{author}{\bibinfo{person}{S. Rehman}, \bibinfo{person}{F. Kriebel},
-  \bibinfo{person}{M. Shafique}, {and} \bibinfo{person}{J. Henkel}.}
-  \bibinfo{year}{2014}\natexlab{}.
-\newblock \showarticletitle{Reliability-Driven Software Transformations for
-  Unreliable Hardware}.
-\newblock \bibinfo{journal}{\emph{IEEE Transactions on Computer-Aided Design of
-  Integrated Circuits and Systems}} \bibinfo{volume}{33}, \bibinfo{number}{11}
-  (\bibinfo{date}{Nov} \bibinfo{year}{2014}), \bibinfo{pages}{1597--1610}.
+\bibitem[\protect\citeauthoryear{Peterson}{Peterson}{2009}]%
+        {KNN:2009}
+\bibfield{author}{\bibinfo{person}{L.~E. Peterson}.}
+  \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{{K}-nearest neighbor}.
+\newblock \bibinfo{journal}{\emph{Scholarpedia}} \bibinfo{volume}{4},
+  \bibinfo{number}{2} (\bibinfo{year}{2009}), \bibinfo{pages}{1883}.
 \newblock
-\showISSN{0278-0070}
 \urldef\tempurl%
-\url{https://doi.org/10.1109/TCAD.2014.2341894}
+\url{https://doi.org/10.4249/scholarpedia.1883}
+\showDOI{\tempurl}
+\newblock
+\shownote{revision \#137311.}
+
+
+\bibitem[\protect\citeauthoryear{Tzanetakis and Cook}{Tzanetakis and
+  Cook}{2002}]%
+        {GTZAN:2002}
+\bibfield{author}{\bibinfo{person}{G. Tzanetakis} {and} \bibinfo{person}{P.
+  Cook}.} \bibinfo{year}{2002}\natexlab{}.
+\newblock \showarticletitle{Musical genre classification of audio signals}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Speech and Audio
+  Processing}} \bibinfo{volume}{10}, \bibinfo{number}{5} (\bibinfo{date}{July}
+  \bibinfo{year}{2002}), \bibinfo{pages}{293--302}.
+\newblock
+\showISSN{1063-6676}
+\urldef\tempurl%
+\url{https://doi.org/10.1109/TSA.2002.800560}
 \showDOI{\tempurl}
 
 
-\bibitem[\protect\citeauthoryear{Rehman, Shafique, and Henkel}{Rehman
+\bibitem[\protect\citeauthoryear{Wagstaff, Cardie, Rogers, and
+  Schr\"{o}dl}{Wagstaff et~al\mbox{.}}{2001}]%
+        {Clustering:2001}
+\bibfield{author}{\bibinfo{person}{Kiri Wagstaff}, \bibinfo{person}{Claire
+  Cardie}, \bibinfo{person}{Seth Rogers}, {and} \bibinfo{person}{Stefan
+  Schr\"{o}dl}.} \bibinfo{year}{2001}\natexlab{}.
+\newblock \showarticletitle{Constrained K-means Clustering with Background
+  Knowledge}. In \bibinfo{booktitle}{\emph{Proceedings of the Eighteenth
+  International Conference on Machine Learning}} \emph{(\bibinfo{series}{ICML
+  '01})}. \bibinfo{publisher}{Morgan Kaufmann Publishers Inc.},
+  \bibinfo{address}{San Francisco, CA, USA}, \bibinfo{pages}{577--584}.
+\newblock
+\showISBNx{1-55860-778-1}
+\urldef\tempurl%
+\url{http://dl.acm.org/citation.cfm?id=645530.655669}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Whitman and Smaragdis}{Whitman and
+  Smaragdis}{2002}]%
+        {Smaragdis:2002}
+\bibfield{author}{\bibinfo{person}{Brian Whitman} {and} \bibinfo{person}{Paris
+  Smaragdis}.} \bibinfo{year}{2002}\natexlab{}.
+\newblock \showarticletitle{Combining Musical and Cultural Features for
+  Intelligent Style Detection}. In \bibinfo{booktitle}{\emph{ISMIR}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Zhang, Lei, Xu, and Xing}{Zhang
   et~al\mbox{.}}{2016}]%
-        {Rehman:2016}
-\bibfield{author}{\bibinfo{person}{Semeen Rehman}, \bibinfo{person}{Muhammad
-  Shafique}, {and} \bibinfo{person}{Jrg Henkel}.}
+        {Xing:2016}
+\bibfield{author}{\bibinfo{person}{Weibin Zhang}, \bibinfo{person}{Wenkang
+  Lei}, \bibinfo{person}{Xiangmin Xu}, {and} \bibinfo{person}{Xiaofeng Xing}.}
   \bibinfo{year}{2016}\natexlab{}.
-\newblock \bibinfo{booktitle}{\emph{Reliable Software for Unreliable Hardware:
-  A Cross Layer Perspective} (\bibinfo{edition}{1st} ed.)}.
-\newblock \bibinfo{publisher}{Springer Publishing Company, Incorporated}.
+\newblock \showarticletitle{Improved Music Genre Classification with
+  Convolutional Neural Networks}. In \bibinfo{booktitle}{\emph{INTERSPEECH}}.
 \newblock
-\showISBNx{3319257706, 9783319257709}
-
-
-\bibitem[\protect\citeauthoryear{Rehman, Toma, Kriebel, Shafique, Chen, and
-  Henkel}{Rehman et~al\mbox{.}}{2013}]%
-        {RTPenalty:2013}
-\bibfield{author}{\bibinfo{person}{S. Rehman}, \bibinfo{person}{A. Toma},
-  \bibinfo{person}{F. Kriebel}, \bibinfo{person}{M. Shafique},
-  \bibinfo{person}{J.~J. Chen}, {and} \bibinfo{person}{J. Henkel}.}
-  \bibinfo{year}{2013}\natexlab{}.
-\newblock \showarticletitle{Reliable code generation and execution on
-  unreliable hardware under joint functional and timing reliability
-  considerations}. In \bibinfo{booktitle}{\emph{2013 IEEE 19th Real-Time and
-  Embedded Technology and Applications Symposium (RTAS)}}.
-  \bibinfo{pages}{273--282}.
-\newblock
-\showISSN{1080-1812}
-\urldef\tempurl%
-\url{https://doi.org/10.1109/RTAS.2013.6531099}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Reinhardt and Mukherjee}{Reinhardt and
-  Mukherjee}{2000}]%
-        {SRT:2000}
-\bibfield{author}{\bibinfo{person}{S.~K. Reinhardt} {and}
-  \bibinfo{person}{S.~S. Mukherjee}.} \bibinfo{year}{2000}\natexlab{}.
-\newblock \showarticletitle{Transient fault detection via simultaneous
-  multithreading}. In \bibinfo{booktitle}{\emph{Proceedings of 27th
-  International Symposium on Computer Architecture (IEEE Cat. No.RS00201)}}.
-  \bibinfo{pages}{25--36}.
-\newblock
-\showISSN{1063-6897}
-
-
-\bibitem[\protect\citeauthoryear{Reis, Chang, Vachharajani, Rangan, and
-  August}{Reis et~al\mbox{.}}{2005}]%
-        {SWIFT:2005}
-\bibfield{author}{\bibinfo{person}{G.~A. Reis}, \bibinfo{person}{J. Chang},
-  \bibinfo{person}{N. Vachharajani}, \bibinfo{person}{R. Rangan}, {and}
-  \bibinfo{person}{D.~I. August}.} \bibinfo{year}{2005}\natexlab{}.
-\newblock \showarticletitle{SWIFT: software implemented fault tolerance}. In
-  \bibinfo{booktitle}{\emph{International Symposium on Code Generation and
-  Optimization}}. \bibinfo{pages}{243--254}.
-\newblock
-\urldef\tempurl%
-\url{https://doi.org/10.1109/CGO.2005.34}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Schwarz, Sheng, Batchuluun, Sheleh, Chaaban,
-  and Börcsök}{Schwarz et~al\mbox{.}}{2009}]%
-        {Schwarz:2009}
-\bibfield{author}{\bibinfo{person}{M.~H. Schwarz}, \bibinfo{person}{H. Sheng},
-  \bibinfo{person}{B. Batchuluun}, \bibinfo{person}{A. Sheleh},
-  \bibinfo{person}{W. Chaaban}, {and} \bibinfo{person}{J. Börcsök}.}
-  \bibinfo{year}{2009}\natexlab{}.
-\newblock \showarticletitle{Reliable software development methodology for
-  safety related applications: From simulation to reliable source code}. In
-  \bibinfo{booktitle}{\emph{2009 XXII International Symposium on Information,
-  Communication and Automation Technologies}}. \bibinfo{pages}{1--7}.
-\newblock
-\urldef\tempurl%
-\url{https://doi.org/10.1109/ICAT.2009.5348447}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Singh and Tomar}{Singh and Tomar}{2013}]%
-        {Singh:2013}
-\bibfield{author}{\bibinfo{person}{A.~P. Singh} {and} \bibinfo{person}{P.
-  Tomar}.} \bibinfo{year}{2013}\natexlab{}.
-\newblock \showarticletitle{A new model for Reliability Estimation of
-  Component-Based Software}. In \bibinfo{booktitle}{\emph{2013 3rd IEEE
-  International Advance Computing Conference (IACC)}}.
-  \bibinfo{pages}{1431--1436}.
-\newblock
-\urldef\tempurl%
-\url{https://doi.org/10.1109/IAdCC.2013.6514437}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Subramaniam, Bracy, Wang, and Loh}{Subramaniam
-  et~al\mbox{.}}{2009}]%
-        {Subramaniam:2009}
-\bibfield{author}{\bibinfo{person}{S. Subramaniam}, \bibinfo{person}{A. Bracy},
-  \bibinfo{person}{H. Wang}, {and} \bibinfo{person}{G.~H. Loh}.}
-  \bibinfo{year}{2009}\natexlab{}.
-\newblock \showarticletitle{Criticality-based optimizations for efficient load
-  processing}. In \bibinfo{booktitle}{\emph{2009 IEEE 15th International
-  Symposium on High Performance Computer Architecture}}.
-  \bibinfo{pages}{419--430}.
-\newblock
-\showISSN{1530-0897}
-\urldef\tempurl%
-\url{https://doi.org/10.1109/HPCA.2009.4798280}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Svenningsson, Eriksson, Vinter, and
-  Törngren}{Svenningsson et~al\mbox{.}}{2010}]%
-        {Fault_Injection_Simulation:2010}
-\bibfield{author}{\bibinfo{person}{R. Svenningsson}, \bibinfo{person}{H.
-  Eriksson}, \bibinfo{person}{J. Vinter}, {and} \bibinfo{person}{M.
-  Törngren}.} \bibinfo{year}{2010}\natexlab{}.
-\newblock \showarticletitle{Model-Implemented Fault Injection for Hardware
-  Fault Simulation}. In \bibinfo{booktitle}{\emph{2010 Workshop on Model-Driven
-  Engineering, Verification, and Validation}}. \bibinfo{pages}{31--36}.
-\newblock
-\urldef\tempurl%
-\url{https://doi.org/10.1109/MoDeVVa.2010.11}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Tune, Tullsen, and Calder}{Tune
-  et~al\mbox{.}}{2002}]%
-        {Tune:2002}
-\bibfield{author}{\bibinfo{person}{Eric Tune}, \bibinfo{person}{Dean~M.
-  Tullsen}, {and} \bibinfo{person}{Brad Calder}.}
-  \bibinfo{year}{2002}\natexlab{}.
-\newblock \showarticletitle{Quantifying Instruction Criticality}. In
-  \bibinfo{booktitle}{\emph{Proceedings of the 2002 International Conference on
-  Parallel Architectures and Compilation Techniques}}
-  \emph{(\bibinfo{series}{PACT '02})}. \bibinfo{publisher}{IEEE Computer
-  Society}, \bibinfo{address}{Washington, DC, USA}, \bibinfo{pages}{104--}.
-\newblock
-\showISBNx{0-7695-1620-3}
-\urldef\tempurl%
-\url{http://dl.acm.org/citation.cfm?id=645989.674310}
-\showURL{%
-\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Yuan, Luo, Zhuang, Rodrigues, Zhao, Zhang,
-  Jain, and Stumm}{Yuan et~al\mbox{.}}{2014}]%
-        {Yuan:2014}
-\bibfield{author}{\bibinfo{person}{Ding Yuan}, \bibinfo{person}{Yu Luo},
-  \bibinfo{person}{Xin Zhuang}, \bibinfo{person}{Guilherme~Renna Rodrigues},
-  \bibinfo{person}{Xu Zhao}, \bibinfo{person}{Yongle Zhang},
-  \bibinfo{person}{Pranay~U. Jain}, {and} \bibinfo{person}{Michael Stumm}.}
-  \bibinfo{year}{2014}\natexlab{}.
-\newblock \showarticletitle{Simple Testing Can Prevent Most Critical Failures:
-  An Analysis of Production Failures in Distributed Data-Intensive Systems}. In
-  \bibinfo{booktitle}{\emph{11th {USENIX} Symposium on Operating Systems Design
-  and Implementation ({OSDI} 14)}}. \bibinfo{publisher}{{USENIX} Association},
-  \bibinfo{address}{Broomfield, CO}, \bibinfo{pages}{249--265}.
-\newblock
-\showISBNx{978-1-931971-16-4}
-\urldef\tempurl%
-\url{https://www.usenix.org/conference/osdi14/technical-sessions/presentation/yuan}
-\showURL{%
-\tempurl}
 
 
 \end{thebibliography}
