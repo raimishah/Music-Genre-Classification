@@ -45,14 +45,89 @@ Previous works \cite{MFCC:2011} on music classification and processing of audio 
 
 % Figure 1-5 --> Mel-spectograms 
 
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.2]{./figures/classical.png}
+\end{center}
+\caption
+{
+Classical
+}
+\label{fig:big_picture1}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.2]{./figures/metal.png}
+\end{center}
+\caption
+{
+Metal
+}
+\label{fig:big_picture2}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.2]{./figures/pop.png}
+\end{center}
+\caption
+{
+Pop
+}
+\label{fig:big_picture3}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.2]{./figures/country.png}
+\end{center}
+\caption
+{
+Country
+}
+\label{fig:big_picture4}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.2]{./figures/blues.png}
+\end{center}
+\caption
+{
+Blues
+}
+\label{fig:big_picture5}
+\end{figure}
+
 \subsection{Dimensionality Reduction with Principal Component Analysis (PCA)}
 After feature extraction and construction of final dataset, we thought of using dimensionality reduction before putting out data through classifiers. Since Principal Component Analysis (PCA) is a well-known and effective method for reduction of dimensions, we used PCA on our dataset. A realistic choice for number of reduced dimensions is to visualize the data with different PCA values and then pick the minimum dimension that can keep at least 95\% of the significant components. The visualization of our data with respect to different PCA dimensions and the corresponding eigenvectors is shown on Figure 6. Note that figures 7 and 8 also present a visualization of each genre in 2 and 3 dimensions. After extensive analysis of the visualization, we reduced the dimensionality to 16. Even though 16 dimensions performed very well on classifiers such as k-NN or SVM, we had to use much bigger dimensions for our neural network, since neural networks need much more data in practice. 
 
 % Figure 6 --> PCA vs. Eigenvecs
 
 % Figure 7 --> 2-dimensional plt 
-
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.3]{./figures/2_d_plot.png}
+\end{center}
+\caption
+{
+2-d pca
+}
+\label{fig:big_picture5}
+\end{figure}
 % Figure 8 --> 3-dimensional plt 
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.3]{./figures/3_d_plot.png}
+\end{center}
+\caption
+{
+3-d pca
+}
+\label{fig:big_picture5}
+\end{figure}
 
 \subsection{Machine Learning Algorithms}
 \subsubsection{\textbf{K-Nearest Neighbor (K-NN)}}
