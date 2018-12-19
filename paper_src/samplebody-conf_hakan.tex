@@ -41,10 +41,33 @@ For musical data, Marsyas is an open source software framework for Music Informa
 For this project, we chose five distinct genres; classical, metal, blues, pop, country. Hence, our dataset was 500 songs total, from which we used 80\% for training and 20\% for testing. We chose five very distinct genres as previous works \cite{Chun:2010} suggest more than 5 genres can decrease accuracy a lot and introduces many problems. 
 
 \subsection{Feature Extraction: Mel Frequency Cepstral Coefficients (MFCC)}
+Previous works \cite{MFCC:2011} on music classification and processing of audio signals directed us to use MFCC (Mel Frequency Cepstral Coefficients) as a method for feature extraction so that time domain waveforms can be represented in the frequency domain in a mel-scale. For the process of MFCC, we first computed the spectogram of each waveform by using Fast Fourier Transform and a Hamming Window. Then, we mapped each frequency to mel scale, as mel scale is the best scale for human ears. The mel spectogram of a song from each genre is shown on Figures 1 through 5, so that the difference between each genre can be visualized. After computing the mel-spectograms of each song, we applied discrete cosine transform (DCT) and then removed the very high frequency values from our data. At the end, we had an MFCC array of each song, where we stacked all them together, created appropriate labels for each genre and constructed our training and testing datasets. As stated, we used 80\% for training and 20\% for testing our classifiers. 
+
+% Figure 1-5 --> Mel-spectograms 
 
 \subsection{Dimensionality Reduction with Principal Component Analysis (PCA)}
+After feature extraction and construction of final dataset, we thought of using dimensionality reduction before putting out data through classifiers. Since Principal Component Analysis (PCA) is a well-known and effective method for reduction of dimensions, we used PCA on our dataset. A realistic choice for number of reduced dimensions is to visualize the data with different PCA values and then pick the minimum dimension that can keep at least 95\% of the significant components. The visualization of our data with respect to different PCA dimensions and the corresponding eigenvectors is shown on Figure 6. Note that figures 7 and 8 also present a visualization of each genre in 2 and 3 dimensions. After extensive analysis of the visualization, we reduced the dimensionality to 16. Even though 16 dimensions performed very well on classifiers such as k-NN or SVM, we had to use much bigger dimensions for our neural network, since neural networks need much more data in practice. 
+
+% Figure 6 --> PCA vs. Eigenvecs
+
+% Figure 7 --> 2-dimensional plt 
+
+% Figure 8 --> 3-dimensional plt 
 
 \subsection{Machine Learning Algorithms}
+\subsubsection{K-Nearest Neighbor (KNN)}
+
+\subsubsection{Support Vector Machines (SVM)}
+
+\subsubsection{Gaussian Mixture Models (GMM)}
+
+\subsubsection{K-Means Clustering}
+
+\subsubsection{Simple 3-layer Neural Network}
+
+\subsubsection{Convolutional Neural Network}
+
+\subsubsection{Super-Classifier}
 
 \section{Experimental Results}\label{sec:results}
 
@@ -53,7 +76,7 @@ For this project, we chose five distinct genres; classical, metal, blues, pop, c
 \subsection{Classification Accuracy}
 
 \section{Conclusion}\label{sec:conclusion}
-
+@@@@@@@@@@@@@@@@@@@@@@@@@@@
 %\section{Future Work}\label{sec:future_work}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%

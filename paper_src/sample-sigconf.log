@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.5)  10 DEC 2018 23:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.5)  18 DEC 2018 19:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -772,53 +772,14 @@ LaTeX Info: Redefining \smaller on input line 151.
 \c@theorem=\count134
 
 Excluding comment 'screenonly' Include comment 'printonly'
-Include comment 'anonsuppress' (./sample-sigconf.aux
-
-LaTeX Warning: Label `fig:plan_8' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_5' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_9' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_10' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_11' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_12' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_13' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_13' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_13' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_14' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_15' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_16' multiply defined.
-
-
-LaTeX Warning: Label `sec:conclusion' multiply defined.
-
-)
+Include comment 'anonsuppress' (./sample-sigconf.aux)
 \openout1 = `sample-sigconf.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 23.
 LaTeX Font Info:    Try loading font information for OML+nxlmi on input line 23
 .
- (/usr/local/texlive/2017/texmf-dist/tex/latex/newtx/omlnxlmi.fd
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
 LaTeX Font Info:    ... okay on input line 23.
@@ -1081,11 +1042,14 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 8.0pt on input line 86.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 8.0pt on input line 86.
+
+
+LaTeX Warning: Reference `TotPages' on page 1 undefined on input line 86.
+
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 86.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.2pt on input line 86.
-
 
 Package hyperref Warning: Option `pdflang' has already been used,
 (hyperref)                setting the option has no effect on input line 86.
@@ -1095,11 +1059,94 @@ Package hyperref Warning: Option `pdfdisplaydoctitle' has already been used,
 (hyperref)                setting the option has no effect on input line 86.
 
 (./samplebody-conf_hakan.tex
+
+Package natbib Warning: Citation `Pachet:2003' on page 1 undefined on input lin
+e 2.
+
+
+Package natbib Warning: Citation `KNN:2009' on page 1 undefined on input line 6
+.
+
+
+Package natbib Warning: Citation `Clustering:2001' on page 1 undefined on input
+ line 6.
+
+
+Package natbib Warning: Citation `SVM:2006' on page 1 undefined on input line 6
+.
+
+
+Package natbib Warning: Citation `Pachet:2003' on page 1 undefined on input lin
+e 6.
+
+
+Package natbib Warning: Citation `PyTorch:2017' on page 1 undefined on input li
+ne 8.
+
+
+Package natbib Warning: Citation `MFCC:2011' on page 1 undefined on input line 
+8.
+
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 11.
- [1.1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+Package natbib Warning: Citation `GTZAN:2002' on page 1 undefined on input line
+ 22.
+
+
+Package natbib Warning: Citation `GTZAN:2002' on page 1 undefined on input line
+ 22.
+
+
+Package natbib Warning: Citation `Pachet:2003' on page 1 undefined on input lin
+e 24.
+
+[1.1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
+
+Package natbib Warning: Citation `Feng:2016' on page 2 undefined on input line 
+26.
+
+
+Package natbib Warning: Citation `Xing:2016' on page 2 undefined on input line 
+28.
+
+
+Package natbib Warning: Citation `Xing:2016' on page 2 undefined on input line 
+28.
+
+
+Package natbib Warning: Citation `Chun:2010' on page 2 undefined on input line 
+28.
+
+
+Package natbib Warning: Citation `Smaragdis:2002' on page 2 undefined on input 
+line 30.
+
+
+Package natbib Warning: Citation `Chun:2010' on page 2 undefined on input line 
+41.
+
+
+Package natbib Warning: Citation `MFCC:2011' on page 2 undefined on input line 
+44.
+
+
+Overfull \hbox (1.10945pt too wide) in paragraph at lines 49--50
+\T1/LinuxLibertineT-TLF/m/n/9 (-20) After fea-ture ex-trac-tion and con-struc-t
+ion of fi-nal dataset, we thought
+ []
+
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 60.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
+(Font)              scaled to size 9.0pt on input line 60.
+[2.2]
+
+LaTeX Warning: Reference `fig:big_picture2' on page 3 undefined on input line 8
+7.
+
 Package epstopdf Info: Source file: <./figures/eps_bb.eps>
 (epstopdf)                    date: 2018-03-16 20:09:14
 (epstopdf)                    size: 2401599 bytes
@@ -1108,29 +1155,34 @@ Package epstopdf Info: Source file: <./figures/eps_bb.eps>
 (epstopdf)                    size: 266365 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/eps_bb-eps-conve
 rted-to.pdf ./figures/eps_bb.eps>
-(epstopdf)             \includegraphics on input line 68.
+(epstopdf)             \includegraphics on input line 91.
 Package epstopdf Info: Output file is already uptodate.
-
-<./figures/eps_bb-eps-converted-to.pdf, id=131, 869.2475pt x 489.83pt>
+<./figures/eps_bb-eps-converted-to.pdf, id=47, 869.2475pt x 489.83pt>
 File: ./figures/eps_bb-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/eps_bb-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/eps_bb-eps-converted-to.pdf used on input li
-ne 68.
+ne 91.
 (pdftex.def)             Requested size: 260.77626pt x 146.95012pt.
 
-Overfull \hbox (19.62877pt too wide) in paragraph at lines 68--69
+Overfull \hbox (19.62877pt too wide) in paragraph at lines 91--92
  [] 
  []
 
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 78.
-[2.2 <./figures/eps_bb-eps-converted-to.pdf>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package natbib Warning: Citation `LLFI:2015' on page 3 undefined on input line 
+112.
+
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 93.
+(Font)              scaled to size 9.0pt on input line 116.
 
-Underfull \vbox (badness 2698) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [3.3 <./figures/eps_bb-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./figures/figure_2_22.eps>
 (epstopdf)                    date: 2018-05-29 08:15:07
 (epstopdf)                    size: 89933 bytes
@@ -1140,14 +1192,15 @@ Package epstopdf Info: Source file: <./figures/figure_2_22.eps>
 (epstopdf)                    size: 26424 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/figure_2_22-eps-
 converted-to.pdf ./figures/figure_2_22.eps>
-(epstopdf)             \includegraphics on input line 99.
+(epstopdf)             \includegraphics on input line 122.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/figure_2_22-eps-converted-to.pdf, id=149, 773.89125pt x 597.23125pt>
+<./figures/figure_2_22-eps-converted-to.pdf, id=59, 773.89125pt x 597.23125pt>
 File: ./figures/figure_2_22-eps-converted-to.pdf Graphic file (type pdf)
+
 <use ./figures/figure_2_22-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/figure_2_22-eps-converted-to.pdf used on inp
-ut line 99.
+ut line 122.
 (pdftex.def)             Requested size: 232.16916pt x 179.17075pt.
 Package epstopdf Info: Source file: <./figures/figure_3_33.eps>
 (epstopdf)                    date: 2018-05-29 08:15:45
@@ -1158,17 +1211,18 @@ Package epstopdf Info: Source file: <./figures/figure_3_33.eps>
 (epstopdf)                    size: 26004 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/figure_3_33-eps-
 converted-to.pdf ./figures/figure_3_33.eps>
-(epstopdf)             \includegraphics on input line 107.
+(epstopdf)             \includegraphics on input line 130.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/figure_3_33-eps-converted-to.pdf, id=150, 816.04875pt x 623.32875pt>
+<./figures/figure_3_33-eps-converted-to.pdf, id=60, 816.04875pt x 623.32875pt>
 File: ./figures/figure_3_33-eps-converted-to.pdf Graphic file (type pdf)
+
 <use ./figures/figure_3_33-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/figure_3_33-eps-converted-to.pdf used on inp
-ut line 107.
+ut line 130.
 (pdftex.def)             Requested size: 244.81651pt x 187.00006pt.
 
-Overfull \hbox (3.66902pt too wide) in paragraph at lines 107--108
+Overfull \hbox (3.66902pt too wide) in paragraph at lines 130--131
  [] 
  []
 
@@ -1181,14 +1235,15 @@ f>
 (epstopdf)                    size: 175551 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/crash_type_2-eps
 -converted-to.pdf ./figures/crash_type_2.eps>
-(epstopdf)             \includegraphics on input line 115.
+(epstopdf)             \includegraphics on input line 138.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/crash_type_2-eps-converted-to.pdf, id=151, 559.08875pt x 419.5675pt>
+<./figures/crash_type_2-eps-converted-to.pdf, id=61, 559.08875pt x 419.5675pt>
 File: ./figures/crash_type_2-eps-converted-to.pdf Graphic file (type pdf)
+
 <use ./figures/crash_type_2-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/crash_type_2-eps-converted-to.pdf used on in
-put line 115.
+put line 138.
 (pdftex.def)             Requested size: 218.04373pt x 163.63066pt.
 Package epstopdf Info: Source file: <./figures/sdc_type_2.eps>
 (epstopdf)                    date: 2018-03-05 20:13:02
@@ -1199,104 +1254,164 @@ Package epstopdf Info: Source file: <./figures/sdc_type_2.eps>
 (epstopdf)                    size: 185954 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/sdc_type_2-eps-c
 onverted-to.pdf ./figures/sdc_type_2.eps>
-(epstopdf)             \includegraphics on input line 123.
+(epstopdf)             \includegraphics on input line 146.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/sdc_type_2-eps-converted-to.pdf, id=152, 560.0925pt x 420.57124pt>
+<./figures/sdc_type_2-eps-converted-to.pdf, id=62, 560.0925pt x 420.57124pt>
 File: ./figures/sdc_type_2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/sdc_type_2-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/sdc_type_2-eps-converted-to.pdf used on inpu
-t line 123.
+t line 146.
 (pdftex.def)             Requested size: 218.4352pt x 164.02213pt.
- [3.3 <./figures/figure_2_22-eps-converted-to.pdf>] [4.4 <./figures/figure_3_33
--eps-converted-to.pdf> <./figures/crash_type_2-eps-converted-to.pdf> <./figures
-/sdc_type_2-eps-converted-to.pdf>]
-Underfull \vbox (badness 1052) has occurred while \output is active []
+
+Underfull \vbox (badness 1394) has occurred while \output is active []
+
+ [4.4 <./figures/figure_2_22-eps-converted-to.pdf> <./figures/figure_3_33-eps-c
+onverted-to.pdf> <./figures/crash_type_2-eps-converted-to.pdf> <./figures/sdc_t
+ype_2-eps-converted-to.pdf>]
+Underfull \vbox (badness 1424) has occurred while \output is active []
+
+ [5.5]
+
+Package natbib Warning: Citation `LLVM:2004' on page 6 undefined on input line 
+217.
+
+
+Package natbib Warning: Citation `EDDI:2002' on page 6 undefined on input line 
+221.
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 207.
+(Font)              scaled to size 7.3pt on input line 230.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 207.
+(Font)              scaled to size 5.5pt on input line 230.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.3pt on input line 231.
+(Font)              scaled to size 7.3pt on input line 254.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 5.5pt on input line 231.
- [5.5]
-Underfull \hbox (badness 10000) in paragraph at lines 249--253
+(Font)              scaled to size 5.5pt on input line 254.
+
+Package natbib Warning: Citation `MediaBench:1997' on page 6 undefined on input
+ line 268.
+
+
+Package natbib Warning: Citation `MiBench:2001' on page 6 undefined on input li
+ne 268.
+
+
+Package natbib Warning: Citation `LLFI:2015' on page 6 undefined on input line 
+270.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--276
 
  []
 
 
-Overfull \hbox (7.08139pt too wide) in paragraph at lines 261--261
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (7.08139pt too wide) in paragraph at lines 284--284
 []\T1/LinuxLibertineT-TLF/m/n/9 (-20) Benchmark| 
  []
 
 
-Overfull \hbox (4.38506pt too wide) in paragraph at lines 261--261
+Overfull \hbox (4.38506pt too wide) in paragraph at lines 284--284
 []\T1/LinuxLibertineT-TLF/m/n/9 (-20) Code
  []
 
 
-Overfull \hbox (1.56483pt too wide) in paragraph at lines 261--261
+Overfull \hbox (1.56483pt too wide) in paragraph at lines 284--284
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) (KB)| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 []\T1/LinuxLibertineT-TLF/m/n/9 (-1) Instr
  []
 
 
-Overfull \hbox (5.32211pt too wide) in paragraph at lines 261--262
+Overfull \hbox (5.32211pt too wide) in paragraph at lines 284--285
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) Count
  []
 
 
-Overfull \hbox (1.27379pt too wide) in paragraph at lines 263--264
+Package natbib Warning: Citation `MiBench:2001' on page 6 undefined on input li
+ne 286.
+
+
+Overfull \hbox (1.27379pt too wide) in paragraph at lines 286--287
 []\T1/LinuxLibertineT-TLF/m/n/9 (-20) 688.3| 
  []
 
 
-Overfull \hbox (1.27379pt too wide) in paragraph at lines 264--265
+Package natbib Warning: Citation `MiBench:2001' on page 6 undefined on input li
+ne 287.
+
+
+Overfull \hbox (1.27379pt too wide) in paragraph at lines 287--288
 []\T1/LinuxLibertineT-TLF/m/n/9 (-20) 327.3| 
  []
 
 
-Overfull \hbox (5.37509pt too wide) in paragraph at lines 265--266
+Package natbib Warning: Citation `MiBench:2001' on page 6 undefined on input li
+ne 288.
+
+
+Overfull \hbox (5.37509pt too wide) in paragraph at lines 288--289
 []\T1/LinuxLibertineT-TLF/m/n/9 (-20) 238.89| 
  []
 
 
-Overfull \hbox (1.27379pt too wide) in paragraph at lines 266--267
+Package natbib Warning: Citation `MiBench:2001' on page 6 undefined on input li
+ne 289.
+
+
+Overfull \hbox (1.27379pt too wide) in paragraph at lines 289--290
 []\T1/LinuxLibertineT-TLF/m/n/9 (-20) 513.8| 
  []
 
 
-Overfull \hbox (3.91225pt too wide) in paragraph at lines 269--269
+Package natbib Warning: Citation `MediaBench:1997' on page 6 undefined on input
+ line 290.
+
+
+Package natbib Warning: Citation `MediaBench:1997' on page 6 undefined on input
+ line 291.
+
+
+Package natbib Warning: Citation `MediaBench:1997' on page 6 undefined on input
+ line 292.
+
+
+Overfull \hbox (3.91225pt too wide) in paragraph at lines 292--292
 []\T1/LinuxLibertineT-TLF/m/n/9 (-20) 488.8| 
  []
 
 
-Overfull \hbox (1.06679pt too wide) in paragraph at lines 269--270
+Overfull \hbox (1.06679pt too wide) in paragraph at lines 292--293
 []\T1/LinuxLibertineT-TLF/m/n/9 (-20) 18.65| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--270
+Package natbib Warning: Citation `MediaBench:1997' on page 6 undefined on input
+ line 293.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--293
 []\T1/LinuxLibertineT-TLF/m/n/9 (+20) Feature Ex-trac-
  []
 
 
-Overfull \hbox (1.27379pt too wide) in paragraph at lines 270--271
+Overfull \hbox (1.27379pt too wide) in paragraph at lines 293--294
 []\T1/LinuxLibertineT-TLF/m/n/9 (-20) 24.86| 
  []
 
 
-Overfull \hbox (37.93858pt too wide) in paragraph at lines 260--272
+Overfull \hbox (37.93858pt too wide) in paragraph at lines 283--295
  [] 
  []
 
+[6.6]
 Package epstopdf Info: Source file: <./figures/Figure_9_final.eps>
 (epstopdf)                    date: 2018-03-23 16:23:20
 (epstopdf)                    size: 75545 bytes
@@ -1306,15 +1421,15 @@ pdf>
 (epstopdf)                    size: 20666 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/Figure_9_final-e
 ps-converted-to.pdf ./figures/Figure_9_final.eps>
-(epstopdf)             \includegraphics on input line 295.
+(epstopdf)             \includegraphics on input line 318.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/Figure_9_final-eps-converted-to.pdf, id=226, 589.20125pt x 468.75125
+<./figures/Figure_9_final-eps-converted-to.pdf, id=123, 589.20125pt x 468.75125
 pt>
 File: ./figures/Figure_9_final-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figures/Figure_9_final-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/Figure_9_final-eps-converted-to.pdf used on 
-input line 295.
+input line 318.
 (pdftex.def)             Requested size: 235.67632pt x 187.49716pt.
 Package epstopdf Info: Source file: <./figures/Figure_10_ff.eps>
 (epstopdf)                    date: 2018-03-23 16:27:35
@@ -1325,15 +1440,15 @@ f>
 (epstopdf)                    size: 19430 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/Figure_10_ff-eps
 -converted-to.pdf ./figures/Figure_10_ff.eps>
-(epstopdf)             \includegraphics on input line 303.
+(epstopdf)             \includegraphics on input line 326.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/Figure_10_ff-eps-converted-to.pdf, id=227, 543.02875pt x 428.60126pt
+<./figures/Figure_10_ff-eps-converted-to.pdf, id=124, 543.02875pt x 428.60126pt
 >
 File: ./figures/Figure_10_ff-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figures/Figure_10_ff-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/Figure_10_ff-eps-converted-to.pdf used on in
-put line 303.
+put line 326.
 (pdftex.def)             Requested size: 228.07051pt x 180.01129pt.
 Package epstopdf Info: Source file: <./figures/baseline_overhead.eps>
 (epstopdf)                    date: 2018-03-23 20:26:31
@@ -1344,22 +1459,23 @@ to.pdf>
 (epstopdf)                    size: 19654 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/baseline_overhea
 d-eps-converted-to.pdf ./figures/baseline_overhead.eps>
-(epstopdf)             \includegraphics on input line 311.
+(epstopdf)             \includegraphics on input line 334.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/baseline_overhead-eps-converted-to.pdf, id=228, 624.3325pt x 480.796
+<./figures/baseline_overhead-eps-converted-to.pdf, id=125, 624.3325pt x 480.796
 25pt>
 File: ./figures/baseline_overhead-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figures/baseline_overhead-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/baseline_overhead-eps-converted-to.pdf used 
-on input line 311.
+on input line 334.
 (pdftex.def)             Requested size: 262.21786pt x 201.93304pt.
 
-Overfull \hbox (21.07037pt too wide) in paragraph at lines 311--312
+Overfull \hbox (21.07037pt too wide) in paragraph at lines 334--335
  [] 
  []
 
-[6.6 <./figures/Figure_9_final-eps-converted-to.pdf>]
+[7.7 <./figures/Figure_9_final-eps-converted-to.pdf> <./figures/Figure_10_ff-ep
+s-converted-to.pdf> <./figures/baseline_overhead-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./figures/figure9.eps>
 (epstopdf)                    date: 2018-05-30 02:41:14
 (epstopdf)                    size: 72811 bytes
@@ -1368,15 +1484,15 @@ Package epstopdf Info: Source file: <./figures/figure9.eps>
 (epstopdf)                    size: 20298 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/figure9-eps-conv
 erted-to.pdf ./figures/figure9.eps>
-(epstopdf)             \includegraphics on input line 337.
+(epstopdf)             \includegraphics on input line 360.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/figure9-eps-converted-to.pdf, id=248, 737.75626pt x 593.21625pt>
+<./figures/figure9-eps-converted-to.pdf, id=168, 737.75626pt x 593.21625pt>
 File: ./figures/figure9-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/figure9-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/figure9-eps-converted-to.pdf used on input l
-ine 337.
+ine 360.
 (pdftex.def)             Requested size: 236.08682pt x 189.83307pt.
 Package epstopdf Info: Source file: <./figures/figure10.eps>
 (epstopdf)                    date: 2018-05-30 02:42:01
@@ -1386,15 +1502,15 @@ Package epstopdf Info: Source file: <./figures/figure10.eps>
 (epstopdf)                    size: 19518 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/figure10-eps-con
 verted-to.pdf ./figures/figure10.eps>
-(epstopdf)             \includegraphics on input line 345.
+(epstopdf)             \includegraphics on input line 368.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/figure10-eps-converted-to.pdf, id=249, 746.79pt x 588.1975pt>
+<./figures/figure10-eps-converted-to.pdf, id=169, 746.79pt x 588.1975pt>
 File: ./figures/figure10-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/figure10-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/figure10-eps-converted-to.pdf used on input 
-line 345.
+line 368.
 (pdftex.def)             Requested size: 238.97768pt x 188.22704pt.
 Package epstopdf Info: Source file: <./figures/figure11.eps>
 (epstopdf)                    date: 2018-05-30 02:42:47
@@ -1404,15 +1520,15 @@ Package epstopdf Info: Source file: <./figures/figure11.eps>
 (epstopdf)                    size: 19905 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/figure11-eps-con
 verted-to.pdf ./figures/figure11.eps>
-(epstopdf)             \includegraphics on input line 353.
+(epstopdf)             \includegraphics on input line 376.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/figure11-eps-converted-to.pdf, id=250, 736.7525pt x 595.22375pt>
+<./figures/figure11-eps-converted-to.pdf, id=170, 736.7525pt x 595.22375pt>
 File: ./figures/figure11-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/figure11-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/figure11-eps-converted-to.pdf used on input 
-line 353.
+line 376.
 (pdftex.def)             Requested size: 235.76561pt x 190.4755pt.
 Package epstopdf Info: Source file: <./figures/figure12.eps>
 (epstopdf)                    date: 2018-05-30 02:43:48
@@ -1422,53 +1538,66 @@ Package epstopdf Info: Source file: <./figures/figure12.eps>
 (epstopdf)                    size: 19460 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/figure12-eps-con
 verted-to.pdf ./figures/figure12.eps>
-(epstopdf)             \includegraphics on input line 361.
+(epstopdf)             \includegraphics on input line 384.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/figure12-eps-converted-to.pdf, id=251, 732.7375pt x 587.19376pt>
+<./figures/figure12-eps-converted-to.pdf, id=171, 732.7375pt x 587.19376pt>
 File: ./figures/figure12-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/figure12-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/figure12-eps-converted-to.pdf used on input 
-line 361.
+line 384.
 (pdftex.def)             Requested size: 234.48079pt x 187.90584pt.
- [7.7 <./figures/Figure_10_ff-eps-converted-to.pdf> <./figures/baseline_overhea
-d-eps-converted-to.pdf> <./figures/figure9-eps-converted-to.pdf>]) (./sample-si
-gconf.bbl
+ [8.8 <./figures/figure9-eps-converted-to.pdf> <./figures/figure10-eps-converte
+d-to.pdf> <./figures/figure11-eps-converted-to.pdf>]) (./sample-sigconf.bbl
 LaTeX Info: Redefining \tempurl on input line 77.
 LaTeX Info: Redefining \tempurl on input line 94.
 LaTeX Info: Redefining \tempurl on input line 111.
- [8.8 <./figures/figure10-eps-converted-to.pdf> <./figures/figure11-eps-convert
-ed-to.pdf> <./figures/figure12-eps-converted-to.pdf>]
 LaTeX Info: Redefining \tempurl on input line 129.
 LaTeX Info: Redefining \tempurl on input line 155.
 LaTeX Info: Redefining \tempurl on input line 185.
 LaTeX Info: Redefining \tempurl on input line 212.
 LaTeX Info: Redefining \tempurl on input line 230.
 LaTeX Info: Redefining \tempurl on input line 248.
-) [9.9
+)
 
-]
+Package natbib Warning: There were undefined citations.
+
+[9.9 <./figures/figure12-eps-converted-to.pdf>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 93.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
- (./sample-sigconf.aux)
+ (./sample-sigconf.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 93.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
-Package rerunfilecheck Info: File `sample-sigconf.out' has not changed.
-(rerunfilecheck)             Checksum: 720BBE3DF153B64FA805AB3C2AEDB4DF;3655.
 
 
-LaTeX Warning: There were multiply-defined labels.
+Package rerunfilecheck Warning: File `sample-sigconf.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `sample-sigconf.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  720BBE3DF153B64FA805AB3C2AEDB4DF;3655.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 19117 strings out of 492995
- 291888 string characters out of 6132705
- 420379 words of memory out of 5000000
- 21793 multiletter control sequences out of 15000+600000
- 164789 words of font info for 305 fonts, out of 8000000 for 9000
+ 19115 strings out of 492995
+ 292054 string characters out of 6132705
+ 418237 words of memory out of 5000000
+ 21773 multiletter control sequences out of 15000+600000
+ 171037 words of font info for 311 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,21n,94p,1492b,567s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,21n,94p,1492b,513s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc
 }{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/te
 xlive/2017/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc}{/usr/local/texliv
@@ -1479,17 +1608,18 @@ e/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/local/texlive
 17/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr/local/texlive/201
 7/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></usr/local/texlive/
 2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on sample-sigconf.pdf (9 pages, 1228566 bytes).
+ive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumTI.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pf
+b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
+Output written on sample-sigconf.pdf (9 pages, 1267344 bytes).
 PDF statistics:
- 417 PDF objects out of 1000 (max. 8388607)
- 324 compressed objects within 4 object streams
- 67 named destinations out of 1000 (max. 500000)
- 49393 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 334 PDF objects out of 1000 (max. 8388607)
+ 240 compressed objects within 3 object streams
+ 74 named destinations out of 1000 (max. 500000)
+ 53321 words of extra memory for PDF output out of 61914 (max. 10000000)
 
