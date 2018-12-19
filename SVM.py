@@ -22,6 +22,7 @@ def get_acc(pred, y_test):
 
 def support_vector_machine(X_train,Y_train,X_test,Y_test):
 	svm = SVC()
+	svm=SVC(C=3,kernel='rbf')
 	svm.fit(X_train,Y_train)
 	pred_train = svm.predict(X_train)
 	pred_test = svm.predict(X_test)
