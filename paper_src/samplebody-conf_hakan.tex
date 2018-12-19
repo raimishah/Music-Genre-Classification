@@ -55,23 +55,26 @@ After feature extraction and construction of final dataset, we thought of using 
 % Figure 8 --> 3-dimensional plt 
 
 \subsection{Machine Learning Algorithms}
-\subsubsection{K-Nearest Neighbor (KNN)}
+\subsubsection{\textbf{K-Nearest Neighbor (K-NN)}}
+The first algorithm we used is the very famous and effective k-closest neighbors algorithm. k-NN is a non-linear algorithm that can detect direct or indirect spread of data. It is very effective for huge amounts of data. The only downside of k-NN is the fact that it makes hard decisions and might produce low classification accuracy. The most significant computation in this algorithm is measuring the distance between different points in our dataset. We used Euclidean distance for k-NN, which produced good results. After our experiments, we also found that k=5 produced the best results. 
 
-\subsubsection{Support Vector Machines (SVM)}
+\subsubsection{\textbf{Support Vector Machines (SVM)}}
+The second technique we used is the support vector machine (SVM), which is a directed organization method that discovers the extreme boundary splitting two classes of information \cite{SVM:2006}. 
 
-\subsubsection{Gaussian Mixture Models (GMM)}
+\subsubsection{\textbf{Gaussian Mixture Models (GMM)}}
 
-\subsubsection{K-Means Clustering}
+\subsubsection{\textbf{K-Means Clustering}}
 
-\subsubsection{Simple 3-layer Neural Network}
+\subsubsection{\textbf{Simple 3-layer Neural Network}}
 
-\subsubsection{Convolutional Neural Network}
+\subsubsection{\textbf{Convolutional Neural Network (CNN)}}
 
-\subsubsection{Super-Classifier}
+\subsubsection{\textbf{Super-Classifier (SC)}}
 
 \section{Experimental Results}\label{sec:results}
 
 \subsection{Experiment Setup}
+The experimental setup for computation of classification accuracies were quite simple. After extracting features of our data through MFCC and applying PCA, we saved our training and testing datasets into a file, so that we do not have to do all the computations again. Then, we wrote a script that loads the training and testing datasets, and then puts the training data as an input to each of our classifiers with the corresponding genre labels. After training on each classifier, we computed predictions of each song and compared each label with its groun truth. Finally, we outputted the classification accuracy of each classifier and their confusion matrices, which are shown in Figure 9 through 16.
 
 \subsection{Classification Accuracy}
 
@@ -88,7 +91,7 @@ In Figure \ref{fig:big_picture2}, we present a high-level description of our app
 
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[scale=0.3]{./figures/eps_bb.eps}
+\includegraphics[scale=0.3]{./figures/pop.png}
 \end{center}
 \caption
 {
