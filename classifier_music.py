@@ -30,6 +30,8 @@ import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn import metrics
 from train import train_torch
+from collections import Counter
+
 
 
 
@@ -125,8 +127,8 @@ plt.show()
 '''
 
 # Gaussian Classifier
-pred = get_gaussian(X_train.T,Y_train,X_test.T)
-print('The accuracy of the gaussian classifier is: %f' %(get_acc(pred,Y_test)))
+gaussian_pred = get_gaussian(X_train.T,Y_train,X_test.T)
+print('The accuracy of the gaussian classifier is: %f' %(get_acc(gaussian_pred,Y_test)))
 #confusion(Y_test,pred)
 
 
@@ -152,18 +154,33 @@ for i in range(len(Y_all)):
 '''
 
 #KNN
-#knn = nearest_neighbor(X_train,Y_train,X_test,Y_test)
-#pred = knn.predict(X_test)
-#confusion(Y_test,pred)
+knn = nearest_neighbor(X_train,Y_train,X_test,Y_test)
+knn_pred = knn.predict(X_test)
+confusion(Y_test,knn_pred)
 
 # SVM 
-#svm = support_vector_machine(X_train,Y_train,X_test,Y_test)
-#pred = svm.predict(X_test)
-#confusion(Y_test,pred)
+svm = support_vector_machine(X_train,Y_train,X_test,Y_test)
+svm_pred = svm.predict(X_test)
+confusion(Y_test,svm_pred)
 
 # Neural-Net
-pred = train_torch(X_train,Y_train,X_test,Y_test)
-confusion(Y_test,pred)
+nn_pred = train_torch(X_train,Y_train,X_test,Y_test)
+confusion(Y_test,nn_pred)
+
+#ensemble method - combine classifiers
+all_pred = np.vstack((gaussian_pred, knn_pred, svm_pred, nn_pred))
+final_pred = np.zeros((len(nn_pred), ))
+for i in range(final_pred.shape[0]):
+    keys = Counter(all_pred[:,i]).keys()
+    values = Counter(all_pred[:,i]).values()
+    
+    keys = np.array(list(keys))
+    values = np.array(list(values))
+    max_idx = np.argmax(values)
+    final_pred[i] = keys[max_idx]
+
+
+print('The accuracy of the combined classifier is: %f' %(get_acc(final_pred,Y_test)))
 
 #KMeans
 '''
