@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.5)  20 DEC 2018 17:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.5)  20 DEC 2018 17:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1183,99 +1183,110 @@ ian Mix-ture Mod-els (GMM)\T1/LinuxBiolinumT-TLF/m/it/9 (-20) .[] \T1/LinuxLibe
 rtineT-TLF/m/n/9 (-20) Af-ter K-Means clus-
  []
 
-<./figures/arch_cnn.png, id=140, 1074.0125pt x 314.17375pt>
+<./figures/arch_nn.png, id=140, 533.995pt x 381.425pt>
+File: ./figures/arch_nn.png Graphic file (type png)
+
+<use ./figures/arch_nn.png>
+Package pdftex.def Info: ./figures/arch_nn.png used on input line 160.
+(pdftex.def)             Requested size: 106.7971pt x 76.28365pt.
+
+<./figures/arch_cnn.png, id=141, 1074.0125pt x 314.17375pt>
 File: ./figures/arch_cnn.png Graphic file (type png)
 
 <use ./figures/arch_cnn.png>
-Package pdftex.def Info: ./figures/arch_cnn.png used on input line 164.
+Package pdftex.def Info: ./figures/arch_cnn.png used on input line 175.
 (pdftex.def)             Requested size: 214.79869pt x 62.83363pt.
 
-Overfull \hbox (7.6072pt too wide) in paragraph at lines 160--172
+Overfull \hbox (7.6072pt too wide) in paragraph at lines 171--183
  \T1/LinuxBiolinumT-TLF/m/it/9 (-20) 3.4.6 \T1/LinuxBiolinumT-TLF/b/sl/9 Con-vo
 -lu-tional Neu-ral Net-work (CNN)\T1/LinuxBiolinumT-TLF/m/it/9 (-20) .[] \T1/Li
 nuxLibertineT-TLF/m/n/9 (-20) We also wanted
  []
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 187.
+(Font)              scaled to size 9.0pt on input line 198.
 
-Overfull \hbox (1.65504pt too wide) in paragraph at lines 187--187
+Overfull \hbox (1.65504pt too wide) in paragraph at lines 198--198
 []\T1/LinuxLibertineT-TLF/m/it/9 (-20) Accuracy| 
  []
 
 
-Overfull \hbox (43.54637pt too wide) in paragraph at lines 186--197
+Overfull \hbox (43.54637pt too wide) in paragraph at lines 197--208
  [] 
  []
 
-[4.4 <./figures/3_d_plot.png> <./figures/arch_cnn.png>]
-<./figures/confusion_knn.png, id=155, 477.785pt x 380.42125pt>
+
+Underfull \vbox (badness 1152) has occurred while \output is active []
+
+ [4.4 <./figures/3_d_plot.png> <./figures/arch_nn.png> <./figures/arch_cnn.png>
+]
+<./figures/confusion_knn.png, id=158, 477.785pt x 380.42125pt>
 File: ./figures/confusion_knn.png Graphic file (type png)
 
 <use ./figures/confusion_knn.png>
-Package pdftex.def Info: ./figures/confusion_knn.png used on input line 202.
+Package pdftex.def Info: ./figures/confusion_knn.png used on input line 213.
 (pdftex.def)             Requested size: 143.3366pt x 114.12724pt.
 
-<./figures/confusion_svm.png, id=156, 410.53375pt x 390.45876pt>
+<./figures/confusion_svm.png, id=159, 410.53375pt x 390.45876pt>
 File: ./figures/confusion_svm.png Graphic file (type png)
 
 <use ./figures/confusion_svm.png>
-Package pdftex.def Info: ./figures/confusion_svm.png used on input line 213.
+Package pdftex.def Info: ./figures/confusion_svm.png used on input line 224.
 (pdftex.def)             Requested size: 123.16107pt x 117.13852pt.
 
-<./figures/confusion_kmeans.png, id=157, 642.4pt x 481.8pt>
+<./figures/confusion_kmeans.png, id=160, 642.4pt x 481.8pt>
 File: ./figures/confusion_kmeans.png Graphic file (type png)
 
 <use ./figures/confusion_kmeans.png>
-Package pdftex.def Info: ./figures/confusion_kmeans.png used on input line 224.
+Package pdftex.def Info: ./figures/confusion_kmeans.png used on input line 235.
 
 (pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
 
-<./figures/confusion_gmm.png, id=158, 425.59pt x 384.43625pt>
+<./figures/confusion_gmm.png, id=161, 425.59pt x 384.43625pt>
 File: ./figures/confusion_gmm.png Graphic file (type png)
 
 <use ./figures/confusion_gmm.png>
-Package pdftex.def Info: ./figures/confusion_gmm.png used on input line 235.
+Package pdftex.def Info: ./figures/confusion_gmm.png used on input line 246.
 (pdftex.def)             Requested size: 127.67798pt x 115.33176pt.
 
-<./figures/confusion_simple_NN.png, id=159, 436.63126pt x 382.42876pt>
+<./figures/confusion_simple_NN.png, id=162, 436.63126pt x 382.42876pt>
 File: ./figures/confusion_simple_NN.png Graphic file (type png)
 
 <use ./figures/confusion_simple_NN.png>
 Package pdftex.def Info: ./figures/confusion_simple_NN.png used on input line 2
-46.
+57.
 (pdftex.def)             Requested size: 130.99039pt x 114.7295pt.
 
-<./figures/confusion_cnn.png, id=160, 646.415pt x 546.04pt>
+<./figures/confusion_cnn.png, id=163, 646.415pt x 546.04pt>
 File: ./figures/confusion_cnn.png Graphic file (type png)
 
 <use ./figures/confusion_cnn.png>
-Package pdftex.def Info: ./figures/confusion_cnn.png used on input line 257.
+Package pdftex.def Info: ./figures/confusion_cnn.png used on input line 268.
 (pdftex.def)             Requested size: 129.2807pt x 109.20605pt.
 
-<./figures/confusion_sc.png, id=161, 642.4pt x 481.8pt>
+<./figures/confusion_sc.png, id=164, 642.4pt x 481.8pt>
 File: ./figures/confusion_sc.png Graphic file (type png)
 
 <use ./figures/confusion_sc.png>
-Package pdftex.def Info: ./figures/confusion_sc.png used on input line 268.
+Package pdftex.def Info: ./figures/confusion_sc.png used on input line 279.
 (pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
 
-<./figures/3_layer_loss.png, id=162, 406.51875pt x 302.12875pt>
+<./figures/3_layer_loss.png, id=165, 406.51875pt x 302.12875pt>
 File: ./figures/3_layer_loss.png Graphic file (type png)
 
 <use ./figures/3_layer_loss.png>
-Package pdftex.def Info: ./figures/3_layer_loss.png used on input line 279.
+Package pdftex.def Info: ./figures/3_layer_loss.png used on input line 290.
 (pdftex.def)             Requested size: 142.28369pt x 105.74664pt.
 
-<./figures/loss_cnn.png, id=163, 721.69624pt x 534.99875pt>
+<./figures/loss_cnn.png, id=166, 721.69624pt x 534.99875pt>
 File: ./figures/loss_cnn.png Graphic file (type png)
 
 <use ./figures/loss_cnn.png>
-Package pdftex.def Info: ./figures/loss_cnn.png used on input line 290.
+Package pdftex.def Info: ./figures/loss_cnn.png used on input line 301.
 (pdftex.def)             Requested size: 144.33669pt x 106.99785pt.
 ) (./sample-sigconf.bbl [5.5 <./figures/confusion_knn.png> <./figures/confusion
 _svm.png> <./figures/confusion_kmeans.png> <./figures/confusion_gmm.png> <./fig
-ures/confusion_simple_NN.png> <./figures/confusion_cnn.png>]
+ures/confusion_simple_NN.png>]
 LaTeX Info: Redefining \tempurl on input line 77.
 LaTeX Info: Redefining \tempurl on input line 94.
 LaTeX Info: Redefining \tempurl on input line 111.
@@ -1285,46 +1296,55 @@ LaTeX Info: Redefining \tempurl on input line 185.
 LaTeX Info: Redefining \tempurl on input line 212.
 LaTeX Info: Redefining \tempurl on input line 230.
 LaTeX Info: Redefining \tempurl on input line 248.
-) [6.6 <./figures/confusion_sc.png> <./figures/3_layer_loss.png> <./figures/los
-s_cnn.png>]
+) [6.6 <./figures/confusion_cnn.png> <./figures/confusion_sc.png> <./figures/3_
+layer_loss.png> <./figures/loss_cnn.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
  (./sample-sigconf.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
-Package rerunfilecheck Info: File `sample-sigconf.out' has not changed.
-(rerunfilecheck)             Checksum: 4283915FF236CED4C3A6823431B54567;2405.
 
+
+Package rerunfilecheck Warning: File `sample-sigconf.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `sample-sigconf.out':
+(rerunfilecheck)             Before: 4283915FF236CED4C3A6823431B54567;2405
+(rerunfilecheck)             After:  1C7BD8F14DFF6914206475E2F39C76F6;2405.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19068 strings out of 492995
- 290819 string characters out of 6132705
- 414928 words of memory out of 5000000
- 21773 multiletter control sequences out of 15000+600000
+ 19075 strings out of 492995
+ 290961 string characters out of 6132705
+ 416928 words of memory out of 5000000
+ 21777 multiletter control sequences out of 15000+600000
  146613 words of font info for 275 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,11n,94p,1210b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
-}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{
-/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/
-usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.
-pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinu
-mTBO.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBi
-olinumTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/L
-inLibertineT.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/liberti
-ne/LinLibertineTB.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/li
-bertine/LinLibertineTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
-ic/newtx/txsys.pfb>
-Output written on sample-sigconf.pdf (6 pages, 2662046 bytes).
+pdfTeX warning (dest): name{section*.24} has been referenced but does not exi
+st, replaced by a fixed one
+
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{
+/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/
+usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/u
+sr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/us
+r/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pf
+b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumT
+BO.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiol
+inumTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/Lin
+LibertineT.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine
+/LinLibertineTB.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libe
+rtine/LinLibertineTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/newtx/txsys.pfb>
+Output written on sample-sigconf.pdf (6 pages, 2696884 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 202 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
- 49359 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 273 PDF objects out of 1000 (max. 8388607)
+ 204 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 49364 words of extra memory for PDF output out of 51595 (max. 10000000)
 

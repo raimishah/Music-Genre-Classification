@@ -155,6 +155,17 @@ After K-Means clustering, we attempted to improve the clustering accuracy by imp
 After implementing different well-known classifiers, we wanted to experiment with neural networks since they generally produce promising results in machine learning applications. Firstly, we used PyTorch to process our dataset and constructed a 3-layer neural network that uses ReLU for nonlinearity. Then, we experimented with different PCA dimensions and different hidden layer sizes to produce the best accuracy. The architecture of the network that gives the best classification results is shown in Figure 9. 
 
 %%--> Figure 9.3-layer NN Architecture
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.2]{./figures/arch_nn.png}
+\end{center}
+\caption
+{
+A summary of our final architecture of 3-layer Neural Network.
+}
+\label{fig:big_picture1}
+\end{figure}
+
 
 \subsubsection{\textbf{Convolutional Neural Network (CNN)}}
 We also wanted to experiment with Convolutional Neural Networks, since they can be much more effective than a simple 3-layer neural network or any other classifier. The downside of CNN is the fact that it requires a great deal of hyperparameter tuning. We experimented with different PCA dimensions, convolution kernel sizes, nonlinearity functions and the amount of dropout that we have to add. After testing our classifier with many different parameters, we were able to get a very good accuracy for music genre classification. The architecture that produced the best accuracy is shown on Figure 10. 
