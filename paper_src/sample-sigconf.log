@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.5)  20 DEC 2018 07:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.5)  20 DEC 2018 08:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -794,6 +794,15 @@ LaTeX Warning: Label `fig:big_picture5' multiply defined.
 
 LaTeX Warning: Label `fig:big_picture5' multiply defined.
 
+
+LaTeX Warning: Label `fig:big_picture5' multiply defined.
+
+
+LaTeX Warning: Label `fig:big_picture5' multiply defined.
+
+
+LaTeX Warning: Label `fig:big_picture5' multiply defined.
+
 )
 \openout1 = `sample-sigconf.aux'.
 
@@ -1003,28 +1012,28 @@ Package caption Info: End \AtBeginDocument code.
 
 Excluding 'CCSXML' comment.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 86.
+(Font)              scaled to size 17.28pt on input line 88.
 LaTeX Font Info:    Try loading font information for T1+LinuxBiolinumT-TLF on i
-nput line 86.
+nput line 88.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
 File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 86.
+(Font)              scaled to size 17.28pt on input line 88.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 86.
+(Font)              scaled to size 17.28pt on input line 88.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 86.
+(Font)              scaled to size 12.0pt on input line 88.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 86.
+(Font)              scaled to size 10.0pt on input line 88.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 86.
+(Font)              scaled to size 10.0pt on input line 88.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1036,9 +1045,9 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 86.
+(Font)              scaled to size 7.0pt on input line 88.
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
- input line 86.
+ input line 88.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.
 fd
@@ -1046,70 +1055,76 @@ File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 86.
+(Font)              scaled to size 7.0pt on input line 88.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 86.
+(Font)              scaled to size 9.0pt on input line 88.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 86.
+(Font)              scaled to size 10.95pt on input line 88.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 86.
+(Font)              scaled to size 9.0pt on input line 88.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 86.
+(Font)              scaled to size 8.0pt on input line 88.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 86.
+(Font)              scaled to size 8.0pt on input line 88.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 86.
+(Font)              scaled to size 8.0pt on input line 88.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 86.
+(Font)              scaled to size 8.0pt on input line 88.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.2pt on input line 86.
+(Font)              scaled to size 6.2pt on input line 88.
 
 
 Package hyperref Warning: Option `pdflang' has already been used,
-(hyperref)                setting the option has no effect on input line 86.
+(hyperref)                setting the option has no effect on input line 88.
 
 
 Package hyperref Warning: Option `pdfdisplaydoctitle' has already been used,
-(hyperref)                setting the option has no effect on input line 86.
+(hyperref)                setting the option has no effect on input line 88.
 
 (./samplebody-conf_hakan.tex
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 11.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [1.1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-<./figures/classical.png, id=99, 778.91pt x 577.15625pt>
+Underfull \vbox (badness 7221) has occurred while \output is active []
+
+
+<./figures/classical.png, id=98, 778.91pt x 577.15625pt>
 File: ./figures/classical.png Graphic file (type png)
 
 <use ./figures/classical.png>
 Package pdftex.def Info: ./figures/classical.png used on input line 50.
 (pdftex.def)             Requested size: 155.77924pt x 115.4292pt.
 
-<./figures/metal.png, id=101, 773.89125pt x 594.22pt>
+<./figures/metal.png, id=100, 773.89125pt x 594.22pt>
 File: ./figures/metal.png Graphic file (type png)
 
 <use ./figures/metal.png>
 Package pdftex.def Info: ./figures/metal.png used on input line 61.
 (pdftex.def)             Requested size: 154.7755pt x 118.84189pt.
- <./figures/pop.png, id=102, 782.925pt x 584.1825pt>
+ <./figures/pop.png, id=101, 782.925pt x 584.1825pt>
 File: ./figures/pop.png Graphic file (type png)
 
 <use ./figures/pop.png>
 Package pdftex.def Info: ./figures/pop.png used on input line 72.
 (pdftex.def)             Requested size: 156.58223pt x 116.83443pt.
 
-<./figures/country.png, id=103, 774.895pt x 596.2275pt>
+<./figures/country.png, id=102, 774.895pt x 596.2275pt>
 File: ./figures/country.png Graphic file (type png)
 
 <use ./figures/country.png>
 Package pdftex.def Info: ./figures/country.png used on input line 83.
 (pdftex.def)             Requested size: 154.97626pt x 119.24338pt.
 
-<./figures/blues.png, id=104, 758.835pt x 573.14125pt>
+<./figures/blues.png, id=103, 758.835pt x 573.14125pt>
 File: ./figures/blues.png Graphic file (type png)
 
 <use ./figures/blues.png>
@@ -1123,21 +1138,21 @@ ion of fi-nal dataset, we thought
 
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 105.
-[2.2 <./figures/classical.png> <./figures/metal.png> <./figures/pop.png>]
-<./figures/pca_eig.png, id=120, 642.4pt x 481.8pt>
+[2.2 <./figures/classical.png> <./figures/metal.png>]
+<./figures/pca_eig.png, id=118, 642.4pt x 481.8pt>
 File: ./figures/pca_eig.png Graphic file (type png)
  <use ./figures/pca_eig.png>
 Package pdftex.def Info: ./figures/pca_eig.png used on input line 109.
 (pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
 
-<./figures/2_d_plot.png, id=121, 461.725pt x 344.28625pt>
+<./figures/2_d_plot.png, id=119, 461.725pt x 344.28625pt>
 File: ./figures/2_d_plot.png Graphic file (type png)
 
 <use ./figures/2_d_plot.png>
 Package pdftex.def Info: ./figures/2_d_plot.png used on input line 121.
 (pdftex.def)             Requested size: 138.51857pt x 103.28667pt.
 
-<./figures/3_d_plot.png, id=122, 440.64626pt x 356.33125pt>
+<./figures/3_d_plot.png, id=120, 440.64626pt x 356.33125pt>
 File: ./figures/3_d_plot.png Graphic file (type png)
 
 <use ./figures/3_d_plot.png>
@@ -1151,15 +1166,15 @@ ilable
 put line 144.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/sl' will be
 (Font)              scaled to size 9.0pt on input line 144.
-
+ [3.3 <./figures/pop.png> <./figures/country.png> <./figures/blues.png> <./figu
+res/pca_eig.png> <./figures/2_d_plot.png> <./figures/3_d_plot.png>]
 Overfull \hbox (4.69318pt too wide) in paragraph at lines 147--148
  \T1/LinuxBiolinumT-TLF/m/it/9 (-20) 3.4.2 \T1/LinuxBiolinumT-TLF/b/sl/9 Sup-po
 rt Vec-tor Ma-chines (SVM)\T1/LinuxBiolinumT-TLF/m/it/9 (-20) .[] \T1/LinuxLibe
 rtineT-TLF/m/n/9 (-20) The sec-ond tech-nique
  []
 
-[3.3 <./figures/country.png> <./figures/blues.png> <./figures/pca_eig.png> <./f
-igures/2_d_plot.png> <./figures/3_d_plot.png>]
+
 Overfull \hbox (7.6072pt too wide) in paragraph at lines 162--164
  \T1/LinuxBiolinumT-TLF/m/it/9 (-20) 3.4.6 \T1/LinuxBiolinumT-TLF/b/sl/9 Con-vo
 -lu-tional Neu-ral Net-work (CNN)\T1/LinuxBiolinumT-TLF/m/it/9 (-20) .[] \T1/Li
@@ -1178,36 +1193,58 @@ Overfull \hbox (43.54637pt too wide) in paragraph at lines 178--189
  [] 
  []
 
-<./figures/confusion_knn.png, id=143, 477.785pt x 380.42125pt>
+<./figures/confusion_knn.png, id=141, 477.785pt x 380.42125pt>
 File: ./figures/confusion_knn.png Graphic file (type png)
 
 <use ./figures/confusion_knn.png>
 Package pdftex.def Info: ./figures/confusion_knn.png used on input line 194.
 (pdftex.def)             Requested size: 143.3366pt x 114.12724pt.
 
-<./figures/confusion_svm.png, id=144, 410.53375pt x 390.45876pt>
+<./figures/confusion_svm.png, id=142, 410.53375pt x 390.45876pt>
 File: ./figures/confusion_svm.png Graphic file (type png)
 
 <use ./figures/confusion_svm.png>
 Package pdftex.def Info: ./figures/confusion_svm.png used on input line 205.
 (pdftex.def)             Requested size: 123.16107pt x 117.13852pt.
 
-<./figures/confusion_gmm.png, id=145, 425.59pt x 384.43625pt>
+<./figures/confusion_kmeans.png, id=143, 642.4pt x 481.8pt>
+File: ./figures/confusion_kmeans.png Graphic file (type png)
+
+<use ./figures/confusion_kmeans.png>
+Package pdftex.def Info: ./figures/confusion_kmeans.png used on input line 216.
+
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+
+<./figures/confusion_gmm.png, id=144, 425.59pt x 384.43625pt>
 File: ./figures/confusion_gmm.png Graphic file (type png)
 
 <use ./figures/confusion_gmm.png>
-Package pdftex.def Info: ./figures/confusion_gmm.png used on input line 216.
+Package pdftex.def Info: ./figures/confusion_gmm.png used on input line 227.
 (pdftex.def)             Requested size: 127.67798pt x 115.33176pt.
 
-<./figures/confusion_simple_NN.png, id=146, 436.63126pt x 382.42876pt>
+<./figures/confusion_simple_NN.png, id=145, 436.63126pt x 382.42876pt>
 File: ./figures/confusion_simple_NN.png Graphic file (type png)
 
 <use ./figures/confusion_simple_NN.png>
 Package pdftex.def Info: ./figures/confusion_simple_NN.png used on input line 2
-27.
+38.
 (pdftex.def)             Requested size: 130.99039pt x 114.7295pt.
+
+<./figures/confusion_cnn.png, id=146, 646.415pt x 546.04pt>
+File: ./figures/confusion_cnn.png Graphic file (type png)
+
+<use ./figures/confusion_cnn.png>
+Package pdftex.def Info: ./figures/confusion_cnn.png used on input line 249.
+(pdftex.def)             Requested size: 129.2807pt x 109.20605pt.
+
+<./figures/confusion_sc.png, id=147, 642.4pt x 481.8pt>
+File: ./figures/confusion_sc.png Graphic file (type png)
+
+<use ./figures/confusion_sc.png>
+Package pdftex.def Info: ./figures/confusion_sc.png used on input line 260.
+(pdftex.def)             Requested size: 128.47772pt x 96.35829pt.
 ) (./sample-sigconf.bbl [4.4 <./figures/confusion_knn.png> <./figures/confusion
-_svm.png> <./figures/confusion_gmm.png>]
+_svm.png>]
 LaTeX Info: Redefining \tempurl on input line 77.
 LaTeX Info: Redefining \tempurl on input line 94.
 LaTeX Info: Redefining \tempurl on input line 111.
@@ -1217,29 +1254,31 @@ LaTeX Info: Redefining \tempurl on input line 185.
 LaTeX Info: Redefining \tempurl on input line 212.
 LaTeX Info: Redefining \tempurl on input line 230.
 LaTeX Info: Redefining \tempurl on input line 248.
-) [5.5
+ [5.5 <./figures/confusion_kmeans.png> <./figures/confusion_gmm.png> <./figures
+/confusion_simple_NN.png> <./figures/confusion_cnn.png> <./figures/confusion_sc
+.png>]) [6.6
 
- <./figures/confusion_simple_NN.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 93.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 95.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 95.
  (./sample-sigconf.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 93.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 95.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 95.
 Package rerunfilecheck Info: File `sample-sigconf.out' has not changed.
-(rerunfilecheck)             Checksum: 600D06D347634F017CDBB28B54CB14DF;2405.
+(rerunfilecheck)             Checksum: C8E1533A2DC00B8AA677594369BD8F09;2405.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19023 strings out of 492995
- 289733 string characters out of 6132705
- 415869 words of memory out of 5000000
- 21758 multiletter control sequences out of 15000+600000
- 145678 words of font info for 265 fonts, out of 8000000 for 9000
+ 19045 strings out of 492995
+ 290307 string characters out of 6132705
+ 414863 words of memory out of 5000000
+ 21770 multiletter control sequences out of 15000+600000
+ 145951 words of font info for 267 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,11n,94p,1108b,569s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,11n,94p,1229b,593s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
 }{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{
@@ -1254,10 +1293,10 @@ inLibertineT.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/liberti
 ne/LinLibertineTB.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/li
 bertine/LinLibertineTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
 ic/newtx/txsys.pfb>
-Output written on sample-sigconf.pdf (5 pages, 2500347 bytes).
+Output written on sample-sigconf.pdf (6 pages, 2578626 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 191 compressed objects within 2 object streams
- 55 named destinations out of 1000 (max. 500000)
- 49841 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 257 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 49856 words of extra memory for PDF output out of 51595 (max. 10000000)
 

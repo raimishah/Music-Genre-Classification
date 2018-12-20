@@ -180,11 +180,11 @@ The experimental setup for computation of classification accuracies were quite s
  \hline
  K-NN & 81\% & Metal & Classical \\
  SVM & 84\% & Classical & Country \\
+ K-Means & 83\% & Classical & Country \\
  GMM & 85\% & Metal & Blues \\
- K-Means & -\% & - & \\
  3-layer NN & 88\% & Classical & Pop \\
- CNN & -\% & - & - \\
- SC & - \% & -  & -  \\
+ CNN & 90\% & Classical & Blues \\
+ SC & 88\% & Classical  & Country  \\
 \end{tabular}
 \end{center}
 \end{table}
@@ -213,6 +213,17 @@ Confusion matrix for Support Vector Machines.
 
 \begin{figure}
 \begin{center}
+\includegraphics[scale=0.3]{./figures/confusion_kmeans.png}
+\end{center}
+\caption
+{
+Confusion matrix for K-Means Clustering. 
+}
+\label{fig:big_picture5}
+\end{figure}
+
+\begin{figure}
+\begin{center}
 \includegraphics[scale=0.3]{./figures/confusion_gmm.png}
 \end{center}
 \caption
@@ -229,6 +240,28 @@ Confusion matrix for Gaussian Mixture Models.
 \caption
 {
 Confusion matrix for 3-layer Neural Network.
+}
+\label{fig:big_picture5}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.2]{./figures/confusion_cnn.png}
+\end{center}
+\caption
+{
+Confusion matrix for Convolutional Neural Network.
+}
+\label{fig:big_picture5}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.2]{./figures/confusion_sc.png}
+\end{center}
+\caption
+{
+Confusion matrix for Super Classifier.
 }
 \label{fig:big_picture5}
 \end{figure}
