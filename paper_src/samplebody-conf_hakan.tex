@@ -51,7 +51,7 @@ Previous works \cite{MFCC:2011} on music classification and processing of audio 
 \end{center}
 \caption
 {
-Classical
+Mel-spectogram of classical genre.
 }
 \label{fig:big_picture1}
 \end{figure}
@@ -62,7 +62,7 @@ Classical
 \end{center}
 \caption
 {
-Metal
+Mel-spectogram of metal genre.
 }
 \label{fig:big_picture2}
 \end{figure}
@@ -73,7 +73,7 @@ Metal
 \end{center}
 \caption
 {
-Pop
+Mel-spectogram of pop genre. 
 }
 \label{fig:big_picture3}
 \end{figure}
@@ -84,7 +84,7 @@ Pop
 \end{center}
 \caption
 {
-Country
+Mel-spectogram of country genre. 
 }
 \label{fig:big_picture4}
 \end{figure}
@@ -95,15 +95,25 @@ Country
 \end{center}
 \caption
 {
-Blues
+Mel-spectogram of blues genre. 
 }
 \label{fig:big_picture5}
 \end{figure}
 
 \subsection{Dimensionality Reduction with Principal Component Analysis (PCA)}
-After feature extraction and construction of final dataset, we thought of using dimensionality reduction before putting out data through classifiers. Since Principal Component Analysis (PCA) is a well-known and effective method for reduction of dimensions, we used PCA on our dataset. A realistic choice for number of reduced dimensions is to visualize the data with different PCA values and then pick the minimum dimension that can keep at least 95\% of the significant components. The visualization of our data with respect to different PCA dimensions and the corresponding eigenvectors is shown on Figure 6. Note that figures 7 and 8 also present a visualization of each genre in 2 and 3 dimensions. After extensive analysis of the visualization, we reduced the dimensionality to 16. Even though 16 dimensions performed very well on classifiers such as k-NN or SVM, we had to use much bigger dimensions for our neural network, since neural networks need much more data in practice. 
+After feature extraction and construction of final dataset, we thought of using dimensionality reduction before putting out data through classifiers. Since Principal Component Analysis (PCA) is a well-known and effective method for reduction of dimensions, we used PCA on our dataset. A realistic choice for number of reduced dimensions is to visualize the data with different PCA values and then pick the minimum dimension that can keep at least 95\% of the significant components. The visualization of our data with respect to different PCA dimensions and the corresponding eigenvectors is shown on Figure 6. Note that figures 7 and 8 also present a visualization of each genre in 2 and 3 dimensions. After extensive analysis of the visualization, and experimenting with out classifiers, we reduced the dimensionality to 16. Even though 16 dimensions performed very well on classifiers such as k-NN or SVM, we had to use much bigger dimensions for our neural network, since neural networks need much more data in practice. 
 
 % Figure 6 --> PCA vs. Eigenvecs
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.3]{./figures/pca_eig.png}
+\end{center}
+\caption
+{
+Norms of eigenvectors of our data plotted with respect to PCA dimensions. Note that we only want to keep the most significant components.
+}
+\label{fig:big_picture5}
+\end{figure}
 
 % Figure 7 --> 2-dimensional plt 
 \begin{figure}
@@ -112,7 +122,7 @@ After feature extraction and construction of final dataset, we thought of using 
 \end{center}
 \caption
 {
-2-d pca
+2-dimensional scatter plot of our data with different genres. 
 }
 \label{fig:big_picture5}
 \end{figure}
@@ -124,94 +134,105 @@ After feature extraction and construction of final dataset, we thought of using 
 \end{center}
 \caption
 {
-3-d pca
+3-dimensional scatter plot of our data with different genres. 
 }
 \label{fig:big_picture5}
 \end{figure}
 
 \subsection{Machine Learning Algorithms}
 \subsubsection{\textbf{K-Nearest Neighbor (K-NN)}}
-The first algorithm we used is the very famous and effective k-closest neighbors algorithm. k-NN is a non-linear algorithm that can detect direct or indirect spread of data. It is very effective for huge amounts of data. The only downside of k-NN is the fact that it makes hard decisions and might produce low classification accuracy. The most significant computation in this algorithm is measuring the distance between different points in our dataset. We used Euclidean distance for k-NN, which produced good results. After our experiments, we also found that k=5 produced the best results. 
+The first algorithm we used is the very famous and effective k-closest neighbors algorithm. k-NN is a non-linear algorithm that can detect direct or indirect spread of data. It is very effective for huge amounts of data. One downside of k-NN is the fact that it makes hard decisions and might produce low classification accuracy. Other than that, k-NN is computationally expensive since it does not learn any data, and it has to compute the distance for every point in prediction. We used Euclidean distance for k-NN, which produced good results. After our experiments, we also found that k=5 produced the best results. 
 
 \subsubsection{\textbf{Support Vector Machines (SVM)}}
-The second technique we used is the support vector machine (SVM), which is a directed organization method that discovers the extreme boundary splitting two classes of information \cite{SVM:2006}. 
+The second technique we used is the support vector machine (SVM), which is a directed organization method that discovers the extreme boundary splitting two classes of information \cite{SVM:2006}. The idea behind the algorithm is to project data onto a higher dimensional space in order to separate classes in a better way. We used Radial Basis Function (RBF) for our kernel for SVM and change the penalty to three. 
 
-\subsubsection{\textbf{Gaussian Mixture Models (GMM)}}
 
 \subsubsection{\textbf{K-Means Clustering}}
+We attempted to use clustering by Kmeans which produces a hard assignment to a cluster for each data point. We initialized this algorithm randomly and assigned each point to the nearest cluster by using euclidean distance, and updated each cluster mean. This algorithm proceeds iteratively until the cluster means do not change. We found that reducing the data to 16 dimensions produced the best results. One challenge we had was evaluating clustering methods. We found that we could use Fowlkes-Mallows score to give an accuracy.
+
+\subsubsection{\textbf{Gaussian Mixture Models (GMM)}}
+After KMeans clustering, we attempted to improve the clustering accuracy by implementing Gaussian Mixture Models. Each gaussian cluster has a mean and associated covariance, and each data point has a probability associated with each cluster. This gives soft assignments, which are usually better to deal with. We used sklearn's GMM class and experimented with different initialization techniques and covariance. 
 
 \subsubsection{\textbf{Simple 3-layer Neural Network}}
+After implementing different wll-known classifiers, we wanted to experiment with neural networks since they generally produce promising results in machine learning applications. Firstly, we used PyTorch to process our dataset and constructed a 3-layer neural network that uses ReLU for nonlinearity. Then, we experimented with different PCA dimensions and different hidden layer sizes to produce the best accuracy. The architecture of the network that gives the best classification results is shown in Figure 9. 
+
+%%--> Figure 9.3-layer NN Architecture
 
 \subsubsection{\textbf{Convolutional Neural Network (CNN)}}
+We also wanted to experiment with Convolutional Neural Networks, since they can be much more effective than a simple 3-layer neural network or any other classifier. The downside of CNN is the fact that it requires a great deal of hyperparameter tuning. We experimented with different PCA dimensions, convolution kernel sizes, nonlinearity functions and the amount of dropout that we have to add. After testing our classifier with many different parameters, we were able to get a very good accuracy for music genre classification. The architecture that produced the best accuracy is shown on Figure 10. 
+%%--> Figure 10. CNN Architecture
 
 \subsubsection{\textbf{Super-Classifier (SC)}}
+After completing a few other methods, we decided to try an ensemble method where we took 4 classifiers (GMM, k-NN, SVM, 3-layer Neural Network) and for each data point in the testing set, ran each classifier and took the most common label as the prediction. This produced better results than each of the methods individually. The motivation behind this implementation of the super classifier was the fact that each individual classifier had different least and most accurate genres. 
 
 \section{Experimental Results}\label{sec:results}
 
 \subsection{Experiment Setup}
-The experimental setup for computation of classification accuracies were quite simple. After extracting features of our data through MFCC and applying PCA, we saved our training and testing datasets into a file, so that we do not have to do all the computations again. Then, we wrote a script that loads the training and testing datasets, and then puts the training data as an input to each of our classifiers with the corresponding genre labels. After training on each classifier, we computed predictions of each song and compared each label with its groun truth. Finally, we outputted the classification accuracy of each classifier and their confusion matrices, which are shown in Figure 9 through 16.
+The experimental setup for computation of classification accuracies were quite simple. After extracting features of our data through MFCC and applying PCA, we saved our training and testing datasets into a file, so that we do not have to do all the computations again. Then, we wrote a script that loads the training and testing datasets, and then puts the training data as an input to each of our classifiers with the corresponding genre labels. After training on each classifier, we computed predictions of each song and compared each label with its ground truth. Finally, we outputted the classification accuracy of each classifier and their confusion matrices, which are shown in Figure 11 through 18.
 
 \subsection{Classification Accuracy}
 
-\section{Conclusion}\label{sec:conclusion}
-@@@@@@@@@@@@@@@@@@@@@@@@@@@
-%\section{Future Work}\label{sec:future_work}
-
-
-
-
-
-
 \begin{table}
 \begin{center}
+\caption{Classification results of each classifier} 
+\begin{tabular}{ p{1.9cm} p{1.1cm} p{2.8cm} p{2.8cm}}
+ \emph{Classifier Type} & \emph{Accuracy}  & \emph{Most Accurate Genre} & \emph{Least Accurate Genre}\\
+ \hline
+ K-NN & 81\% & Metal & Classical \\
+ SVM & 84\% & Classical & Country \\
+ GMM & 85\% & Metal & Blues \\
+ K-Means & -\% & - & \\
+ 3-layer NN & 88\% & Classical & Pop \\
+ CNN & -\% & - & - \\
+ SC & - \% & -  & -  \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.3]{./figures/confusion_knn.png}
+\end{center}
 \caption
 {
-Individual instruction type rankings are presented where the first instruction type is the most significant type for Silent Data Corruption (or crash). The ranking values next to the instruction types should be considered for computing the instruction criticality. Instruction types that are not listed are treated as the least significant ranking. 
-} 
-\begin{tabular}{ p{2.5cm} p{2.5cm}}
- \textbf{Crash Rank}& \textbf{SDC Rank} \\
- \hline
- 1. \emph{allocate} & 8. \emph{load} \\
- 2. \emph{getelementptr} & 7. \emph{add/mul}  \\
- 3. \emph{load} & 6. \emph{call}  \\
- 4. \emph{add/mul} & 5. \emph{allocate}  \\
- 5. \emph{call} & 4. \emph{br/icmp}  \\
- 6. \emph{br/icmp} & 3. \emph{getelementptr}  \\
- 7. \emph{ret} & 2. \emph{store} \\
- 8. \emph{store} & 1. \emph{ret}  \\
-\end{tabular}
-\end{center}
-\end{table}
+Confusion matrix for k-Nearest Neighbors.
+}
+\label{fig:big_picture5}
+\end{figure}
 
-\section{Experimental Evaluation}\label{sec:evaluation}
-
-\subsection{Setup}
-We tested our reliable code generation algorithm on different benchmarks from Media Bench \cite{MediaBench:1997} and MiBench \cite{MiBench:2001}. The set of benchmark codes used in our experiments are given in Table 2. The third column of this table explains the functionality implemented by each benchmark. The next two columns give the number of basic blocks and code size in kilobytes, respectively. The last column gives the dynamic nymber of instructions executed. 
-
-We collected statistics for a number of different applications in each benchmark and compared the SDC and Crash rates with non-modified source codes. After implementing our code generation algorithm, we again used LLFI \cite{LLFI:2015} on different benchmark applications where we first injected faults in a random manner without any modification. Then, for different overhead limits and different $\alpha$ values, we injected faults similarly to our proposed approach. In order to get accurate results, at least a thousand fault injections were conducted on the source code using a random number generator. All experiments are repeated multiple times and the average values of those experiments were reported. 
-
-For each benchmark code in our experimental suite, we performed experiments with 3 different versions, which can be summarized as follows.\\
-1)\emph{BASE}: The base execution does not employ any optimization where we injected randomized faults into unmodified LLVM IR code and collected data. \\
-2)\emph{ICBR}: This is our instruction criticality based reliability (ICBR) enhancement approach where we applied our reliable code generation algorithm and collected both SDC and Crash results. \\
-3)\emph{FTP}: Finally, we conducted fault injection experiments on fully tolerant and protected (FTP) programs so that we could see how close we are to a fully fault-tolerant system with a given $\alpha$ and overhead.\\
-
-Finally, Table 3 lists the base simulation parameters used in our experiments. Unless stated otherwise, our results are collected using these parameters. We use $\alpha$ as 0.5 for the default value since we want to keep the significance of SDC and Crash the same. Note that this value can easily be changed by the user. We also set the overhead limit as 70\% to compare and prove the usefulness of our formula. Finally, we use 0.55 as the default value for DDC after our analysis and normalization of our IC formula. 
-
-
-\begin{table}
+\begin{figure}
 \begin{center}
-\caption{Benchmarks used in our experiments and their characteristics.} 
-\begin{tabular}{ p{1.2cm} p{2.2cm} p{2.2cm} p{1cm} p{0.5cm} p{0.6cm} }
- Benchmark& Source & Type & Number of Basic Blocks& Code Size (KB)& Instr Count (mil)\\
- \hline
- btcnt& MiBench \cite{MiBench:2001} & Automative &  138 &  98 &  688.3 \\
- btstrng& MiBench \cite{MiBench:2001} & Automative&  56 &  48.9 &  327.3 \\
- FFT& MiBench \cite{MiBench:2001} & Telecomm & 44 & 69.2 & 238.89 \\
- qsort& MiBench \cite{MiBench:2001} & Automative & 78 &  72.3 &  513.8 \\
- adpcm& MediaBench \cite{MediaBench:1997} & Compression & 22 & 8 & 1.2\\
- gsm& MediaBench \cite{MediaBench:1997} & Telecomm & 98  &  438   &  7.09  \\
- jpeg& MediaBench \cite{MediaBench:1997} & Decompression &  112  &  488.8  &  18.65  \\
- rasta& MediaBench \cite{MediaBench:1997} & Feature Extraction &  189  &   269  &  24.86   \\
-\end{tabular}
+\includegraphics[scale=0.3]{./figures/confusion_svm.png}
 \end{center}
-\end{table}
+\caption
+{
+Confusion matrix for Support Vector Machines.
+}
+\label{fig:big_picture5}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.3]{./figures/confusion_gmm.png}
+\end{center}
+\caption
+{
+Confusion matrix for Gaussian Mixture Models. 
+}
+\label{fig:big_picture5}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.3]{./figures/confusion_simple_NN.png}
+\end{center}
+\caption
+{
+Confusion matrix for 3-layer Neural Network.
+}
+\label{fig:big_picture5}
+\end{figure}
+
+\section{Conclusion}\label{sec:conclusion}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@
+

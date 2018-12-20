@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.5)  18 DEC 2018 20:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.5)  20 DEC 2018 07:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -780,46 +780,19 @@ LaTeX Warning: Label `fig:big_picture5' multiply defined.
 LaTeX Warning: Label `fig:big_picture5' multiply defined.
 
 
-LaTeX Warning: Label `fig:big_picture2' multiply defined.
+LaTeX Warning: Label `fig:big_picture5' multiply defined.
 
 
-LaTeX Warning: Label `fig:plan_8' multiply defined.
+LaTeX Warning: Label `fig:big_picture5' multiply defined.
 
 
-LaTeX Warning: Label `fig:plan_5' multiply defined.
+LaTeX Warning: Label `fig:big_picture5' multiply defined.
 
 
-LaTeX Warning: Label `fig:plan_9' multiply defined.
+LaTeX Warning: Label `fig:big_picture5' multiply defined.
 
 
-LaTeX Warning: Label `fig:plan_10' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_11' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_12' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_13' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_13' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_13' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_14' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_15' multiply defined.
-
-
-LaTeX Warning: Label `fig:plan_16' multiply defined.
-
-
-LaTeX Warning: Label `sec:conclusion' multiply defined.
+LaTeX Warning: Label `fig:big_picture5' multiply defined.
 
 )
 \openout1 = `sample-sigconf.aux'.
@@ -1109,34 +1082,34 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
  [1.1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-<./figures/classical.png, id=131, 778.91pt x 577.15625pt>
+<./figures/classical.png, id=99, 778.91pt x 577.15625pt>
 File: ./figures/classical.png Graphic file (type png)
 
 <use ./figures/classical.png>
 Package pdftex.def Info: ./figures/classical.png used on input line 50.
 (pdftex.def)             Requested size: 155.77924pt x 115.4292pt.
 
-<./figures/metal.png, id=133, 773.89125pt x 594.22pt>
+<./figures/metal.png, id=101, 773.89125pt x 594.22pt>
 File: ./figures/metal.png Graphic file (type png)
 
 <use ./figures/metal.png>
 Package pdftex.def Info: ./figures/metal.png used on input line 61.
 (pdftex.def)             Requested size: 154.7755pt x 118.84189pt.
- <./figures/pop.png, id=134, 782.925pt x 584.1825pt>
+ <./figures/pop.png, id=102, 782.925pt x 584.1825pt>
 File: ./figures/pop.png Graphic file (type png)
 
 <use ./figures/pop.png>
 Package pdftex.def Info: ./figures/pop.png used on input line 72.
 (pdftex.def)             Requested size: 156.58223pt x 116.83443pt.
 
-<./figures/country.png, id=135, 774.895pt x 596.2275pt>
+<./figures/country.png, id=103, 774.895pt x 596.2275pt>
 File: ./figures/country.png Graphic file (type png)
 
 <use ./figures/country.png>
 Package pdftex.def Info: ./figures/country.png used on input line 83.
 (pdftex.def)             Requested size: 154.97626pt x 119.24338pt.
 
-<./figures/blues.png, id=136, 758.835pt x 573.14125pt>
+<./figures/blues.png, id=104, 758.835pt x 573.14125pt>
 File: ./figures/blues.png Graphic file (type png)
 
 <use ./figures/blues.png>
@@ -1151,113 +1124,90 @@ ion of fi-nal dataset, we thought
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 105.
 [2.2 <./figures/classical.png> <./figures/metal.png> <./figures/pop.png>]
-<./figures/2_d_plot.png, id=152, 461.725pt x 344.28625pt>
+<./figures/pca_eig.png, id=120, 642.4pt x 481.8pt>
+File: ./figures/pca_eig.png Graphic file (type png)
+ <use ./figures/pca_eig.png>
+Package pdftex.def Info: ./figures/pca_eig.png used on input line 109.
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+
+<./figures/2_d_plot.png, id=121, 461.725pt x 344.28625pt>
 File: ./figures/2_d_plot.png Graphic file (type png)
 
 <use ./figures/2_d_plot.png>
-Package pdftex.def Info: ./figures/2_d_plot.png used on input line 111.
+Package pdftex.def Info: ./figures/2_d_plot.png used on input line 121.
 (pdftex.def)             Requested size: 138.51857pt x 103.28667pt.
 
-<./figures/3_d_plot.png, id=153, 440.64626pt x 356.33125pt>
+<./figures/3_d_plot.png, id=122, 440.64626pt x 356.33125pt>
 File: ./figures/3_d_plot.png Graphic file (type png)
 
 <use ./figures/3_d_plot.png>
-Package pdftex.def Info: ./figures/3_d_plot.png used on input line 123.
+Package pdftex.def Info: ./figures/3_d_plot.png used on input line 133.
 (pdftex.def)             Requested size: 132.19489pt x 106.90019pt.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 134.
+(Font)              scaled to size 9.0pt on input line 144.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/it' in size <9> not ava
 ilable
 (Font)              Font shape `T1/LinuxBiolinumT-TLF/b/sl' tried instead on in
-put line 134.
+put line 144.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/sl' will be
-(Font)              scaled to size 9.0pt on input line 134.
+(Font)              scaled to size 9.0pt on input line 144.
 
-Overfull \hbox (4.69318pt too wide) in paragraph at lines 137--138
+Overfull \hbox (4.69318pt too wide) in paragraph at lines 147--148
  \T1/LinuxBiolinumT-TLF/m/it/9 (-20) 3.4.2 \T1/LinuxBiolinumT-TLF/b/sl/9 Sup-po
 rt Vec-tor Ma-chines (SVM)\T1/LinuxBiolinumT-TLF/m/it/9 (-20) .[] \T1/LinuxLibe
 rtineT-TLF/m/n/9 (-20) The sec-ond tech-nique
  []
 
+[3.3 <./figures/country.png> <./figures/blues.png> <./figures/pca_eig.png> <./f
+igures/2_d_plot.png> <./figures/3_d_plot.png>]
+Overfull \hbox (7.6072pt too wide) in paragraph at lines 162--164
+ \T1/LinuxBiolinumT-TLF/m/it/9 (-20) 3.4.6 \T1/LinuxBiolinumT-TLF/b/sl/9 Con-vo
+-lu-tional Neu-ral Net-work (CNN)\T1/LinuxBiolinumT-TLF/m/it/9 (-20) .[] \T1/Li
+nuxLibertineT-TLF/m/n/9 (-20) We also wanted
+ []
+
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 174.
-[3.3 <./figures/country.png> <./figures/blues.png> <./figures/2_d_plot.png> <./
-figures/3_d_plot.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 193--197
+(Font)              scaled to size 9.0pt on input line 179.
 
+Overfull \hbox (1.65504pt too wide) in paragraph at lines 179--179
+[]\T1/LinuxLibertineT-TLF/m/it/9 (-20) Accuracy| 
  []
 
 
-Overfull \hbox (7.08139pt too wide) in paragraph at lines 205--205
-[]\T1/LinuxLibertineT-TLF/m/n/9 (-20) Benchmark| 
- []
-
-
-Overfull \hbox (4.38506pt too wide) in paragraph at lines 205--205
-[]\T1/LinuxLibertineT-TLF/m/n/9 (-20) Code
- []
-
-
-Overfull \hbox (1.56483pt too wide) in paragraph at lines 205--205
-\T1/LinuxLibertineT-TLF/m/n/9 (-20) (KB)| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
-[]\T1/LinuxLibertineT-TLF/m/n/9 (-1) Instr
- []
-
-
-Overfull \hbox (5.32211pt too wide) in paragraph at lines 205--206
-\T1/LinuxLibertineT-TLF/m/n/9 (-20) Count
- []
-
-
-Overfull \hbox (1.27379pt too wide) in paragraph at lines 207--208
-[]\T1/LinuxLibertineT-TLF/m/n/9 (-20) 688.3| 
- []
-
-
-Overfull \hbox (1.27379pt too wide) in paragraph at lines 208--209
-[]\T1/LinuxLibertineT-TLF/m/n/9 (-20) 327.3| 
- []
-
-
-Overfull \hbox (5.37509pt too wide) in paragraph at lines 209--210
-[]\T1/LinuxLibertineT-TLF/m/n/9 (-20) 238.89| 
- []
-
-
-Overfull \hbox (1.27379pt too wide) in paragraph at lines 210--211
-[]\T1/LinuxLibertineT-TLF/m/n/9 (-20) 513.8| 
- []
-
-
-Overfull \hbox (3.91225pt too wide) in paragraph at lines 213--213
-[]\T1/LinuxLibertineT-TLF/m/n/9 (-20) 488.8| 
- []
-
-
-Overfull \hbox (1.06679pt too wide) in paragraph at lines 213--214
-[]\T1/LinuxLibertineT-TLF/m/n/9 (-20) 18.65| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--214
-[]\T1/LinuxLibertineT-TLF/m/n/9 (+20) Feature Ex-trac-
- []
-
-
-Overfull \hbox (1.27379pt too wide) in paragraph at lines 214--215
-[]\T1/LinuxLibertineT-TLF/m/n/9 (-20) 24.86| 
- []
-
-
-Overfull \hbox (37.93858pt too wide) in paragraph at lines 204--216
+Overfull \hbox (43.54637pt too wide) in paragraph at lines 178--189
  [] 
  []
 
-) (./sample-sigconf.bbl
+<./figures/confusion_knn.png, id=143, 477.785pt x 380.42125pt>
+File: ./figures/confusion_knn.png Graphic file (type png)
+
+<use ./figures/confusion_knn.png>
+Package pdftex.def Info: ./figures/confusion_knn.png used on input line 194.
+(pdftex.def)             Requested size: 143.3366pt x 114.12724pt.
+
+<./figures/confusion_svm.png, id=144, 410.53375pt x 390.45876pt>
+File: ./figures/confusion_svm.png Graphic file (type png)
+
+<use ./figures/confusion_svm.png>
+Package pdftex.def Info: ./figures/confusion_svm.png used on input line 205.
+(pdftex.def)             Requested size: 123.16107pt x 117.13852pt.
+
+<./figures/confusion_gmm.png, id=145, 425.59pt x 384.43625pt>
+File: ./figures/confusion_gmm.png Graphic file (type png)
+
+<use ./figures/confusion_gmm.png>
+Package pdftex.def Info: ./figures/confusion_gmm.png used on input line 216.
+(pdftex.def)             Requested size: 127.67798pt x 115.33176pt.
+
+<./figures/confusion_simple_NN.png, id=146, 436.63126pt x 382.42876pt>
+File: ./figures/confusion_simple_NN.png Graphic file (type png)
+
+<use ./figures/confusion_simple_NN.png>
+Package pdftex.def Info: ./figures/confusion_simple_NN.png used on input line 2
+27.
+(pdftex.def)             Requested size: 130.99039pt x 114.7295pt.
+) (./sample-sigconf.bbl [4.4 <./figures/confusion_knn.png> <./figures/confusion
+_svm.png> <./figures/confusion_gmm.png>]
 LaTeX Info: Redefining \tempurl on input line 77.
 LaTeX Info: Redefining \tempurl on input line 94.
 LaTeX Info: Redefining \tempurl on input line 111.
@@ -1267,77 +1217,47 @@ LaTeX Info: Redefining \tempurl on input line 185.
 LaTeX Info: Redefining \tempurl on input line 212.
 LaTeX Info: Redefining \tempurl on input line 230.
 LaTeX Info: Redefining \tempurl on input line 248.
-) [4.4]
+) [5.5
+
+ <./figures/confusion_simple_NN.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 93.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
  (./sample-sigconf.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 93.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
+Package rerunfilecheck Info: File `sample-sigconf.out' has not changed.
+(rerunfilecheck)             Checksum: 600D06D347634F017CDBB28B54CB14DF;2405.
 
-
-Package rerunfilecheck Warning: File `sample-sigconf.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `sample-sigconf.out':
-(rerunfilecheck)             Before: 97D072001D56BDD1B2F37AE0545328A0;3655
-(rerunfilecheck)             After:  0B7F9C4C9D0A91CB1FE2817DCF4C3349;2686.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19031 strings out of 492995
- 289423 string characters out of 6132705
- 423550 words of memory out of 5000000
- 21760 multiletter control sequences out of 15000+600000
- 147130 words of font info for 271 fonts, out of 8000000 for 9000
+ 19023 strings out of 492995
+ 289733 string characters out of 6132705
+ 415869 words of memory out of 5000000
+ 21758 multiletter control sequences out of 15000+600000
+ 145678 words of font info for 265 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,11n,94p,1108b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{page.10} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.29} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.7} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.6.3} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.6.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.3} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc}{/us
-r/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr
-/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/
-local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/usr/l
-ocal/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/usr/lo
-cal/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumTBO.p
-fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinum
-TI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLibe
-rtineT.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/Lin
-LibertineTB.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertin
-e/LinLibertineTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/new
-tx/txsys.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri
-.pfb>
-Output written on sample-sigconf.pdf (4 pages, 2385347 bytes).
+ 60i,11n,94p,1108b,569s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
+}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{
+/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/
+usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.
+pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinu
+mTBO.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBi
+olinumTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/L
+inLibertineT.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/liberti
+ne/LinLibertineTB.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/li
+bertine/LinLibertineTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
+ic/newtx/txsys.pfb>
+Output written on sample-sigconf.pdf (5 pages, 2500347 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
- 233 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
- 49880 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 244 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 49841 words of extra memory for PDF output out of 51595 (max. 10000000)
 
