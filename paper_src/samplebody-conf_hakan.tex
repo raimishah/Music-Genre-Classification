@@ -13,7 +13,7 @@ To summarize, we make three main contributions in this paper:
   \item We report experimental data that describe the overall effectiveness of our classification methods by including confusion matrices. 
 \end{itemize}
 
------>>> ADD a paragraph that states experimental results briefly!!!! <<<-------- 
+Our experimental results suggest that Convolutional Neural Networks produced the best classification results, with 90\%, whereas k-Nearest Neighbor algorithm outputted the least accurate classification, with 81\%. We observed that Support Vector Machines and Gaussian Mixture Models are also quite effective, with accuracy results around 85\%. Additionally, the super classifier we created by combining GMM, SVM, k-NN, and a simple 3-layer neural network showed promising results . Furthermore, we found that 16 dimensions is the best reduction of our data through Principal Component Analysis. 
 
 \section{Related Work}\label{sec:related}
 
@@ -29,8 +29,7 @@ Xing et. al. \cite{Xing:2016} proposes a similar approach that uses convolutiona
 
 Finally, Smaragdis and Whitman \cite{Smaragdis:2002} presents a very interesting musical style identification scheme based on simultaneous classification of auditory and textual data. They combine musical and cultural features of audio tracks for intelligent style detection. They suggest that addition of cultural attributes in feature space improves the proper classification of acoustically dissimilar music within the same style.
 
--->> Add a paragraph that compares our work to above <<-- 
-As compared to these works,...
+As compared to these works, we do a comparative study of genre classification where we experiment with 7 different classifiers. Even though our feature extraction method is very similar to other works, not many works use PCA right after extracting MFCC features. Furthermore, to the best of our knowledge, this project is the first to create a super classifier, which is basically an ensemble method that uses 4 different classifiers and combines their predictions. Finally, in terms of classification accuracy, our experimental results are better than previous works that also used only 4 or 5 genres instead of 10. Specifically, there are only a few works that were able to be beat the 90\% accuracy threshold. Hence, we believe our controbution to music genre clasification research is significant.  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Proposed Approach}\label{sec:approach}
@@ -146,7 +145,6 @@ The first algorithm we used is the very famous and effective k-closest neighbors
 \subsubsection{\textbf{Support Vector Machines (SVM)}}
 The second technique we used is the support vector machine (SVM), which is a directed organization method that discovers the extreme boundary splitting two classes of information \cite{SVM:2006}. The idea behind the algorithm is to project data onto a higher dimensional space in order to separate classes in a better way. We used Radial Basis Function (RBF) for our kernel for SVM and change the penalty to three. 
 
-
 \subsubsection{\textbf{K-Means Clustering}}
 We attempted to use clustering by Kmeans which produces a hard assignment to a cluster for each data point. We initialized this algorithm randomly and assigned each point to the nearest cluster by using euclidean distance, and updated each cluster mean. This algorithm proceeds iteratively until the cluster means do not change. We found that reducing the data to 16 dimensions produced the best results. One challenge we had was evaluating clustering methods. We found that we could use Fowlkes-Mallows score to give an accuracy.
 
@@ -166,7 +164,6 @@ We also wanted to experiment with Convolutional Neural Networks, since they can 
 After completing a few other methods, we decided to try an ensemble method where we took 4 classifiers (GMM, k-NN, SVM, 3-layer Neural Network) and for each data point in the testing set, ran each classifier and took the most common label as the prediction. This produced better results than each of the methods individually. The motivation behind this implementation of the super classifier was the fact that each individual classifier had different least and most accurate genres. 
 
 \section{Experimental Results}\label{sec:results}
-
 \subsection{Experiment Setup}
 The experimental setup for computation of classification accuracies were quite simple. After extracting features of our data through MFCC and applying PCA, we saved our training and testing datasets into a file, so that we do not have to do all the computations again. Then, we wrote a script that loads the training and testing datasets, and then puts the training data as an input to each of our classifiers with the corresponding genre labels. After training on each classifier, we computed predictions of each song and compared each label with its ground truth. Finally, we outputted the classification accuracy of each classifier and their confusion matrices, which are shown in Figure 11 through 18.
 
@@ -213,7 +210,7 @@ Confusion matrix for Support Vector Machines.
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.3]{./figures/confusion_kmeans.png}
+\includegraphics[scale=0.25]{./figures/confusion_kmeans.png}
 \end{center}
 \caption
 {
@@ -267,5 +264,5 @@ Confusion matrix for Super Classifier.
 \end{figure}
 
 \section{Conclusion}\label{sec:conclusion}
-@@@@@@@@@@@@@@@@@@@@@@@@@@@
+In conclusion, we implemented 7 different classifiers for music genre classification and it is fair to state that all the classifiers performed well, which is expected since we used 5 distinctive genres. It is observed that simple and easy to implement approaches such as k-NN and k-Means did worse than other more complicated classifiers such as SVMs or Neural Networks. Our goal was to achieve accuracy around 90\% and we were able to accomplish that goal with Convolutional Neural Networks. We also observed that it was easy to beat 80\% accuracy for 5 genres of music and the easiest genres to classify or distingush were classical and metal. Other than that, most of the classifiers had problems with classifying country or blues music.
 
