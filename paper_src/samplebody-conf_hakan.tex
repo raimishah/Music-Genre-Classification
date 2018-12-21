@@ -1,5 +1,5 @@
 \section{Introduction}
-In the past decade, with the introduction of technology that can store huge amounts of data, a large amount of musical data is increasingly available to public on different application platforms such as Spotify. As the number of musical data in our phones and Internet keeps increasing, there is a need to characterize each music track so that finding a specific song in a large archive of music would not be a problem. Musical genres are commonly used to describe and characterize songs for music information retrieval. Pachet \cite{Pachet:2003} suggests that genre of music can be the best general information for music content description. Hence, a system that can classify musical genres can solve the problem of locating a specific sound track on any device. 
+In the past decade, with the introduction of technology that can store huge amounts of data, a large amount of musical data is increasingly available to public on different application platforms such as Spotify. As the amount of musical data in our phones and Internet is increasing, there is a need to characterize each music track so that finding a specific song in a large archive of music would not be a problem. Musical genres are commonly used to describe and characterize songs for music information retrieval. Pachet \cite{Pachet:2003} suggests that genre of music can be the best general information for music content description. Hence, a system that can classify musical genres can solve the problem of locating a specific sound track on any device. 
 
 The only problem with musical genre classification is the fact that the definition of genre is very subjective by its nature and there exists thousands of genres or sub-genres. It is also important to note that, the definition of music genre tends to change with time, as what we call rock song today is very different from the rock songs twenty years ago. Even though musical genres are subjective, there are certain features that can easily distinguish between different genres. By using features such as distribution of frequency or the number of beats, it is possible to classify main genres of music. For classification of musical genres, various approaches have been proposed. Unfortunately, most of these approaches have been proven to show accuracy around 60-70\% \cite{GTZAN:2002}. Therefore, new approaches that can maximize classification accuracy must be considered.  
 
@@ -13,21 +13,21 @@ To summarize, we make three main contributions in this paper:
   \item We report experimental data that describe the overall effectiveness of our classification methods by including confusion matrices. 
 \end{itemize}
 
-Our experimental results suggest that Convolutional Neural Networks produced the best classification results, with 90\%, whereas k-Nearest Neighbor algorithm outputted the least accurate classification, with 81\%. We observed that Support Vector Machines and Gaussian Mixture Models are also quite effective, with accuracy results around 85\%. Additionally, the super classifier we created by combining GMM, SVM, k-NN, and a simple 3-layer neural network showed promising results . Furthermore, we found that 16 dimensions is the best reduction of our data through Principal Component Analysis. 
+Our experimental results suggest that Convolutional Neural Networks produced the best classification results, with around 90\%, whereas k-Nearest Neighbor algorithm outputted the least accurate classification, with 81\%. We observed that Support Vector Machines and Gaussian Mixture Models are also quite effective, with accuracy results around 85\%. Additionally, the super classifier we created by combining GMM, SVM, k-NN, and a simple 3-layer neural network showed promising results, with accuracy around 90\% as well. Furthermore, we found that 16 dimensions is the best reduction of our data through Principal Component Analysis. 
 
 \section{Related Work}\label{sec:related}
 
 The development of music genre classification has been increasing rapidly in the past decade. Many approaches have been proposed that build different models for genre classification. Some approaches concentrate on the processing of audio signals, whereas some approaches try to combine audio signals with lyrics from each musical track to increase accuracy. Some of the related work to our project is presented below. 
 
-Firstly, Tzanetakis and Cook \cite{GTZAN:2002} introduced different feautres to organize musical tracks into a genre by using k-NN and Gaussian Mixture Model (GMM) methods. Three different feature sets for speaking to tumbrel surface, rythmic substance and pitch substance of music signse were suggested. They also introduced a dataset for music genre classification (GTZAN Dataset \cite{GTZAN:2002}), which is widely used today in many projects, including ours. 
+Firstly, Tzanetakis and Cook \cite{GTZAN:2002} introduced different features to organize musical tracks into a genre by using k-NN and Gaussian Mixture Model (GMM) methods. Three different feature sets for speaking to tumbrel surface, rythmic substance and pitch substance of music signs were suggested. They also introduced a dataset for music genre classification (GTZAN Dataset \cite{GTZAN:2002}), which is widely used today in many projects, including ours. 
 
 Furthermore, Aucouturier and Pachet \cite{Pachet:2003} used GMM and utilized Monte Carlo procedures for evaluation of KL divergence, which was used in a k-NN classifier. They conveyed some significant component sets for musical information retrieval that we use in our work, specifically the MFCC. 
 
 Apart from models such as GMM or k-NN, Feng \cite{Feng:2016} proposed an approach that uses Restricted Boltzmann machine algorithm to build deep belief neural networks. By generating more dataset from the original limited music tracks, he shows great improvement in the classification accuracy and describes the significance of neural networks for music genre classification. 
 
-Xing et. al. \cite{Xing:2016} proposes a similar approach that uses convolutional neural networks. By combining max and average pooling to provide more statistical information to higher neaural networks and applying residual connections, Xing et. al. \cite{Xing:2016} improves the classification accuracy on the GTZAN data set greatly. Li, Chan and Chun \cite{Chun:2010} recommend a very similar technique to concentrate musical example included in audio signals by using convolutional neural networks. They present their revelation of the perfect parameter set and best work on CNN for music genre classification.
+Xing et. al. \cite{Xing:2016} proposed a similar approach that uses convolutional neural networks. By combining max and average pooling to provide more statistical information to higher neaural networks and applying residual connections, Xing et. al. \cite{Xing:2016} improved the classification accuracy on the GTZAN data set greatly. Li, Chan and Chun \cite{Chun:2010} recommend a very similar technique to concentrate musical example included in audio signals by using convolutional neural networks. They present their revelation of the perfect parameter set and best work on CNN for music genre classification.
 
-Finally, Smaragdis and Whitman \cite{Smaragdis:2002} presents a very interesting musical style identification scheme based on simultaneous classification of auditory and textual data. They combine musical and cultural features of audio tracks for intelligent style detection. They suggest that addition of cultural attributes in feature space improves the proper classification of acoustically dissimilar music within the same style.
+Finally, Smaragdis and Whitman \cite{Smaragdis:2002} presented a very interesting musical style identification scheme based on simultaneous classification of auditory and textual data. They combined musical and cultural features of audio tracks for intelligent style detection. They suggest that addition of cultural attributes in feature space improves the proper classification of acoustically dissimilar music within the same style.
 
 As compared to these works, we do a comparative study of genre classification where we experiment with 7 different classifiers. Even though our feature extraction method is very similar to other works, not many works use PCA right after extracting MFCC features. Furthermore, to the best of our knowledge, this project is the first to create a super classifier, which is basically an ensemble method that uses 4 different classifiers and combines their predictions. Finally, in terms of classification accuracy, our experimental results are better than previous works that also used only 4 or 5 genres instead of 10. Specifically, there are only a few works that were able to be beat the 90\% accuracy threshold. Hence, we believe our contribution to music genre clasification research is significant.  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -40,9 +40,9 @@ For musical data, Marsyas is an open source software framework for Music Informa
 For this project, we chose five distinct genres; classical, metal, blues, pop, country. Hence, our dataset was 500 songs total, from which we used 80\% for training and 20\% for testing. We chose five very distinct genres as previous works \cite{Chun:2010} suggest more than 5 genres can decrease accuracy a lot and introduce many problems. 
 
 \subsection{Feature Extraction: Mel Frequency Cepstral Coefficients (MFCC)}
-Previous works \cite{MFCC:2011} on music classification and processing of audio signals directed us to use MFCC (Mel Frequency Cepstral Coefficients) as a method for feature extraction so that time domain waveforms can be represented in the frequency domain in a mel-scale. For the process of MFCC, we first computed the spectogram of each waveform by using Fast Fourier Transform and a Hamming Window. Then, we mapped each frequency to mel scale, as mel scale is the best scale for human ears. The mel spectogram of a song from each genre is shown on Figures 1 through 5, so that the difference between each genre can be visualized. After computing the mel-spectograms of each song, we applied discrete cosine transform (DCT) and then removed the very high frequency values from our data. At the end, we had an MFCC array of each song, where we stacked all them together, created appropriate labels for each genre and constructed our training and testing datasets. As stated, we used 80\% for training and 20\% for testing our classifiers. 
+Previous works \cite{MFCC:2011} on music classification and processing of audio signals directed us to use MFCC (Mel Frequency Cepstral Coefficients) as a method for feature extraction so that time domain waveforms can be represented in the frequency domain in a mel-scale. For the process of MFCC, we first computed the spectrogram of each waveform by using Fast Fourier Transform and a Hamming Window. Then, we mapped each frequency to mel scale, as mel scale is the best scale for human ears. The mel spectrogram of a song from each genre is shown on Figures 1 through 5, so that the difference between each genre can be visualized. After computing the mel-spectrograms of each song, we applied discrete cosine transform (DCT) and then removed the very high frequency values from our data. At the end, we had an MFCC array of each song, where we stacked all them together, created appropriate labels for each genre and constructed our training and testing datasets. As stated, we used 80\% for training and 20\% for testing our classifiers. 
 
-% Figure 1-5 --> Mel-spectograms 
+% Figure 1-5 --> Mel-spectrograms 
 
 \begin{figure}
 \begin{center}
@@ -50,7 +50,7 @@ Previous works \cite{MFCC:2011} on music classification and processing of audio 
 \end{center}
 \caption
 {
-Mel-spectogram of classical genre.
+Mel-spectrogram of classical genre.
 }
 \label{fig:big_picture1}
 \end{figure}
@@ -61,7 +61,7 @@ Mel-spectogram of classical genre.
 \end{center}
 \caption
 {
-Mel-spectogram of metal genre.
+Mel-spectrogram of metal genre.
 }
 \label{fig:big_picture2}
 \end{figure}
@@ -72,7 +72,7 @@ Mel-spectogram of metal genre.
 \end{center}
 \caption
 {
-Mel-spectogram of pop genre. 
+Mel-spectrogram of pop genre. 
 }
 \label{fig:big_picture3}
 \end{figure}
@@ -83,7 +83,7 @@ Mel-spectogram of pop genre.
 \end{center}
 \caption
 {
-Mel-spectogram of country genre. 
+Mel-spectrogram of country genre. 
 }
 \label{fig:big_picture4}
 \end{figure}
@@ -94,13 +94,13 @@ Mel-spectogram of country genre.
 \end{center}
 \caption
 {
-Mel-spectogram of blues genre. 
+Mel-spectrogram of blues genre. 
 }
 \label{fig:big_picture5}
 \end{figure}
 
 \subsection{Dimensionality Reduction with Principal Component Analysis (PCA)}
-After feature extraction and construction of final dataset, we thought of using dimensionality reduction before putting our data through classifiers. Since Principal Component Analysis (PCA) is a well-known and effective method for reduction of dimensions, we used PCA on our dataset. A realistic choice for number of reduced dimensions is to visualize the data with different PCA values and then pick the minimum dimension that can keep at least 95\% of the significant components. The visualization of our data with respect to different PCA dimensions and the corresponding eigenvectors is shown on Figure 6. Note that figures 7 and 8 also present a visualization of each genre in 2 and 3 dimensions. After extensive analysis of the visualization, and experimenting with our classifiers, we reduced the dimensionality to 16. Even though 16 dimensions performed very well on classifiers such as k-NN or SVM, we had to use much bigger dimensions for our neural network, since neural networks need much more data in practice. 
+After feature extraction and construction of final dataset, we thought of using dimensionality reduction before putting our data through classifiers. Since Principal Component Analysis (PCA) is a well-known and effective method for reduction of dimensions, we used PCA on our dataset. A realistic choice for number of reduced dimensions is to visualize the data with different PCA values and then pick the minimum dimension that can keep at least 95\% of the significant components. The visualization of our data with respect to different PCA dimensions and the corresponding eigenvectors is shown on Figure 6. Note that figures 7 and 8 also present a visualization of each genre in 2 and 3 dimensions. After extensive analysis of the visualization and experimentation with our classifiers, we reduced the dimensionality to 16. Even though 16 dimensions performed very well on classifiers such as k-NN or SVM, we had to use much bigger dimensions for our neural network, since neural networks need much more data in practice. 
 
 % Figure 6 --> PCA vs. Eigenvecs
 \begin{figure}
@@ -149,7 +149,7 @@ The second technique we used is the support vector machine (SVM), which is a dir
 We attempted to use clustering by K-means which produces a hard assignment to a cluster for each data point. We initialized this algorithm randomly and assigned each point to the nearest cluster by using euclidean distance, and updated each cluster mean. This algorithm proceeds iteratively until the cluster means do not change. We found that reducing the data to 16 dimensions produced the best results. One challenge we had was evaluating clustering methods. We found that we could use Fowlkes-Mallows score to give an accuracy.
 
 \subsubsection{\textbf{Gaussian Mixture Models (GMM)}}
-After K-Means clustering, we attempted to improve the clustering accuracy by implementing Gaussian Mixture Models. Each gaussian cluster has a mean and associated covariance, and each data point has a probability associated with each cluster. This gives soft assignments, which are usually better to deal with. We used sklearn's GMM class and experimented with different initialization techniques and covariance. 
+After K-Means clustering, we attempted to improve the clustering accuracy by implementing Gaussian Mixture Models. Each gaussian cluster has a mean and associated covariance, and each data point has a probability associated with each cluster. This gives soft assignments, which are usually better to deal with. We used sklearn's GMM class and experimented with different initialization techniques and covariance. We found that initialization with K-Means and diagonal covariance produced the best results.
 
 \subsubsection{\textbf{Simple 3-layer Neural Network}}
 After implementing different well-known classifiers, we wanted to experiment with neural networks since they generally produce promising results in machine learning applications. Firstly, we used PyTorch to process our dataset and constructed a 3-layer neural network that uses ReLU for nonlinearity. Then, we experimented with different PCA dimensions and different hidden layer sizes to produce the best accuracy. The architecture of the network that gives the best classification results is shown in Figure 9. 
@@ -190,7 +190,7 @@ After completing a few other methods, we decided to try an ensemble method where
 The experimental setup for computation of classification accuracies were quite simple. After extracting features of our data through MFCC and applying PCA, we saved our training and testing datasets into a file, so that we do not have to do all the computations again. Then, we wrote a script that loads the training and testing datasets, and then puts the training data as an input to each of our classifiers with the corresponding genre labels. After training on each classifier, we computed predictions of each song and compared each label with its ground truth. Finally, we outputted the classification accuracy of each classifier and their confusion matrices, which are shown in Figure 11 through 18.
 
 \subsection{Classification Accuracy}
-After splitting the dataset into training and testing, we ran each classifier sequentially for five times and recorded their average accuracies. After that, we also plotted the confusion matrix of each classifier and recorded each classifier's least and most accurate genre. The classification results in terms of accuracy are shown in Table 1. We can see from the table that CNN gave the highest accuracy with 90\% and k-NN produced the least accuracy with 81\%. Our results show that combining different classifiers' predictions increased the general accuracy to 88\%. Other than that, the results show that metal and classical genres were the easiest to classify compared to other musical genres, whereas country music was the hardest one to classify correctly. Furthermore, it is also significant to state that Neural Networks were dominant in terms of classification accuracy and they produced very promising results for audio signal classification, as expected. The training losses of neural networks are shown in Figure 19 and Figure 20. 
+After splitting the dataset into training and testing, we ran each classifier sequentially for five times and recorded their average accuracies. After that, we also plotted the confusion matrix of each classifier and recorded each classifier's least and most accurate genre. The classification results in terms of accuracy are shown in Table 1. We can see from the table that CNN gave the highest accuracy with 90\% and k-NN produced the least accuracy with 81\%. Our results show that combining different classifiers' predictions increased the general accuracy to 88\%. Other than that, the results show that metal and classical genres were the easiest to classify compared to other musical genres, whereas country music was the hardest one to classify correctly. Furthermore, it is also significant to state that Neural Networks were dominant in terms of classification accuracy and they produced very promising results for audio signal classification, as expected. The training losses of neural networks are shown in Figure 19 and Figure 20. It is also fair to state that Convolutional Neural Networks did not perform as well as we expected, since we can instead use a 3-layer Neural Network or a super classifier as well and get an accuracy close to 90\%. 
 \begin{table}
 \begin{center}
 \caption{Classification results of each classifier} 

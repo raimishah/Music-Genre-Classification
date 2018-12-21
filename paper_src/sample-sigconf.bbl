@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{16}
+\begin{thebibliography}{11}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -78,58 +78,6 @@
 \showDOI{\tempurl}
 
 
-\bibitem[\protect\citeauthoryear{Guthaus, Ringenberg, Ernst, Austin, Mudge, and
-  Brown}{Guthaus et~al\mbox{.}}{2001}]%
-        {MiBench:2001}
-\bibfield{author}{\bibinfo{person}{M.~R. Guthaus}, \bibinfo{person}{J.~S.
-  Ringenberg}, \bibinfo{person}{D. Ernst}, \bibinfo{person}{T.~M. Austin},
-  \bibinfo{person}{T. Mudge}, {and} \bibinfo{person}{R.~B. Brown}.}
-  \bibinfo{year}{2001}\natexlab{}.
-\newblock \showarticletitle{MiBench: A free, commercially representative
-  embedded benchmark suite}. In \bibinfo{booktitle}{\emph{Proceedings of the
-  Fourth Annual IEEE International Workshop on Workload Characterization. WWC-4
-  (Cat. No.01EX538)}}. \bibinfo{pages}{3--14}.
-\newblock
-\urldef\tempurl%
-\url{https://doi.org/10.1109/WWC.2001.990739}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Lattner and Adve}{Lattner and Adve}{2004}]%
-        {LLVM:2004}
-\bibfield{author}{\bibinfo{person}{Chris Lattner} {and} \bibinfo{person}{Vikram
-  Adve}.} \bibinfo{year}{2004}\natexlab{}.
-\newblock \showarticletitle{LLVM: A Compilation Framework for Lifelong Program
-  Analysis \& Transformation}. In \bibinfo{booktitle}{\emph{Proceedings of the
-  International Symposium on Code Generation and Optimization:
-  Feedback-directed and Runtime Optimization}} \emph{(\bibinfo{series}{CGO
-  '04})}. \bibinfo{publisher}{IEEE Computer Society},
-  \bibinfo{address}{Washington, DC, USA}, \bibinfo{pages}{75--}.
-\newblock
-\showISBNx{0-7695-2102-9}
-\urldef\tempurl%
-\url{http://dl.acm.org/citation.cfm?id=977395.977673}
-\showURL{%
-\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Lee, Potkonjak, and Mangione-Smith}{Lee
-  et~al\mbox{.}}{1997}]%
-        {MediaBench:1997}
-\bibfield{author}{\bibinfo{person}{Chunho Lee}, \bibinfo{person}{M. Potkonjak},
-  {and} \bibinfo{person}{W.~H. Mangione-Smith}.}
-  \bibinfo{year}{1997}\natexlab{}.
-\newblock \showarticletitle{MediaBench: a tool for evaluating and synthesizing
-  multimedia and communications systems}. In
-  \bibinfo{booktitle}{\emph{Proceedings of 30th Annual International Symposium
-  on Microarchitecture}}. \bibinfo{pages}{330--335}.
-\newblock
-\showISSN{1072-4451}
-\urldef\tempurl%
-\url{https://doi.org/10.1109/MICRO.1997.645830}
-\showDOI{\tempurl}
-
-
 \bibitem[\protect\citeauthoryear{Li, Chan, and Chun}{Li et~al\mbox{.}}{2010}]%
         {Chun:2010}
 \bibfield{author}{\bibinfo{person}{Tom L.~H. Li}, \bibinfo{person}{Antoni~B.
@@ -138,22 +86,6 @@
 \newblock \showarticletitle{Automatic Musical Pattern Feature Extraction Using
   Convolutional Neural Network}.
 \newblock
-
-
-\bibitem[\protect\citeauthoryear{Lu, Farahani, Wei, Thomas, and
-  Pattabiraman}{Lu et~al\mbox{.}}{2015}]%
-        {LLFI:2015}
-\bibfield{author}{\bibinfo{person}{Q. Lu}, \bibinfo{person}{M. Farahani},
-  \bibinfo{person}{J. Wei}, \bibinfo{person}{A. Thomas}, {and}
-  \bibinfo{person}{K. Pattabiraman}.} \bibinfo{year}{2015}\natexlab{}.
-\newblock \showarticletitle{LLFI: An Intermediate Code-Level Fault Injection
-  Tool for Hardware Faults}. In \bibinfo{booktitle}{\emph{2015 IEEE
-  International Conference on Software Quality, Reliability and Security}}.
-  \bibinfo{pages}{11--16}.
-\newblock
-\urldef\tempurl%
-\url{https://doi.org/10.1109/QRS.2015.13}
-\showDOI{\tempurl}
 
 
 \bibitem[\protect\citeauthoryear{Mandel, Poliner, and Ellis}{Mandel
@@ -167,23 +99,6 @@
 \newblock \bibinfo{journal}{\emph{Multimedia Systems}}  \bibinfo{volume}{12}
   (\bibinfo{year}{2006}), \bibinfo{pages}{3--13}.
 \newblock
-
-
-\bibitem[\protect\citeauthoryear{Oh, Shirvani, and McCluskey}{Oh
-  et~al\mbox{.}}{2002}]%
-        {EDDI:2002}
-\bibfield{author}{\bibinfo{person}{N. Oh}, \bibinfo{person}{P.~P. Shirvani},
-  {and} \bibinfo{person}{E.~J. McCluskey}.} \bibinfo{year}{2002}\natexlab{}.
-\newblock \showarticletitle{Error detection by duplicated instructions in
-  super-scalar processors}.
-\newblock \bibinfo{journal}{\emph{IEEE Transactions on Reliability}}
-  \bibinfo{volume}{51}, \bibinfo{number}{1} (\bibinfo{date}{Mar}
-  \bibinfo{year}{2002}), \bibinfo{pages}{63--75}.
-\newblock
-\showISSN{0018-9529}
-\urldef\tempurl%
-\url{https://doi.org/10.1109/24.994913}
-\showDOI{\tempurl}
 
 
 \bibitem[\protect\citeauthoryear{Paszke, Gross, Chintala, Chanan, Yang, DeVito,

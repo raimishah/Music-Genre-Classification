@@ -13,16 +13,10 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--no number and no volume in Feng:2016
 Warning--page numbers missing in both pages and numpages fields in Feng:2016
-Warning--empty publisher in MiBench:2001
-Warning--empty address in MiBench:2001
-Warning--empty publisher in MediaBench:1997
-Warning--empty address in MediaBench:1997
 Warning--empty booktitle in Chun:2010
 Warning--empty publisher in Chun:2010
 Warning--empty address in Chun:2010
 Warning--page numbers missing in both pages and numpages fields in Chun:2010
-Warning--empty publisher in LLFI:2015
-Warning--empty address in LLFI:2015
 Warning--empty publisher in PyTorch:2017
 Warning--empty address in PyTorch:2017
 Warning--page numbers missing in both pages and numpages fields in PyTorch:2017
@@ -33,45 +27,45 @@ Warning--page numbers missing in both pages and numpages fields in Smaragdis:200
 Warning--empty publisher in Xing:2016
 Warning--empty address in Xing:2016
 Warning--page numbers missing in both pages and numpages fields in Xing:2016
-You've used 16 entries,
+You've used 11 entries,
             5733 wiz_defined-function locations,
-            1756 strings with 24358 characters,
-and the built_in function-call counts, 19640 in all, are:
-= -- 2420
-> -- 749
+            1708 strings with 22912 characters,
+and the built_in function-call counts, 13164 in all, are:
+= -- 1688
+> -- 492
 < -- 0
-+ -- 246
-- -- 252
-* -- 1433
-:= -- 1960
-add.period$ -- 77
-call.type$ -- 16
-change.case$ -- 118
-chr.to.int$ -- 16
-cite$ -- 38
-duplicate$ -- 1734
-empty$ -- 1214
-format.name$ -- 304
-if$ -- 4763
++ -- 161
+- -- 168
+* -- 942
+:= -- 1310
+add.period$ -- 52
+call.type$ -- 11
+change.case$ -- 79
+chr.to.int$ -- 11
+cite$ -- 27
+duplicate$ -- 1144
+empty$ -- 805
+format.name$ -- 200
+if$ -- 3225
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 73
-newline$ -- 199
-num.names$ -- 128
-pop$ -- 694
+missing$ -- 49
+newline$ -- 144
+num.names$ -- 88
+pop$ -- 462
 preamble$ -- 1
-purify$ -- 262
+purify$ -- 178
 quote$ -- 0
-skip$ -- 592
+skip$ -- 381
 stack$ -- 0
-substring$ -- 1328
-swap$ -- 163
+substring$ -- 864
+swap$ -- 102
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 382
-warning$ -- 22
-while$ -- 111
+type$ -- 246
+warning$ -- 16
+while$ -- 76
 width$ -- 0
-write$ -- 342
-(There were 22 warnings)
+write$ -- 239
+(There were 16 warnings)

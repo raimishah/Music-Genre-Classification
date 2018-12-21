@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.5)  20 DEC 2018 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.5)  21 DEC 2018 06:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -786,6 +786,9 @@ LaTeX Warning: Label `fig:big_picture5' multiply defined.
 LaTeX Warning: Label `fig:big_picture1' multiply defined.
 
 
+LaTeX Warning: Label `fig:big_picture1' multiply defined.
+
+
 LaTeX Warning: Label `fig:big_picture5' multiply defined.
 
 
@@ -1284,18 +1287,13 @@ File: ./figures/loss_cnn.png Graphic file (type png)
 <use ./figures/loss_cnn.png>
 Package pdftex.def Info: ./figures/loss_cnn.png used on input line 301.
 (pdftex.def)             Requested size: 144.33669pt x 106.99785pt.
-) (./sample-sigconf.bbl [5.5 <./figures/confusion_knn.png> <./figures/confusion
-_svm.png> <./figures/confusion_kmeans.png> <./figures/confusion_gmm.png> <./fig
-ures/confusion_simple_NN.png>]
+ [5.5 <./figures/confusion_knn.png> <./figures/confusion_svm.png> <./figures/co
+nfusion_kmeans.png> <./figures/confusion_gmm.png> <./figures/confusion_simple_N
+N.png>]) (./sample-sigconf.bbl
 LaTeX Info: Redefining \tempurl on input line 77.
-LaTeX Info: Redefining \tempurl on input line 94.
-LaTeX Info: Redefining \tempurl on input line 111.
-LaTeX Info: Redefining \tempurl on input line 129.
-LaTeX Info: Redefining \tempurl on input line 155.
-LaTeX Info: Redefining \tempurl on input line 185.
-LaTeX Info: Redefining \tempurl on input line 212.
-LaTeX Info: Redefining \tempurl on input line 230.
-LaTeX Info: Redefining \tempurl on input line 248.
+LaTeX Info: Redefining \tempurl on input line 127.
+LaTeX Info: Redefining \tempurl on input line 145.
+LaTeX Info: Redefining \tempurl on input line 163.
 ) [6.6 <./figures/confusion_cnn.png> <./figures/confusion_sc.png> <./figures/3_
 layer_loss.png> <./figures/loss_cnn.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
@@ -1303,48 +1301,39 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
  (./sample-sigconf.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
+Package rerunfilecheck Info: File `sample-sigconf.out' has not changed.
+(rerunfilecheck)             Checksum: 1C7BD8F14DFF6914206475E2F39C76F6;2405.
 
-
-Package rerunfilecheck Warning: File `sample-sigconf.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `sample-sigconf.out':
-(rerunfilecheck)             Before: 4283915FF236CED4C3A6823431B54567;2405
-(rerunfilecheck)             After:  1C7BD8F14DFF6914206475E2F39C76F6;2405.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19075 strings out of 492995
- 290961 string characters out of 6132705
- 416928 words of memory out of 5000000
- 21777 multiletter control sequences out of 15000+600000
- 146613 words of font info for 275 fonts, out of 8000000 for 9000
+ 19036 strings out of 492995
+ 290139 string characters out of 6132705
+ 416582 words of memory out of 5000000
+ 21762 multiletter control sequences out of 15000+600000
+ 144681 words of font info for 263 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,11n,94p,1210b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section*.24} has been referenced but does not exi
-st, replaced by a fixed one
-
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{
-/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/
-usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/u
-sr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/us
-r/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pf
-b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumT
-BO.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiol
-inumTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/Lin
-LibertineT.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine
-/LinLibertineTB.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libe
-rtine/LinLibertineTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
-/newtx/txsys.pfb>
-Output written on sample-sigconf.pdf (6 pages, 2696884 bytes).
+ 60i,11n,94p,1311b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
+}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{
+/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/
+usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.
+pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinu
+mTBO.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBi
+olinumTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/L
+inLibertineT.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/liberti
+ne/LinLibertineTB.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/li
+bertine/LinLibertineTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
+ic/newtx/txsys.pfb>
+Output written on sample-sigconf.pdf (6 pages, 2692790 bytes).
 PDF statistics:
- 273 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
+ 258 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
+ 58 named destinations out of 1000 (max. 500000)
  49364 words of extra memory for PDF output out of 51595 (max. 10000000)
 
